@@ -59,6 +59,12 @@
       <DependentUpon>frmbusquedapedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="clases\clscliente.cs" />
+    <Compile Include="clases\clsempleado.cs" />
+    <Compile Include="clases\clsinsumo.cs" />
+    <Compile Include="clases\clspedido.cs" />
+    <Compile Include="clases\clsproducto.cs" />
+    <Compile Include="clases\clsreceta.cs" />
+    <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
     <Compile Include="DsMunicipio.Designer.cs">
       <AutoGen>True</AutoGen>
