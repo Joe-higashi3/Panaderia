@@ -101,11 +101,27 @@
     <Compile Include="forms\frmproductos.Designer.cs">
       <DependentUpon>frmproductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\frmreceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmreceta.Designer.cs">
+      <DependentUpon>frmreceta.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmventas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\frmventas.Designer.cs">
       <DependentUpon>frmventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gruposDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gruposDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="gruposDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gruposDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="panesitoDataSet.cs">
       <DependentUpon>panesitoDataSet.xsd</DependentUpon>
@@ -127,6 +143,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>panesitoDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -163,6 +184,9 @@
     <EmbeddedResource Include="forms\frmproductos.resx">
       <DependentUpon>frmproductos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmreceta.resx">
+      <DependentUpon>frmreceta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmventas.resx">
       <DependentUpon>frmventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +215,28 @@
     </None>
     <None Include="DsMunicipio.xss">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </None>
+    <None Include="gruposDataSet.xsc">
+      <DependentUpon>gruposDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gruposDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gruposDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gruposDataSet.xss">
+      <DependentUpon>gruposDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gruposDataSet2.xsc">
+      <DependentUpon>gruposDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="gruposDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gruposDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gruposDataSet2.xss">
+      <DependentUpon>gruposDataSet2.xsd</DependentUpon>
     </None>
     <None Include="panesitoDataSet.xsc">
       <DependentUpon>panesitoDataSet.xsd</DependentUpon>
@@ -224,6 +270,17 @@
     </None>
     <None Include="panesitoDataSet2.xss">
       <DependentUpon>panesitoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet3.xsc">
+      <DependentUpon>panesitoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet3.xss">
+      <DependentUpon>panesitoDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
