@@ -44,19 +44,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.cbxgrupo = new System.Windows.Forms.ComboBox();
+            this.gRUPOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gruposDataSet2 = new WindowsFormsApp2.gruposDataSet2();
             this.gruposDataSet = new WindowsFormsApp2.gruposDataSet();
             this.eSTADOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eSTADOTableAdapter = new WindowsFormsApp2.gruposDataSetTableAdapters.ESTADOTableAdapter();
-            this.gruposDataSet2 = new WindowsFormsApp2.gruposDataSet2();
-            this.gRUPOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gRUPOTableAdapter = new WindowsFormsApp2.gruposDataSet2TableAdapters.GRUPOTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rECETABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gRUPOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gruposDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruposDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTADOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gruposDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gRUPOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnagregar
@@ -70,7 +70,7 @@
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(704, 155);
+            this.btnguardar.Location = new System.Drawing.Point(743, 155);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(75, 23);
             this.btnguardar.TabIndex = 1;
@@ -185,6 +185,16 @@
             this.cbxgrupo.TabIndex = 9;
             this.cbxgrupo.ValueMember = "g_id_grupo";
             // 
+            // gRUPOBindingSource
+            // 
+            this.gRUPOBindingSource.DataMember = "GRUPO";
+            this.gRUPOBindingSource.DataSource = this.gruposDataSet2;
+            // 
+            // gruposDataSet2
+            // 
+            this.gruposDataSet2.DataSetName = "gruposDataSet2";
+            this.gruposDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gruposDataSet
             // 
             this.gruposDataSet.DataSetName = "gruposDataSet";
@@ -198,16 +208,6 @@
             // eSTADOTableAdapter
             // 
             this.eSTADOTableAdapter.ClearBeforeFill = true;
-            // 
-            // gruposDataSet2
-            // 
-            this.gruposDataSet2.DataSetName = "gruposDataSet2";
-            this.gruposDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gRUPOBindingSource
-            // 
-            this.gRUPOBindingSource.DataMember = "GRUPO";
-            this.gRUPOBindingSource.DataSource = this.gruposDataSet2;
             // 
             // gRUPOTableAdapter
             // 
@@ -233,10 +233,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rECETABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gRUPOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gruposDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruposDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eSTADOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gruposDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gRUPOBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
