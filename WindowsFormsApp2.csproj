@@ -66,6 +66,7 @@
     <Compile Include="clases\clsreceta.cs" />
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
+    <Compile Include="clases\ZeeKar.cs" />
     <Compile Include="DsMunicipio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
