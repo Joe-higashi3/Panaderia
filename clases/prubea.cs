@@ -8,5 +8,6 @@ namespace WindowsFormsApp2.clases
 {
     class prubea
     {
+        //primer prueba a ver si jala esta madre
     }
 }
