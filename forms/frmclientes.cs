@@ -40,7 +40,7 @@ namespace WindowsFormsApp2.forms
         private void GuardarCliente()
         {
             clscliente cliente = new clscliente();
-            cliente.iIdcliente = Convert.ToInt32(txtid.Text);
+            //cliente.iIdcliente = Convert.ToInt32(txtid.Text);
             cliente.sNombre = txtnombre.Text;
             cliente.sApellido_p = txtapellidop.Text;
             cliente.sApellido_m = txtapellidom.Text;
@@ -133,12 +133,13 @@ namespace WindowsFormsApp2.forms
         {
 
 
+            if(ValidarDatos() == true)
+            {
 
-            GuardarCliente();
+                GuardarCliente();
 
-
-
-
+            }
+              
 
         }
 
@@ -203,8 +204,7 @@ namespace WindowsFormsApp2.forms
                 validacion = false;
                 errorTel.SetError(txttelefono, "Ingresar Telefono");
 
-                txttelefono.Clear();
-                txttelefono.Focus();
+             
 
             }
 
@@ -214,8 +214,7 @@ namespace WindowsFormsApp2.forms
                 validacion = false;
                 errorNombre.SetError(txtnombre, "Ingresar Nombre");
 
-                txtnombre.Clear();
-                txtnombre.Focus();
+                
 
             }
 
@@ -226,9 +225,6 @@ namespace WindowsFormsApp2.forms
                 validacion = false;
                 errorApePat.SetError(txttelefono, "Ingresar Apellido Paterno");
 
-                txtapellidop.Clear();
-                txtapellidop.Focus();
-
             }
             if (txtapellidom.Text == "")
             {
@@ -236,9 +232,7 @@ namespace WindowsFormsApp2.forms
                 validacion = false;
                 errorApeMat.SetError(txttelefono, "Ingresar Apellido Materno");
 
-                txtapellidom.Clear();
-                txtapellidom.Focus();
-
+                
             }
             if (txtcolonia.Text == "")
             {
@@ -246,8 +240,7 @@ namespace WindowsFormsApp2.forms
                 validacion = false;
                 errorCol.SetError(txttelefono, "Ingresar Colonia");
 
-                txtcolonia.Clear();
-                txtcolonia.Focus();
+                
 
             }
 
@@ -257,9 +250,7 @@ namespace WindowsFormsApp2.forms
                 validacion = false;
                 errorNInte.SetError(txttelefono, "Ingresar Numero Interior");
 
-                txtnumint.Clear();
-                txtnumint.Focus();
-
+               
             }
             if (txtnumext.Text == "")
             {
@@ -267,8 +258,7 @@ namespace WindowsFormsApp2.forms
                 validacion = false;
                 errorrNumExt.SetError(txttelefono, "Ingresar Numero Exterior");
 
-                txtnumext.Clear();
-                txtnumext.Focus();
+               
 
             }
 
@@ -278,8 +268,6 @@ namespace WindowsFormsApp2.forms
                 validacion = false;
                 errorCalle.SetError(txttelefono, "Ingresar Calle");
 
-                txtcalle.Clear();
-                txtcalle.Focus();
 
             }
 
@@ -352,6 +340,13 @@ namespace WindowsFormsApp2.forms
 
         }
 
+
+
+
+
+
+
+
         private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -359,12 +354,20 @@ namespace WindowsFormsApp2.forms
             {
 
                 errorNombre.SetError(txtnombre, "Ingrese solo Letras");
-                txtnombre.Clear();
-                txtnombre.Focus();
+
+
+            }
+            else
+            {
+                
+                errorNombre.SetError(txtnombre, "");
 
             }
 
         }
+
+
+
 
         private void txtapellidop_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -373,8 +376,13 @@ namespace WindowsFormsApp2.forms
             {
 
                 errorApePat.SetError(txtapellidop, "Ingrese solo Letras");
-                txtapellidop.Clear();
-                txtapellidop.Focus();
+                
+
+            }
+            else
+            {
+
+                errorApePat.SetError(txtapellidop, "");
 
             }
 
@@ -387,8 +395,13 @@ namespace WindowsFormsApp2.forms
             {
 
                 errorApeMat.SetError(txtapellidom, "Ingrese solo Letras");
-                txtapellidom.Clear();
-                txtapellidom.Focus();
+               
+
+            }
+            else
+            {
+
+                errorApeMat.SetError(txtapellidom, "");
 
             }
 
@@ -401,8 +414,13 @@ namespace WindowsFormsApp2.forms
             {
 
                 errorCol.SetError(txtcolonia, "Ingrese solo Letras");
-                txtcolonia.Clear();
-                txtcolonia.Focus();
+              
+
+            }
+            else
+            {
+
+                errorCol.SetError(txtcolonia, "");
 
             }
 
@@ -416,11 +434,24 @@ namespace WindowsFormsApp2.forms
             {
 
                 errorCalle.SetError(txtcalle, "Ingrese solo Letras");
-                txtcalle.Clear();
-                txtcalle.Focus();
+
+            }
+
+            else
+            {
+
+                errorCalle.SetError(txtcalle, "");
 
             }
 
         }
+
+        private void txtnombre_Validating(object sender, CancelEventArgs e)
+        {
+
+            
+
+        }
+
     }
 }

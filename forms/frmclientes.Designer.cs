@@ -146,6 +146,7 @@
             this.txtnombre.Size = new System.Drawing.Size(337, 26);
             this.txtnombre.TabIndex = 4;
             this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
+            this.txtnombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtnombre_Validating);
             // 
             // label4
             // 
