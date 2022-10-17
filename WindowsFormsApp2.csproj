@@ -67,10 +67,25 @@
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
     <Compile Include="clases\pruebaEdi.cs" />
+    <Compile Include="DSEmpleadoEdi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSEmpleadoEdi.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsMunicipio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSMunicipioEdi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMunicipioEdi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRolEdi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRolEdi.xsd</DependentUpon>
     </Compile>
     <Compile Include="forms\frmclientes.cs">
       <SubType>Form</SubType>
@@ -206,6 +221,17 @@
     <EmbeddedResource Include="reportes\frmrepoventas.resx">
       <DependentUpon>frmrepoventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DSEmpleadoEdi.xsc">
+      <DependentUpon>DSEmpleadoEdi.xsd</DependentUpon>
+    </None>
+    <None Include="DSEmpleadoEdi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSEmpleadoEdi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSEmpleadoEdi.xss">
+      <DependentUpon>DSEmpleadoEdi.xsd</DependentUpon>
+    </None>
     <None Include="DsMunicipio.xsc">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
     </None>
@@ -216,6 +242,28 @@
     </None>
     <None Include="DsMunicipio.xss">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </None>
+    <None Include="DSMunicipioEdi.xsc">
+      <DependentUpon>DSMunicipioEdi.xsd</DependentUpon>
+    </None>
+    <None Include="DSMunicipioEdi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMunicipioEdi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSMunicipioEdi.xss">
+      <DependentUpon>DSMunicipioEdi.xsd</DependentUpon>
+    </None>
+    <None Include="DSRolEdi.xsc">
+      <DependentUpon>DSRolEdi.xsd</DependentUpon>
+    </None>
+    <None Include="DSRolEdi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRolEdi.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSRolEdi.xss">
+      <DependentUpon>DSRolEdi.xsd</DependentUpon>
     </None>
     <None Include="gruposDataSet.xsc">
       <DependentUpon>gruposDataSet.xsd</DependentUpon>

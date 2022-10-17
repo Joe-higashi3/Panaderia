@@ -70,7 +70,7 @@ namespace WindowsFormsApp2.forms
             SqlDataReader l;
 
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT ISNULL(MAX(cl_id_cliente),0) + 1 AS consecutivo FROM CLIENTE";
+            cmd.CommandText = "SELECT ISNULL(MAX(cl_id_cliente),0) +1 AS consecutivo FROM CLIENTE";
 
 
             conn.Open();
