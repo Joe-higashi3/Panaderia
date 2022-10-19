@@ -33,5 +33,15 @@ namespace WindowsFormsApp2.Properties {
                 return ((string)(this["panesitoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=M3\\BASEDATOSJUAN;Initial Catalog=panesito;Integrated Security=True")]
+        public string panesitoConnectionString1 {
+            get {
+                return ((string)(this["panesitoConnectionString1"]));
+            }
+        }
     }
 }

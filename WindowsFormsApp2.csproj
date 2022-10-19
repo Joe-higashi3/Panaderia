@@ -72,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
     </Compile>
+    <Compile Include="forms\DataSetproducto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetproducto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="forms\frmclientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +197,17 @@
     </None>
     <None Include="DsMunicipio.xss">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </None>
+    <None Include="forms\DataSetproducto.xsc">
+      <DependentUpon>DataSetproducto.xsd</DependentUpon>
+    </None>
+    <None Include="forms\DataSetproducto.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetproducto.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="forms\DataSetproducto.xss">
+      <DependentUpon>DataSetproducto.xsd</DependentUpon>
     </None>
     <None Include="panesitoDataSet.xsc">
       <DependentUpon>panesitoDataSet.xsd</DependentUpon>

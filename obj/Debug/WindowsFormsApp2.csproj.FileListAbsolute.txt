@@ -36,3 +36,22 @@ C:\Users\Joe-H\Desktop\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.Genera
 C:\Users\Joe-H\Desktop\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 C:\Users\Joe-H\Desktop\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Joe-H\Desktop\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+E:\escuela\semestre 5\ing soft panesito\Panaderia\bin\Debug\WindowsFormsApp2.exe.config
+E:\escuela\semestre 5\ing soft panesito\Panaderia\bin\Debug\WindowsFormsApp2.exe
+E:\escuela\semestre 5\ing soft panesito\Panaderia\bin\Debug\WindowsFormsApp2.pdb
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.busquedas.frmbusquedaclientes.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.busquedas.frmbusquedapedidos.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmclientes.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmempleados.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmmenu.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.frmpedidos.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmproductos.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmventas.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.reportes.frmrepopedidos.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.reportes.frmrepoventas.resources
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.exe
+E:\escuela\semestre 5\ing soft panesito\Panaderia\obj\Debug\WindowsFormsApp2.pdb
