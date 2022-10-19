@@ -16,7 +16,8 @@ namespace WindowsFormsApp2.clases
         public string sDescripcion { get; set; }
         public int iId_categoria { get; set; }
         public float fPrecio99 { get; set; }
-        //public bool bStatus { get; set; }
+        public string sStatus { get; set; }
+        public int iId_unidad { get; set; }
 
 
 
@@ -34,7 +35,9 @@ namespace WindowsFormsApp2.clases
             cmd.Parameters.AddWithValue("@DESCRIPCION", sDescripcion);
             cmd.Parameters.AddWithValue("@CATEGORIA", iId_categoria);
             cmd.Parameters.AddWithValue("@RECIO", fPrecio99);
-            //cmd.Parameters.AddWithValue("@STATUS", bStatus);
+            cmd.Parameters.AddWithValue("@STATUS", sStatus);
+            //cmd.Parameters.AddWithValue("@UNIDAD", iId_unidad);
+
             try
             {
                 conn.Open();

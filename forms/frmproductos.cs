@@ -31,8 +31,10 @@ namespace WindowsFormsApp2.forms
             producto.fPrecio99 = Convert.ToInt32(txtprecio.Text);
             producto.sNombre = txtnombre.Text;
             producto.sDescripcion = txtdescripcion.Text;
-            producto.iId_categoria = Convert.ToInt32(txtid.Text);
-            //agregar status aqui
+            producto.iId_categoria = Convert.ToInt32(txtcategoria.Text);
+            producto.sStatus = cmbxstatus.Text.Substring(0, 1);
+            producto.iId_unidad = Convert.ToInt32(txtunidad.Text);
+
             if (producto.GuardarProducto() == true)
             {
                 MessageBox.Show("Sus Datos se guardaron correctamente");
@@ -54,6 +56,7 @@ namespace WindowsFormsApp2.forms
             txtdescripcion.Clear();
             txtcategoria.Clear();
             //agregar lo de status aqui
+            txtunidad.Clear();
             consecutivo();
         }
 
@@ -76,6 +79,8 @@ namespace WindowsFormsApp2.forms
 
         private void frmproductos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'panesitoDataSetproductomod1.PRODUCTO' Puede moverla o quitarla según sea necesario.
+            this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetproductomod1.PRODUCTO);
             // TODO: esta línea de código carga datos en la tabla 'dataSetproducto.PRODUCTO' Puede moverla o quitarla según sea necesario.
             this.pRODUCTOTableAdapter.Fill(this.dataSetproducto.PRODUCTO);
             txtnombre.Focus();
@@ -95,6 +100,8 @@ namespace WindowsFormsApp2.forms
             txtdescripcion.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_descripcion.ToString();
             txtcategoria.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_id_categoria.ToString();
             //agregar lo de estatus aqui
+            //agregar lo de unidad aqui
+            //txtunidad.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_unidad.ToString();
         }
     }
 }
