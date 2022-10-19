@@ -10,7 +10,7 @@ namespace WindowsFormsApp2.clases
 {
     public class clscliente
     {
-        public string error;
+        public string error;    
         public int iIdcliente { get; set; }
         public string sNombre { get; set; }
         public string sApellido_p { get; set; }

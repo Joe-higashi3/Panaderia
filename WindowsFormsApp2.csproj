@@ -149,6 +149,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>panesitoDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="panesitoDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="panesitoDataSetPed.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>panesitoDataSetPed.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="reportes\frmrepopedidos.cs">
@@ -281,6 +301,50 @@
     </None>
     <None Include="panesitoDataSet3.xss">
       <DependentUpon>panesitoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet4.xsc">
+      <DependentUpon>panesitoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet4.xss">
+      <DependentUpon>panesitoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet5.xsc">
+      <DependentUpon>panesitoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet5.xss">
+      <DependentUpon>panesitoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet6.xsc">
+      <DependentUpon>panesitoDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSet6.xss">
+      <DependentUpon>panesitoDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSetPed.xsc">
+      <DependentUpon>panesitoDataSetPed.xsd</DependentUpon>
+    </None>
+    <None Include="panesitoDataSetPed.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>panesitoDataSetPed.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="panesitoDataSetPed.xss">
+      <DependentUpon>panesitoDataSetPed.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

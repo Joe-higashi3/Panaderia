@@ -36,3 +36,23 @@ C:\Users\Joe-H\Desktop\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.Genera
 C:\Users\Joe-H\Desktop\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 C:\Users\Joe-H\Desktop\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Joe-H\Desktop\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\bin\Debug\WindowsFormsApp2.exe
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.csprojAssemblyReference.cache
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.busquedas.frmbusquedaclientes.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.busquedas.frmbusquedapedidos.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmclientes.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmempleados.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmmenu.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.frmpedidos.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmproductos.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmreceta.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmventas.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.reportes.frmrepopedidos.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.reportes.frmrepoventas.resources
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.exe
+C:\Users\soyun\Desktop\Trabajos u\5Semestre\Ingenieria software 2\panaderia\Panaderia\obj\Debug\WindowsFormsApp2.pdb

@@ -175,5 +175,10 @@ namespace WindowsFormsApp2.forms
         {
             limpiar();
         }
+
+        private void txtid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

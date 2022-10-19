@@ -50,13 +50,6 @@
             this.txtcalle = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtwclientes = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cmbxMunicipio = new System.Windows.Forms.ComboBox();
-            this.cmbxstatus = new System.Windows.Forms.ComboBox();
-            this.cLIENTEBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.panesitoDataSet2 = new WindowsFormsApp2.panesitoDataSet2();
-            this.cLIENTETableAdapter2 = new WindowsFormsApp2.panesitoDataSet2TableAdapters.CLIENTETableAdapter();
             this.clidclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clapellidopatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,14 +62,21 @@
             this.clidmunicipioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mu_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cl_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dsMunicipio = new WindowsFormsApp2.DsMunicipio();
+            this.cLIENTEBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.panesitoDataSet2 = new WindowsFormsApp2.panesitoDataSet2();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cmbxMunicipio = new System.Windows.Forms.ComboBox();
             this.mUNICIPIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsMunicipio = new WindowsFormsApp2.DsMunicipio();
+            this.cmbxstatus = new System.Windows.Forms.ComboBox();
+            this.cLIENTETableAdapter2 = new WindowsFormsApp2.panesitoDataSet2TableAdapters.CLIENTETableAdapter();
             this.mUNICIPIOTableAdapter = new WindowsFormsApp2.DsMunicipioTableAdapters.MUNICIPIOTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtwclientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTEBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsMunicipio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mUNICIPIOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMunicipio)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -102,7 +102,7 @@
             // 
             this.txttelefono.Location = new System.Drawing.Point(322, 22);
             this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(154, 30);
+            this.txttelefono.Size = new System.Drawing.Size(154, 26);
             this.txttelefono.TabIndex = 2;
             // 
             // txtid
@@ -110,22 +110,23 @@
             this.txtid.Enabled = false;
             this.txtid.Location = new System.Drawing.Point(139, 21);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(67, 30);
+            this.txtid.Size = new System.Drawing.Size(67, 26);
             this.txtid.TabIndex = 0;
+            this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             this.txtid.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtid_KeyUp);
             // 
             // txtcolonia
             // 
             this.txtcolonia.Location = new System.Drawing.Point(139, 166);
             this.txtcolonia.Name = "txtcolonia";
-            this.txtcolonia.Size = new System.Drawing.Size(337, 30);
+            this.txtcolonia.Size = new System.Drawing.Size(337, 26);
             this.txtcolonia.TabIndex = 10;
             // 
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(139, 58);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(337, 30);
+            this.txtnombre.Size = new System.Drawing.Size(337, 26);
             this.txtnombre.TabIndex = 4;
             // 
             // label4
@@ -133,7 +134,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(542, 55);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 25);
+            this.label4.Size = new System.Drawing.Size(54, 20);
             this.label4.TabIndex = 16;
             this.label4.Text = "Calle:";
             // 
@@ -142,7 +143,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(212, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 25);
+            this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 15;
             this.label3.Text = "Telefono:";
             // 
@@ -151,7 +152,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(39, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.Size = new System.Drawing.Size(76, 20);
             this.label2.TabIndex = 14;
             this.label2.Text = "Nombre:";
             // 
@@ -160,7 +161,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(93, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 25);
+            this.label1.Size = new System.Drawing.Size(33, 20);
             this.label1.TabIndex = 13;
             this.label1.Text = "ID:";
             // 
@@ -168,7 +169,7 @@
             // 
             this.txtapellidom.Location = new System.Drawing.Point(139, 130);
             this.txtapellidom.Name = "txtapellidom";
-            this.txtapellidom.Size = new System.Drawing.Size(337, 30);
+            this.txtapellidom.Size = new System.Drawing.Size(337, 26);
             this.txtapellidom.TabIndex = 8;
             // 
             // label5
@@ -176,7 +177,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(12, 132);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 25);
+            this.label5.Size = new System.Drawing.Size(97, 20);
             this.label5.TabIndex = 26;
             this.label5.Text = "Apellido M:";
             // 
@@ -184,7 +185,7 @@
             // 
             this.txtapellidop.Location = new System.Drawing.Point(139, 94);
             this.txtapellidop.Name = "txtapellidop";
-            this.txtapellidop.Size = new System.Drawing.Size(337, 30);
+            this.txtapellidop.Size = new System.Drawing.Size(337, 26);
             this.txtapellidop.TabIndex = 6;
             // 
             // label6
@@ -192,7 +193,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(16, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 25);
+            this.label6.Size = new System.Drawing.Size(94, 20);
             this.label6.TabIndex = 28;
             this.label6.Text = "Apellido P:";
             // 
@@ -200,7 +201,7 @@
             // 
             this.txtnumint.Location = new System.Drawing.Point(617, 19);
             this.txtnumint.Name = "txtnumint";
-            this.txtnumint.Size = new System.Drawing.Size(102, 30);
+            this.txtnumint.Size = new System.Drawing.Size(102, 26);
             this.txtnumint.TabIndex = 12;
             // 
             // label7
@@ -208,7 +209,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(498, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 25);
+            this.label7.Size = new System.Drawing.Size(94, 20);
             this.label7.TabIndex = 30;
             this.label7.Text = "N. Interior:";
             // 
@@ -216,7 +217,7 @@
             // 
             this.txtnumext.Location = new System.Drawing.Point(842, 19);
             this.txtnumext.Name = "txtnumext";
-            this.txtnumext.Size = new System.Drawing.Size(103, 30);
+            this.txtnumext.Size = new System.Drawing.Size(103, 26);
             this.txtnumext.TabIndex = 14;
             // 
             // label8
@@ -224,7 +225,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(725, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 25);
+            this.label8.Size = new System.Drawing.Size(98, 20);
             this.label8.TabIndex = 32;
             this.label8.Text = "N. Exterior:";
             // 
@@ -232,7 +233,7 @@
             // 
             this.txtcalle.Location = new System.Drawing.Point(617, 55);
             this.txtcalle.Name = "txtcalle";
-            this.txtcalle.Size = new System.Drawing.Size(337, 30);
+            this.txtcalle.Size = new System.Drawing.Size(337, 26);
             this.txtcalle.TabIndex = 16;
             // 
             // label9
@@ -240,7 +241,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(39, 166);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 25);
+            this.label9.Size = new System.Drawing.Size(74, 20);
             this.label9.TabIndex = 34;
             this.label9.Text = "Colonia:";
             // 
@@ -274,64 +275,6 @@
             this.dtwclientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtwclientes_CellContentClick);
             this.dtwclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtwclientes_CellContentClick);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(772, 94);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 25);
-            this.label10.TabIndex = 38;
-            this.label10.Text = "Status:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(500, 92);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 25);
-            this.label11.TabIndex = 40;
-            this.label11.Text = "Municipio:";
-            // 
-            // cmbxMunicipio
-            // 
-            this.cmbxMunicipio.DataSource = this.mUNICIPIOBindingSource;
-            this.cmbxMunicipio.DisplayMember = "mu_descripcion";
-            this.cmbxMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxMunicipio.FormattingEnabled = true;
-            this.cmbxMunicipio.Location = new System.Drawing.Point(617, 94);
-            this.cmbxMunicipio.Name = "cmbxMunicipio";
-            this.cmbxMunicipio.Size = new System.Drawing.Size(137, 33);
-            this.cmbxMunicipio.TabIndex = 41;
-            this.cmbxMunicipio.ValueMember = "mu_id_municipio";
-            // 
-            // cmbxstatus
-            // 
-            this.cmbxstatus.AutoCompleteCustomSource.AddRange(new string[] {
-            "Activo",
-            "Inactivo"});
-            this.cmbxstatus.FormattingEnabled = true;
-            this.cmbxstatus.Items.AddRange(new object[] {
-            "Activo",
-            "Cancelado"});
-            this.cmbxstatus.Location = new System.Drawing.Point(860, 94);
-            this.cmbxstatus.Name = "cmbxstatus";
-            this.cmbxstatus.Size = new System.Drawing.Size(121, 33);
-            this.cmbxstatus.TabIndex = 42;
-            // 
-            // cLIENTEBindingSource2
-            // 
-            this.cLIENTEBindingSource2.DataMember = "CLIENTE";
-            this.cLIENTEBindingSource2.DataSource = this.panesitoDataSet2;
-            // 
-            // panesitoDataSet2
-            // 
-            this.panesitoDataSet2.DataSetName = "panesitoDataSet2";
-            this.panesitoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cLIENTETableAdapter2
-            // 
-            this.cLIENTETableAdapter2.ClearBeforeFill = true;
-            // 
             // clidclienteDataGridViewTextBoxColumn
             // 
             this.clidclienteDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
@@ -339,7 +282,7 @@
             this.clidclienteDataGridViewTextBoxColumn.HeaderText = "Id";
             this.clidclienteDataGridViewTextBoxColumn.Name = "clidclienteDataGridViewTextBoxColumn";
             this.clidclienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clidclienteDataGridViewTextBoxColumn.Width = 59;
+            this.clidclienteDataGridViewTextBoxColumn.Width = 50;
             // 
             // clnombreDataGridViewTextBoxColumn
             // 
@@ -348,7 +291,7 @@
             this.clnombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.clnombreDataGridViewTextBoxColumn.Name = "clnombreDataGridViewTextBoxColumn";
             this.clnombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clnombreDataGridViewTextBoxColumn.Width = 116;
+            this.clnombreDataGridViewTextBoxColumn.Width = 96;
             // 
             // clapellidopatDataGridViewTextBoxColumn
             // 
@@ -357,7 +300,7 @@
             this.clapellidopatDataGridViewTextBoxColumn.HeaderText = "Apellido Paterno";
             this.clapellidopatDataGridViewTextBoxColumn.Name = "clapellidopatDataGridViewTextBoxColumn";
             this.clapellidopatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clapellidopatDataGridViewTextBoxColumn.Width = 182;
+            this.clapellidopatDataGridViewTextBoxColumn.Width = 151;
             // 
             // clapellidomatDataGridViewTextBoxColumn
             // 
@@ -366,7 +309,7 @@
             this.clapellidomatDataGridViewTextBoxColumn.HeaderText = "Apellido Materno";
             this.clapellidomatDataGridViewTextBoxColumn.Name = "clapellidomatDataGridViewTextBoxColumn";
             this.clapellidomatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clapellidomatDataGridViewTextBoxColumn.Width = 186;
+            this.clapellidomatDataGridViewTextBoxColumn.Width = 154;
             // 
             // cltelefonoDataGridViewTextBoxColumn
             // 
@@ -375,7 +318,7 @@
             this.cltelefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
             this.cltelefonoDataGridViewTextBoxColumn.Name = "cltelefonoDataGridViewTextBoxColumn";
             this.cltelefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cltelefonoDataGridViewTextBoxColumn.Width = 126;
+            this.cltelefonoDataGridViewTextBoxColumn.Width = 104;
             // 
             // clcalleDataGridViewTextBoxColumn
             // 
@@ -384,7 +327,7 @@
             this.clcalleDataGridViewTextBoxColumn.HeaderText = "Calle";
             this.clcalleDataGridViewTextBoxColumn.Name = "clcalleDataGridViewTextBoxColumn";
             this.clcalleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clcalleDataGridViewTextBoxColumn.Width = 91;
+            this.clcalleDataGridViewTextBoxColumn.Width = 74;
             // 
             // clnuminteriorDataGridViewTextBoxColumn
             // 
@@ -393,7 +336,7 @@
             this.clnuminteriorDataGridViewTextBoxColumn.HeaderText = "Num. Int.";
             this.clnuminteriorDataGridViewTextBoxColumn.Name = "clnuminteriorDataGridViewTextBoxColumn";
             this.clnuminteriorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clnuminteriorDataGridViewTextBoxColumn.Width = 117;
+            this.clnuminteriorDataGridViewTextBoxColumn.Width = 98;
             // 
             // clnumexteriorDataGridViewTextBoxColumn
             // 
@@ -402,7 +345,7 @@
             this.clnumexteriorDataGridViewTextBoxColumn.HeaderText = "Num. Ext.";
             this.clnumexteriorDataGridViewTextBoxColumn.Name = "clnumexteriorDataGridViewTextBoxColumn";
             this.clnumexteriorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clnumexteriorDataGridViewTextBoxColumn.Width = 123;
+            this.clnumexteriorDataGridViewTextBoxColumn.Width = 102;
             // 
             // clcoloniaDataGridViewTextBoxColumn
             // 
@@ -411,7 +354,7 @@
             this.clcoloniaDataGridViewTextBoxColumn.HeaderText = "Colonia";
             this.clcoloniaDataGridViewTextBoxColumn.Name = "clcoloniaDataGridViewTextBoxColumn";
             this.clcoloniaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clcoloniaDataGridViewTextBoxColumn.Width = 115;
+            this.clcoloniaDataGridViewTextBoxColumn.Width = 94;
             // 
             // clidmunicipioDataGridViewTextBoxColumn
             // 
@@ -420,7 +363,7 @@
             this.clidmunicipioDataGridViewTextBoxColumn.HeaderText = "Municipio";
             this.clidmunicipioDataGridViewTextBoxColumn.Name = "clidmunicipioDataGridViewTextBoxColumn";
             this.clidmunicipioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.clidmunicipioDataGridViewTextBoxColumn.Width = 133;
+            this.clidmunicipioDataGridViewTextBoxColumn.Width = 109;
             // 
             // mu_descripcion
             // 
@@ -436,15 +379,73 @@
             this.cl_status.Name = "cl_status";
             this.cl_status.ReadOnly = true;
             // 
-            // dsMunicipio
+            // cLIENTEBindingSource2
             // 
-            this.dsMunicipio.DataSetName = "DsMunicipio";
-            this.dsMunicipio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cLIENTEBindingSource2.DataMember = "CLIENTE";
+            this.cLIENTEBindingSource2.DataSource = this.panesitoDataSet2;
+            // 
+            // panesitoDataSet2
+            // 
+            this.panesitoDataSet2.DataSetName = "panesitoDataSet2";
+            this.panesitoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(772, 94);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 20);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Status:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(500, 92);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(89, 20);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Municipio:";
+            // 
+            // cmbxMunicipio
+            // 
+            this.cmbxMunicipio.DataSource = this.mUNICIPIOBindingSource;
+            this.cmbxMunicipio.DisplayMember = "mu_descripcion";
+            this.cmbxMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxMunicipio.FormattingEnabled = true;
+            this.cmbxMunicipio.Location = new System.Drawing.Point(617, 94);
+            this.cmbxMunicipio.Name = "cmbxMunicipio";
+            this.cmbxMunicipio.Size = new System.Drawing.Size(137, 28);
+            this.cmbxMunicipio.TabIndex = 41;
+            this.cmbxMunicipio.ValueMember = "mu_id_municipio";
             // 
             // mUNICIPIOBindingSource
             // 
             this.mUNICIPIOBindingSource.DataMember = "MUNICIPIO";
             this.mUNICIPIOBindingSource.DataSource = this.dsMunicipio;
+            // 
+            // dsMunicipio
+            // 
+            this.dsMunicipio.DataSetName = "DsMunicipio";
+            this.dsMunicipio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmbxstatus
+            // 
+            this.cmbxstatus.AutoCompleteCustomSource.AddRange(new string[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbxstatus.FormattingEnabled = true;
+            this.cmbxstatus.Items.AddRange(new object[] {
+            "Activo",
+            "Cancelado"});
+            this.cmbxstatus.Location = new System.Drawing.Point(860, 94);
+            this.cmbxstatus.Name = "cmbxstatus";
+            this.cmbxstatus.Size = new System.Drawing.Size(121, 28);
+            this.cmbxstatus.TabIndex = 42;
+            // 
+            // cLIENTETableAdapter2
+            // 
+            this.cLIENTETableAdapter2.ClearBeforeFill = true;
             // 
             // mUNICIPIOTableAdapter
             // 
@@ -452,7 +453,7 @@
             // 
             // frmclientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1101, 593);
             this.Controls.Add(this.cmbxstatus);
@@ -488,8 +489,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtwclientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTEBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsMunicipio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mUNICIPIOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMunicipio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
