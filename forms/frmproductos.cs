@@ -32,6 +32,7 @@ namespace WindowsFormsApp2.forms
             producto.sNombre = txtnombre.Text;
             producto.sDescripcion = txtdescripcion.Text;
             producto.iId_categoria = Convert.ToInt32(txtid.Text);
+            //agregar status aqui
             if (producto.GuardarProducto() == true)
             {
                 MessageBox.Show("Sus Datos se guardaron correctamente");
@@ -52,6 +53,7 @@ namespace WindowsFormsApp2.forms
             txtprecio.Clear();
             txtdescripcion.Clear();
             txtcategoria.Clear();
+            //agregar lo de status aqui
             consecutivo();
         }
 
@@ -76,7 +78,7 @@ namespace WindowsFormsApp2.forms
         {
             // TODO: esta línea de código carga datos en la tabla 'dataSetproducto.PRODUCTO' Puede moverla o quitarla según sea necesario.
             this.pRODUCTOTableAdapter.Fill(this.dataSetproducto.PRODUCTO);
-            txtprecio.Focus();
+            txtnombre.Focus();
             consecutivo();
         }
 
@@ -87,10 +89,12 @@ namespace WindowsFormsApp2.forms
 
         private void dvgproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtid.Text = 
-            txtprecio.Text = 
-            txtdescripcion.Text = 
-            txtcategoria.Text = 
+            txtid.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_id_producto.ToString();
+            txtprecio.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_precio.ToString();
+            txtnombre.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_nombre.ToString();
+            txtdescripcion.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_descripcion.ToString();
+            txtcategoria.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_id_categoria.ToString();
+            //agregar lo de estatus aqui
         }
     }
 }
