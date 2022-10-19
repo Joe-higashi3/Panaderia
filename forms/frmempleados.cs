@@ -43,12 +43,14 @@ namespace WindowsFormsApp2.forms
         private void GuardarEmpleado()
         {
             clsempleado empleado = new clsempleado();
-            empleado.iIdempleado = Convert.ToInt32(txtid.Text);
+            byte[] bytes = Encoding.ASCII.GetBytes(txtcontraseña.Text);
+            //empleado.iIdempleado = Convert.ToInt32(txtid.Text);
             empleado.sUsuario = txtusuario.Text;
-            empleado.sContraseña = txtcontraseña.Text;
+            empleado.sContraseña = bytes;
             empleado.sApellido_p = txtapaterno.Text;
-            empleado.sApellido_p = txtamaterno.Text;
+            empleado.sApellido_m = txtamaterno.Text;
             empleado.sColonia = txtcolonia.Text;
+            empleado.sTelefono = txttelefono.Text;
             empleado.iNum_int = Convert.ToInt32(txtinterior.Text);
             empleado.iNum_ext = Convert.ToInt32(txtexterior.Text);
             empleado.sCalle = txtcalle.Text;

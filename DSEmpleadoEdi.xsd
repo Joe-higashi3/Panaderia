@@ -119,7 +119,7 @@ SELECT em_id_empleado, em_usuario, em_contraseña, em_apellido_paterno, em_apell
   <xs:element name="DSEmpleadoEdi" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSEmpleadoEdi" msprop:Generator_UserDSName="DSEmpleadoEdi">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="EMPLEADO" msprop:Generator_TableClassName="EMPLEADODataTable" msprop:Generator_TableVarName="tableEMPLEADO" msprop:Generator_TablePropName="EMPLEADO" msprop:Generator_RowDeletingName="EMPLEADORowDeleting" msprop:Generator_RowChangingName="EMPLEADORowChanging" msprop:Generator_RowEvHandlerName="EMPLEADORowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLEADORowDeleted" msprop:Generator_UserTableName="EMPLEADO" msprop:Generator_RowChangedName="EMPLEADORowChanged" msprop:Generator_RowEvArgName="EMPLEADORowChangeEvent" msprop:Generator_RowClassName="EMPLEADORow">
+        <xs:element name="EMPLEADO" msprop:Generator_TableClassName="EMPLEADODataTable" msprop:Generator_TableVarName="tableEMPLEADO" msprop:Generator_RowChangedName="EMPLEADORowChanged" msprop:Generator_TablePropName="EMPLEADO" msprop:Generator_RowDeletingName="EMPLEADORowDeleting" msprop:Generator_RowChangingName="EMPLEADORowChanging" msprop:Generator_RowEvHandlerName="EMPLEADORowChangeEventHandler" msprop:Generator_RowDeletedName="EMPLEADORowDeleted" msprop:Generator_RowClassName="EMPLEADORow" msprop:Generator_UserTableName="EMPLEADO" msprop:Generator_RowEvArgName="EMPLEADORowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="em_id_empleado" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnem_id_empleado" msprop:Generator_ColumnPropNameInRow="em_id_empleado" msprop:Generator_ColumnPropNameInTable="em_id_empleadoColumn" msprop:Generator_UserColumnName="em_id_empleado" type="xs:int" />
@@ -130,13 +130,7 @@ SELECT em_id_empleado, em_usuario, em_contraseña, em_apellido_paterno, em_apell
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="em_contraseña" msprop:Generator_ColumnVarNameInTable="columnem_contraseña" msprop:Generator_ColumnPropNameInRow="em_contraseña" msprop:Generator_ColumnPropNameInTable="em_contraseñaColumn" msprop:Generator_UserColumnName="em_contraseña">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="30" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
+              <xs:element name="em_contraseña" msprop:Generator_ColumnVarNameInTable="columnem_contraseña" msprop:Generator_ColumnPropNameInRow="em_contraseña" msprop:Generator_ColumnPropNameInTable="em_contraseñaColumn" msprop:Generator_UserColumnName="em_contraseña" type="xs:base64Binary" />
               <xs:element name="em_apellido_paterno" msprop:Generator_ColumnVarNameInTable="columnem_apellido_paterno" msprop:Generator_ColumnPropNameInRow="em_apellido_paterno" msprop:Generator_ColumnPropNameInTable="em_apellido_paternoColumn" msprop:Generator_UserColumnName="em_apellido_paterno">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">

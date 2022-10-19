@@ -40,19 +40,6 @@
             this.txtapaterno = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvempleados = new System.Windows.Forms.DataGridView();
-            this.emidempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emcontraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emapellidopaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emapellidomaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emtelefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emcalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emnuminteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emnumexteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emcoloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emidmunicipioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eMPLEADOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dSEmpleadoEdi = new WindowsFormsApp2.DSEmpleadoEdi();
             this.btncancelar = new System.Windows.Forms.Button();
@@ -75,18 +62,31 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.cmbrol = new System.Windows.Forms.ComboBox();
+            this.rOLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSRolEdi = new WindowsFormsApp2.DSRolEdi();
             this.mUNICIPIOTableAdapter = new WindowsFormsApp2.DSMunicipioEdiTableAdapters.MUNICIPIOTableAdapter();
             this.eMPLEADOTableAdapter = new WindowsFormsApp2.DSEmpleadoEdiTableAdapters.EMPLEADOTableAdapter();
-            this.dSRolEdi = new WindowsFormsApp2.DSRolEdi();
-            this.rOLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rOLTableAdapter = new WindowsFormsApp2.DSRolEdiTableAdapters.ROLTableAdapter();
+            this.emidempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emusuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emcontraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emapellidopaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emapellidomaternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emtelefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emcalleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emnuminteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emnumexteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emcoloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emidmunicipioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSEmpleadoEdi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mUNICIPIOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSMunicipioEdi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSRolEdi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSRolEdi)).BeginInit();
             this.SuspendLayout();
             // 
             // txtcalle
@@ -197,97 +197,6 @@
             this.dgvempleados.Size = new System.Drawing.Size(1087, 328);
             this.dgvempleados.TabIndex = 48;
             this.dgvempleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvempleados_CellContentClick);
-            // 
-            // emidempleadoDataGridViewTextBoxColumn
-            // 
-            this.emidempleadoDataGridViewTextBoxColumn.DataPropertyName = "em_id_empleado";
-            this.emidempleadoDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.emidempleadoDataGridViewTextBoxColumn.Name = "emidempleadoDataGridViewTextBoxColumn";
-            this.emidempleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emusuarioDataGridViewTextBoxColumn
-            // 
-            this.emusuarioDataGridViewTextBoxColumn.DataPropertyName = "em_usuario";
-            this.emusuarioDataGridViewTextBoxColumn.HeaderText = "USUARIO";
-            this.emusuarioDataGridViewTextBoxColumn.Name = "emusuarioDataGridViewTextBoxColumn";
-            this.emusuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emcontraseñaDataGridViewTextBoxColumn
-            // 
-            this.emcontraseñaDataGridViewTextBoxColumn.DataPropertyName = "em_contraseña";
-            this.emcontraseñaDataGridViewTextBoxColumn.HeaderText = "CONTRASEÑA";
-            this.emcontraseñaDataGridViewTextBoxColumn.Name = "emcontraseñaDataGridViewTextBoxColumn";
-            this.emcontraseñaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emapellidopaternoDataGridViewTextBoxColumn
-            // 
-            this.emapellidopaternoDataGridViewTextBoxColumn.DataPropertyName = "em_apellido_paterno";
-            this.emapellidopaternoDataGridViewTextBoxColumn.HeaderText = "APELLIDO PATERNO";
-            this.emapellidopaternoDataGridViewTextBoxColumn.Name = "emapellidopaternoDataGridViewTextBoxColumn";
-            this.emapellidopaternoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emapellidomaternoDataGridViewTextBoxColumn
-            // 
-            this.emapellidomaternoDataGridViewTextBoxColumn.DataPropertyName = "em_apellido_materno";
-            this.emapellidomaternoDataGridViewTextBoxColumn.HeaderText = "APELLIDO MATERNO";
-            this.emapellidomaternoDataGridViewTextBoxColumn.Name = "emapellidomaternoDataGridViewTextBoxColumn";
-            this.emapellidomaternoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emtelefonoDataGridViewTextBoxColumn
-            // 
-            this.emtelefonoDataGridViewTextBoxColumn.DataPropertyName = "em_telefono";
-            this.emtelefonoDataGridViewTextBoxColumn.HeaderText = "TELEFONO";
-            this.emtelefonoDataGridViewTextBoxColumn.Name = "emtelefonoDataGridViewTextBoxColumn";
-            this.emtelefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emcalleDataGridViewTextBoxColumn
-            // 
-            this.emcalleDataGridViewTextBoxColumn.DataPropertyName = "em_calle";
-            this.emcalleDataGridViewTextBoxColumn.HeaderText = "CALLE";
-            this.emcalleDataGridViewTextBoxColumn.Name = "emcalleDataGridViewTextBoxColumn";
-            this.emcalleDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emnuminteriorDataGridViewTextBoxColumn
-            // 
-            this.emnuminteriorDataGridViewTextBoxColumn.DataPropertyName = "em_num_interior";
-            this.emnuminteriorDataGridViewTextBoxColumn.HeaderText = "#INTERIOR";
-            this.emnuminteriorDataGridViewTextBoxColumn.Name = "emnuminteriorDataGridViewTextBoxColumn";
-            this.emnuminteriorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emnumexteriorDataGridViewTextBoxColumn
-            // 
-            this.emnumexteriorDataGridViewTextBoxColumn.DataPropertyName = "em_num_exterior";
-            this.emnumexteriorDataGridViewTextBoxColumn.HeaderText = "#EXTERIOR";
-            this.emnumexteriorDataGridViewTextBoxColumn.Name = "emnumexteriorDataGridViewTextBoxColumn";
-            this.emnumexteriorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emcoloniaDataGridViewTextBoxColumn
-            // 
-            this.emcoloniaDataGridViewTextBoxColumn.DataPropertyName = "em_colonia";
-            this.emcoloniaDataGridViewTextBoxColumn.HeaderText = "COLONIA";
-            this.emcoloniaDataGridViewTextBoxColumn.Name = "emcoloniaDataGridViewTextBoxColumn";
-            this.emcoloniaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emidmunicipioDataGridViewTextBoxColumn
-            // 
-            this.emidmunicipioDataGridViewTextBoxColumn.DataPropertyName = "em_id_municipio";
-            this.emidmunicipioDataGridViewTextBoxColumn.HeaderText = "MUNICIPIO";
-            this.emidmunicipioDataGridViewTextBoxColumn.Name = "emidmunicipioDataGridViewTextBoxColumn";
-            this.emidmunicipioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emridDataGridViewTextBoxColumn
-            // 
-            this.emridDataGridViewTextBoxColumn.DataPropertyName = "em_r_id";
-            this.emridDataGridViewTextBoxColumn.HeaderText = "ROL";
-            this.emridDataGridViewTextBoxColumn.Name = "emridDataGridViewTextBoxColumn";
-            this.emridDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emstatusDataGridViewTextBoxColumn
-            // 
-            this.emstatusDataGridViewTextBoxColumn.DataPropertyName = "em_status";
-            this.emstatusDataGridViewTextBoxColumn.HeaderText = "STATUS";
-            this.emstatusDataGridViewTextBoxColumn.Name = "emstatusDataGridViewTextBoxColumn";
-            this.emstatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // eMPLEADOBindingSource
             // 
@@ -443,6 +352,7 @@
             // 
             this.txtcontraseña.Location = new System.Drawing.Point(159, 109);
             this.txtcontraseña.Name = "txtcontraseña";
+            this.txtcontraseña.PasswordChar = '*';
             this.txtcontraseña.Size = new System.Drawing.Size(337, 30);
             this.txtcontraseña.TabIndex = 4;
             // 
@@ -476,6 +386,16 @@
             this.cmbrol.TabIndex = 22;
             this.cmbrol.ValueMember = "r_id";
             // 
+            // rOLBindingSource
+            // 
+            this.rOLBindingSource.DataMember = "ROL";
+            this.rOLBindingSource.DataSource = this.dSRolEdi;
+            // 
+            // dSRolEdi
+            // 
+            this.dSRolEdi.DataSetName = "DSRolEdi";
+            this.dSRolEdi.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // mUNICIPIOTableAdapter
             // 
             this.mUNICIPIOTableAdapter.ClearBeforeFill = true;
@@ -484,19 +404,101 @@
             // 
             this.eMPLEADOTableAdapter.ClearBeforeFill = true;
             // 
-            // dSRolEdi
-            // 
-            this.dSRolEdi.DataSetName = "DSRolEdi";
-            this.dSRolEdi.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rOLBindingSource
-            // 
-            this.rOLBindingSource.DataMember = "ROL";
-            this.rOLBindingSource.DataSource = this.dSRolEdi;
-            // 
             // rOLTableAdapter
             // 
             this.rOLTableAdapter.ClearBeforeFill = true;
+            // 
+            // emidempleadoDataGridViewTextBoxColumn
+            // 
+            this.emidempleadoDataGridViewTextBoxColumn.DataPropertyName = "em_id_empleado";
+            this.emidempleadoDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.emidempleadoDataGridViewTextBoxColumn.Name = "emidempleadoDataGridViewTextBoxColumn";
+            this.emidempleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emusuarioDataGridViewTextBoxColumn
+            // 
+            this.emusuarioDataGridViewTextBoxColumn.DataPropertyName = "em_usuario";
+            this.emusuarioDataGridViewTextBoxColumn.HeaderText = "USUARIO";
+            this.emusuarioDataGridViewTextBoxColumn.Name = "emusuarioDataGridViewTextBoxColumn";
+            this.emusuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emcontraseñaDataGridViewTextBoxColumn
+            // 
+            this.emcontraseñaDataGridViewTextBoxColumn.DataPropertyName = "em_contraseña";
+            this.emcontraseñaDataGridViewTextBoxColumn.HeaderText = "CONTRASEÑA";
+            this.emcontraseñaDataGridViewTextBoxColumn.Name = "emcontraseñaDataGridViewTextBoxColumn";
+            this.emcontraseñaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emcontraseñaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // emapellidopaternoDataGridViewTextBoxColumn
+            // 
+            this.emapellidopaternoDataGridViewTextBoxColumn.DataPropertyName = "em_apellido_paterno";
+            this.emapellidopaternoDataGridViewTextBoxColumn.HeaderText = "APELLIDO PATERNO";
+            this.emapellidopaternoDataGridViewTextBoxColumn.Name = "emapellidopaternoDataGridViewTextBoxColumn";
+            this.emapellidopaternoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emapellidomaternoDataGridViewTextBoxColumn
+            // 
+            this.emapellidomaternoDataGridViewTextBoxColumn.DataPropertyName = "em_apellido_materno";
+            this.emapellidomaternoDataGridViewTextBoxColumn.HeaderText = "APELLIDO MATERNO";
+            this.emapellidomaternoDataGridViewTextBoxColumn.Name = "emapellidomaternoDataGridViewTextBoxColumn";
+            this.emapellidomaternoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emtelefonoDataGridViewTextBoxColumn
+            // 
+            this.emtelefonoDataGridViewTextBoxColumn.DataPropertyName = "em_telefono";
+            this.emtelefonoDataGridViewTextBoxColumn.HeaderText = "TELEFONO";
+            this.emtelefonoDataGridViewTextBoxColumn.Name = "emtelefonoDataGridViewTextBoxColumn";
+            this.emtelefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emcalleDataGridViewTextBoxColumn
+            // 
+            this.emcalleDataGridViewTextBoxColumn.DataPropertyName = "em_calle";
+            this.emcalleDataGridViewTextBoxColumn.HeaderText = "CALLE";
+            this.emcalleDataGridViewTextBoxColumn.Name = "emcalleDataGridViewTextBoxColumn";
+            this.emcalleDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emnuminteriorDataGridViewTextBoxColumn
+            // 
+            this.emnuminteriorDataGridViewTextBoxColumn.DataPropertyName = "em_num_interior";
+            this.emnuminteriorDataGridViewTextBoxColumn.HeaderText = "#INTERIOR";
+            this.emnuminteriorDataGridViewTextBoxColumn.Name = "emnuminteriorDataGridViewTextBoxColumn";
+            this.emnuminteriorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emnumexteriorDataGridViewTextBoxColumn
+            // 
+            this.emnumexteriorDataGridViewTextBoxColumn.DataPropertyName = "em_num_exterior";
+            this.emnumexteriorDataGridViewTextBoxColumn.HeaderText = "#EXTERIOR";
+            this.emnumexteriorDataGridViewTextBoxColumn.Name = "emnumexteriorDataGridViewTextBoxColumn";
+            this.emnumexteriorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emcoloniaDataGridViewTextBoxColumn
+            // 
+            this.emcoloniaDataGridViewTextBoxColumn.DataPropertyName = "em_colonia";
+            this.emcoloniaDataGridViewTextBoxColumn.HeaderText = "COLONIA";
+            this.emcoloniaDataGridViewTextBoxColumn.Name = "emcoloniaDataGridViewTextBoxColumn";
+            this.emcoloniaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emidmunicipioDataGridViewTextBoxColumn
+            // 
+            this.emidmunicipioDataGridViewTextBoxColumn.DataPropertyName = "em_id_municipio";
+            this.emidmunicipioDataGridViewTextBoxColumn.HeaderText = "MUNICIPIO";
+            this.emidmunicipioDataGridViewTextBoxColumn.Name = "emidmunicipioDataGridViewTextBoxColumn";
+            this.emidmunicipioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emridDataGridViewTextBoxColumn
+            // 
+            this.emridDataGridViewTextBoxColumn.DataPropertyName = "em_r_id";
+            this.emridDataGridViewTextBoxColumn.HeaderText = "ROL";
+            this.emridDataGridViewTextBoxColumn.Name = "emridDataGridViewTextBoxColumn";
+            this.emridDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emstatusDataGridViewTextBoxColumn
+            // 
+            this.emstatusDataGridViewTextBoxColumn.DataPropertyName = "em_status";
+            this.emstatusDataGridViewTextBoxColumn.HeaderText = "STATUS";
+            this.emstatusDataGridViewTextBoxColumn.Name = "emstatusDataGridViewTextBoxColumn";
+            this.emstatusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmempleados
             // 
@@ -543,8 +545,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dSEmpleadoEdi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mUNICIPIOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSMunicipioEdi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSRolEdi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rOLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSRolEdi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,6 +589,9 @@
         private DSEmpleadoEdi dSEmpleadoEdi;
         private System.Windows.Forms.BindingSource eMPLEADOBindingSource;
         private DSEmpleadoEdiTableAdapters.EMPLEADOTableAdapter eMPLEADOTableAdapter;
+        private DSRolEdi dSRolEdi;
+        private System.Windows.Forms.BindingSource rOLBindingSource;
+        private DSRolEdiTableAdapters.ROLTableAdapter rOLTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn emidempleadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emusuarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emcontraseñaDataGridViewTextBoxColumn;
@@ -600,8 +605,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emidmunicipioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emridDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emstatusDataGridViewTextBoxColumn;
-        private DSRolEdi dSRolEdi;
-        private System.Windows.Forms.BindingSource rOLBindingSource;
-        private DSRolEdiTableAdapters.ROLTableAdapter rOLTableAdapter;
     }
 }

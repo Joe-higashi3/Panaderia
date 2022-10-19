@@ -479,7 +479,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EMPLEADORow AddEMPLEADORow(string em_usuario, string em_contraseña, string em_apellido_paterno, string em_apellido_materno, string em_telefono, string em_calle, int em_num_interior, int em_num_exterior, string em_colonia, int em_id_municipio, int em_r_id, string em_status) {
+            public EMPLEADORow AddEMPLEADORow(string em_usuario, byte[] em_contraseña, string em_apellido_paterno, string em_apellido_materno, string em_telefono, string em_calle, int em_num_interior, int em_num_exterior, string em_colonia, int em_id_municipio, int em_r_id, string em_status) {
                 EMPLEADORow rowEMPLEADORow = ((EMPLEADORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -546,7 +546,7 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnem_id_empleado);
                 this.columnem_usuario = new global::System.Data.DataColumn("em_usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnem_usuario);
-                this.columnem_contraseña = new global::System.Data.DataColumn("em_contraseña", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnem_contraseña = new global::System.Data.DataColumn("em_contraseña", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnem_contraseña);
                 this.columnem_apellido_paterno = new global::System.Data.DataColumn("em_apellido_paterno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnem_apellido_paterno);
@@ -579,7 +579,6 @@ namespace WindowsFormsApp2 {
                 this.columnem_usuario.AllowDBNull = false;
                 this.columnem_usuario.MaxLength = 30;
                 this.columnem_contraseña.AllowDBNull = false;
-                this.columnem_contraseña.MaxLength = 30;
                 this.columnem_apellido_paterno.AllowDBNull = false;
                 this.columnem_apellido_paterno.MaxLength = 30;
                 this.columnem_apellido_materno.MaxLength = 30;
@@ -759,9 +758,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string em_contraseña {
+            public byte[] em_contraseña {
                 get {
-                    return ((string)(this[this.tableEMPLEADO.em_contraseñaColumn]));
+                    return ((byte[])(this[this.tableEMPLEADO.em_contraseñaColumn]));
                 }
                 set {
                     this[this.tableEMPLEADO.em_contraseñaColumn] = value;
