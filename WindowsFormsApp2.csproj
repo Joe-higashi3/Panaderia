@@ -66,11 +66,20 @@
     <Compile Include="clases\clsreceta.cs" />
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
-    <Compile Include="clases\pruebaperla.cs" />
+    <Compile Include="dsInsumosp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInsumosp.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsMunicipio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsunidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsunidad.xsd</DependentUpon>
     </Compile>
     <Compile Include="forms\frmclientes.cs">
       <SubType>Form</SubType>
@@ -83,6 +92,12 @@
     </Compile>
     <Compile Include="forms\frmempleados.Designer.cs">
       <DependentUpon>frmempleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frminsumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frminsumos.Designer.cs">
+      <DependentUpon>frminsumos.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\frmmenu.cs">
       <SubType>Form</SubType>
@@ -176,6 +191,9 @@
     <EmbeddedResource Include="forms\frmempleados.resx">
       <DependentUpon>frmempleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frminsumos.resx">
+      <DependentUpon>frminsumos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmmenu.resx">
       <DependentUpon>frmmenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +224,17 @@
     <EmbeddedResource Include="reportes\frmrepoventas.resx">
       <DependentUpon>frmrepoventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsInsumosp.xsc">
+      <DependentUpon>dsInsumosp.xsd</DependentUpon>
+    </None>
+    <None Include="dsInsumosp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInsumosp.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsInsumosp.xss">
+      <DependentUpon>dsInsumosp.xsd</DependentUpon>
+    </None>
     <None Include="DsMunicipio.xsc">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
     </None>
@@ -216,6 +245,17 @@
     </None>
     <None Include="DsMunicipio.xss">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </None>
+    <None Include="dsunidad.xsc">
+      <DependentUpon>dsunidad.xsd</DependentUpon>
+    </None>
+    <None Include="dsunidad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsunidad.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsunidad.xss">
+      <DependentUpon>dsunidad.xsd</DependentUpon>
     </None>
     <None Include="gruposDataSet.xsc">
       <DependentUpon>gruposDataSet.xsd</DependentUpon>
