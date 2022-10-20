@@ -40,7 +40,7 @@ namespace WindowsFormsApp2.forms
         private void GuardarCliente()
         {
             clscliente cliente = new clscliente();
-            cliente.iIdcliente = Convert.ToInt32(txtid.Text);
+            //cliente.iIdcliente = Convert.ToInt32(txtid.Text);
             cliente.sNombre = txtnombre.Text;
             cliente.sApellido_p = txtapellidop.Text;
             cliente.sApellido_m = txtapellidom.Text;
@@ -51,16 +51,27 @@ namespace WindowsFormsApp2.forms
             cliente.sColonia = txtcolonia.Text;
             cliente.iMunicipio = Convert.ToInt32(cmbxMunicipio.SelectedValue);
             cliente.sStatus = cmbxstatus.Text.Substring(0,1);
-            if (cliente.Guardar() == true)
+
+            if(ValidarDatos() == true)
             {
-                MessageBox.Show("Sus Datos se guardaron correctamente");
-                limpiar();
+
+                if (cliente.Guardar() == true)
+                {
+                    MessageBox.Show("Sus Datos se guardaron correctamente");
+                    limpiar();
+                }
+                else
+                {
+                    MessageBox.Show("Sus Datos no se pudieron guardar error: " + cliente.error);
+
+                }
+
             }
-            else
-            {
-                MessageBox.Show("Sus Datos no se pudieron guardar error: "+ cliente.error);
-                
-            }
+
+            
+
+
+
         }
         private void consecutivo()
         {
@@ -120,7 +131,16 @@ namespace WindowsFormsApp2.forms
         }
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            GuardarCliente();
+
+
+            if(ValidarDatos() == true)
+            {
+
+                GuardarCliente();
+
+            }
+              
+
         }
 
         private void txtid_KeyUp(object sender, KeyEventArgs e)
@@ -171,9 +191,267 @@ namespace WindowsFormsApp2.forms
             }
         }
 
+
+        // Validacion de los cuadros de Texto
+        private bool ValidarDatos() // Validar espacios en blanco y si no cumplen con las condiciones
+        {
+
+            bool validacion = true;
+
+            if(txttelefono.Text == "")
+            {
+
+                validacion = false;
+                errorTel.SetError(txttelefono, "Ingresar Telefono");
+
+             
+
+            }
+
+            if (txtnombre.Text == "")
+            {
+
+                validacion = false;
+                errorNombre.SetError(txtnombre, "Ingresar Nombre");
+
+                
+
+            }
+
+
+            if (txtapellidop.Text == "")
+            {
+
+                validacion = false;
+                errorApePat.SetError(txttelefono, "Ingresar Apellido Paterno");
+
+            }
+            if (txtapellidom.Text == "")
+            {
+
+                validacion = false;
+                errorApeMat.SetError(txttelefono, "Ingresar Apellido Materno");
+
+                
+            }
+            if (txtcolonia.Text == "")
+            {
+
+                validacion = false;
+                errorCol.SetError(txttelefono, "Ingresar Colonia");
+
+                
+
+            }
+
+            if (txtnumint.Text == "")
+            {
+
+                validacion = false;
+                errorNInte.SetError(txttelefono, "Ingresar Numero Interior");
+
+               
+            }
+            if (txtnumext.Text == "")
+            {
+
+                validacion = false;
+                errorrNumExt.SetError(txttelefono, "Ingresar Numero Exterior");
+
+               
+
+            }
+
+            if (txtcalle.Text == "")
+            {
+
+                validacion = false;
+                errorCalle.SetError(txttelefono, "Ingresar Calle");
+
+
+            }
+
+
+            return validacion;
+
+        }
+
+
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiar();
         }
+
+        private void txttelefono_Validating(object sender, CancelEventArgs e)
+        {
+
+            int num;
+            if(!int.TryParse(txttelefono.Text, out num))
+            {
+
+                errorTel.SetError(txttelefono, "Ingrese Solo Numeros");
+
+            }
+            else
+            {
+
+                errorTel.SetError(txttelefono, "");
+
+            }
+
+        }
+
+        private void txtnumint_Validating(object sender, CancelEventArgs e)
+        {
+
+            int ErrorNum;
+            if (!int.TryParse(txtnumint.Text, out ErrorNum))
+            {
+
+                errorNInte.SetError(txtnumint, "Ingrese Solo Numeros");
+
+            }
+            else
+            {
+
+                errorNInte.SetError(txtnumint, "");
+
+            }
+
+        }
+
+        private void txtnumext_Validating(object sender, CancelEventArgs e)
+        {
+
+            int ErrorNum;
+            if (!int.TryParse(txtnumext.Text, out ErrorNum))
+            {
+
+                errorrNumExt.SetError(txtnumext, "Ingrese Solo Numeros");
+
+            }
+            else
+            {
+
+                errorrNumExt.SetError(txtnumext, "");
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                errorNombre.SetError(txtnombre, "Ingrese solo Letras");
+
+
+            }
+            else
+            {
+                
+                errorNombre.SetError(txtnombre, "");
+
+            }
+
+        }
+
+
+
+
+        private void txtapellidop_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                errorApePat.SetError(txtapellidop, "Ingrese solo Letras");
+                
+
+            }
+            else
+            {
+
+                errorApePat.SetError(txtapellidop, "");
+
+            }
+
+        }
+
+        private void txtapellidom_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                errorApeMat.SetError(txtapellidom, "Ingrese solo Letras");
+               
+
+            }
+            else
+            {
+
+                errorApeMat.SetError(txtapellidom, "");
+
+            }
+
+        }
+
+        private void txtcolonia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                errorCol.SetError(txtcolonia, "Ingrese solo Letras");
+              
+
+            }
+            else
+            {
+
+                errorCol.SetError(txtcolonia, "");
+
+            }
+
+        }
+
+        private void txtcalle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+
+                errorCalle.SetError(txtcalle, "Ingrese solo Letras");
+
+            }
+
+            else
+            {
+
+                errorCalle.SetError(txtcalle, "");
+
+            }
+
+        }
+
+        private void txtnombre_Validating(object sender, CancelEventArgs e)
+        {
+
+            
+
+        }
+
     }
 }
