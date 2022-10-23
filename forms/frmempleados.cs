@@ -93,8 +93,8 @@ namespace WindowsFormsApp2.forms
         {
             txtusuario.Clear();
             txtcontraseña.Clear();
-            txtapaterno.Clear();
             txtamaterno.Clear();
+            txtapaterno.Clear();
             txtcolonia.Clear();
             txttelefono.Clear();
             txtcalle.Clear();
@@ -120,8 +120,8 @@ namespace WindowsFormsApp2.forms
             txtid.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_id_empleado.ToString();
             txtusuario.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_usuario.ToString();
             txtcontraseña.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_contraseña.ToString();
-            txtapaterno.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_apellido_paterno.ToString();
-            txtamaterno.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_apellido_materno.ToString();
+            txtamaterno.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_apellido_paterno.ToString();
+            txtapaterno.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_apellido_materno.ToString();
             txttelefono.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_telefono.ToString();
             txtcolonia.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_colonia.ToString();
             txtinterior.Text = this.dSEmpleadoEdi.EMPLEADO[eMPLEADOBindingSource.Position].em_num_interior.ToString();
