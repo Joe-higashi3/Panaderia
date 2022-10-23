@@ -27,13 +27,13 @@ namespace WindowsFormsApp2.forms
         private void GuardarProducto()
         {
             clsproducto producto = new clsproducto();
-            producto.iId_producto = Convert.ToInt32(txtid.Text);
-            producto.fPrecio99 = Convert.ToInt32(txtprecio.Text);
+            //producto.iId_producto = Convert.ToInt32(txtid.Text);
+            producto.fPrecio99 = float.Parse(txtprecio.Text);
             producto.sNombre = txtnombre.Text;
             producto.sDescripcion = txtdescripcion.Text;
             producto.iId_categoria = Convert.ToInt32(txtcategoria.Text);
             producto.sStatus = cmbxstatus.Text.Substring(0, 1);
-            producto.iId_unidad = Convert.ToInt32(txtunidad.Text);
+            producto.iCantidad = Convert.ToInt32(txtcantidad.Text);
 
             if (producto.GuardarProducto() == true)
             {
@@ -55,9 +55,10 @@ namespace WindowsFormsApp2.forms
             txtprecio.Clear();
             txtdescripcion.Clear();
             txtcategoria.Clear();
-            //agregar lo de status aqui
-            txtunidad.Clear();
+            txtcantidad.Clear();
             consecutivo();
+            this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetcatag.PRODUCTO);
+
         }
 
         private void consecutivo()
@@ -69,6 +70,7 @@ namespace WindowsFormsApp2.forms
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT ISNULL(MAX(pr_id_producto),0) + 1 AS consecutivo FROM PRODUCTO";
 
+            
             conn.Open();
             l = cmd.ExecuteReader();
             if (l.Read())
@@ -79,11 +81,9 @@ namespace WindowsFormsApp2.forms
 
         private void frmproductos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'panesitoDataSetproductomod1.PRODUCTO' Puede moverla o quitarla según sea necesario.
-            this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetproductomod1.PRODUCTO);
-            // TODO: esta línea de código carga datos en la tabla 'dataSetproducto.PRODUCTO' Puede moverla o quitarla según sea necesario.
-            this.pRODUCTOTableAdapter.Fill(this.dataSetproducto.PRODUCTO);
-            txtnombre.Focus();
+            txtprecio.Focus();
+            // TODO: esta línea de código carga datos en la tabla 'panesitoDataSetcatag.PRODUCTO' Puede moverla o quitarla según sea necesario.
+            this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetcatag.PRODUCTO);            
             consecutivo();
         }
 
@@ -94,14 +94,32 @@ namespace WindowsFormsApp2.forms
 
         private void dvgproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtid.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_id_producto.ToString();
-            txtprecio.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_precio.ToString();
-            txtnombre.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_nombre.ToString();
-            txtdescripcion.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_descripcion.ToString();
-            txtcategoria.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_id_categoria.ToString();
-            //agregar lo de estatus aqui
-            //agregar lo de unidad aqui
-            //txtunidad.Text = this.dataSetproducto.PRODUCTO[pRODUCTOBindingSource.Position].pr_unidad.ToString();
+            txtid.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_id_producto.ToString();
+            txtprecio.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_precio.ToString();
+            txtnombre.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_nombre.ToString();
+            txtdescripcion.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_descripcion.ToString();
+            txtcategoria.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_id_categoria.ToString();
+            txtcantidad.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_cantidad.ToString();
+            string sSTATUS;
+            sSTATUS = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_status.ToString();
+            switch (sSTATUS)
+            {
+                case "A":
+                    cmbxstatus.Text = "Activo";
+                break;
+                case "C":
+                    cmbxstatus.Text = "Cancelado";
+                break;
+                default:
+                    cmbxstatus.Text = "Activo";
+                break;
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

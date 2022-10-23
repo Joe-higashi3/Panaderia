@@ -17,7 +17,7 @@ namespace WindowsFormsApp2.clases
         public int iId_categoria { get; set; }
         public float fPrecio99 { get; set; }
         public string sStatus { get; set; }
-        public int iId_unidad { get; set; }
+        public int iCantidad { get; set; }
 
 
 
@@ -27,16 +27,16 @@ namespace WindowsFormsApp2.clases
             SqlCommand cmd = new SqlCommand("", conn);
             bool respuesta;
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "SP_producto";
+            cmd.CommandText = "pro_alm_producto_guardar";
 
             cmd.Parameters.AddWithValue("@OP", 1);
-            cmd.Parameters.AddWithValue("@IDPRODUCTO", iId_producto);
+            //cmd.Parameters.AddWithValue("@IDPRODUCTO", iId_producto);
             cmd.Parameters.AddWithValue("@NOMBRE", sNombre);
             cmd.Parameters.AddWithValue("@DESCRIPCION", sDescripcion);
             cmd.Parameters.AddWithValue("@CATEGORIA", iId_categoria);
-            cmd.Parameters.AddWithValue("@RECIO", fPrecio99);
+            cmd.Parameters.AddWithValue("@PRECIO", fPrecio99);
             cmd.Parameters.AddWithValue("@STATUS", sStatus);
-            //cmd.Parameters.AddWithValue("@UNIDAD", iId_unidad);
+            cmd.Parameters.AddWithValue("@CANTIDAD", iCantidad);
 
             try
             {

@@ -67,20 +67,10 @@
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
     <Compile Include="clases\prubea.cs" />
-    <Compile Include="DataSetproductosmod1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetproductosmod1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DsMunicipio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="forms\DataSetproducto.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetproducto.xsd</DependentUpon>
     </Compile>
     <Compile Include="forms\frmclientes.cs">
       <SubType>Form</SubType>
@@ -139,10 +129,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>panesitoDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="panesitoDataSetproductomod1.Designer.cs">
+    <Compile Include="panesitoDataSetcatag.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>panesitoDataSetproductomod1.xsd</DependentUpon>
+      <DependentUpon>panesitoDataSetcatag.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,17 +187,6 @@
     <EmbeddedResource Include="reportes\frmrepoventas.resx">
       <DependentUpon>frmrepoventas.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSetproductosmod1.xsc">
-      <DependentUpon>DataSetproductosmod1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetproductosmod1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetproductosmod1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetproductosmod1.xss">
-      <DependentUpon>DataSetproductosmod1.xsd</DependentUpon>
-    </None>
     <None Include="DsMunicipio.xsc">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
     </None>
@@ -218,17 +197,6 @@
     </None>
     <None Include="DsMunicipio.xss">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
-    </None>
-    <None Include="forms\DataSetproducto.xsc">
-      <DependentUpon>DataSetproducto.xsd</DependentUpon>
-    </None>
-    <None Include="forms\DataSetproducto.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetproducto.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="forms\DataSetproducto.xss">
-      <DependentUpon>DataSetproducto.xsd</DependentUpon>
     </None>
     <None Include="panesitoDataSet.xsc">
       <DependentUpon>panesitoDataSet.xsd</DependentUpon>
@@ -263,16 +231,16 @@
     <None Include="panesitoDataSet2.xss">
       <DependentUpon>panesitoDataSet2.xsd</DependentUpon>
     </None>
-    <None Include="panesitoDataSetproductomod1.xsc">
-      <DependentUpon>panesitoDataSetproductomod1.xsd</DependentUpon>
+    <None Include="panesitoDataSetcatag.xsc">
+      <DependentUpon>panesitoDataSetcatag.xsd</DependentUpon>
     </None>
-    <None Include="panesitoDataSetproductomod1.xsd">
+    <None Include="panesitoDataSetcatag.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>panesitoDataSetproductomod1.Designer.cs</LastGenOutput>
+      <LastGenOutput>panesitoDataSetcatag.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="panesitoDataSetproductomod1.xss">
-      <DependentUpon>panesitoDataSetproductomod1.xsd</DependentUpon>
+    <None Include="panesitoDataSetcatag.xss">
+      <DependentUpon>panesitoDataSetcatag.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
