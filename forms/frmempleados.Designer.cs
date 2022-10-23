@@ -77,8 +77,8 @@
             this.emnuminteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emnumexteriorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emcoloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emidmunicipioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mu_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r_tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOBindingSource)).BeginInit();
@@ -186,15 +186,15 @@
             this.emnuminteriorDataGridViewTextBoxColumn,
             this.emnumexteriorDataGridViewTextBoxColumn,
             this.emcoloniaDataGridViewTextBoxColumn,
-            this.emidmunicipioDataGridViewTextBoxColumn,
-            this.emridDataGridViewTextBoxColumn,
+            this.mu_descripcion,
+            this.r_tipo,
             this.emstatusDataGridViewTextBoxColumn});
             this.dgvempleados.DataSource = this.eMPLEADOBindingSource;
             this.dgvempleados.Location = new System.Drawing.Point(27, 293);
             this.dgvempleados.Name = "dgvempleados";
             this.dgvempleados.ReadOnly = true;
             this.dgvempleados.RowTemplate.Height = 24;
-            this.dgvempleados.Size = new System.Drawing.Size(1087, 328);
+            this.dgvempleados.Size = new System.Drawing.Size(1208, 328);
             this.dgvempleados.TabIndex = 48;
             this.dgvempleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvempleados_CellContentClick);
             // 
@@ -479,19 +479,19 @@
             this.emcoloniaDataGridViewTextBoxColumn.Name = "emcoloniaDataGridViewTextBoxColumn";
             this.emcoloniaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // emidmunicipioDataGridViewTextBoxColumn
+            // mu_descripcion
             // 
-            this.emidmunicipioDataGridViewTextBoxColumn.DataPropertyName = "em_id_municipio";
-            this.emidmunicipioDataGridViewTextBoxColumn.HeaderText = "MUNICIPIO";
-            this.emidmunicipioDataGridViewTextBoxColumn.Name = "emidmunicipioDataGridViewTextBoxColumn";
-            this.emidmunicipioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.mu_descripcion.DataPropertyName = "mu_descripcion";
+            this.mu_descripcion.HeaderText = "MUNICIPIO";
+            this.mu_descripcion.Name = "mu_descripcion";
+            this.mu_descripcion.ReadOnly = true;
             // 
-            // emridDataGridViewTextBoxColumn
+            // r_tipo
             // 
-            this.emridDataGridViewTextBoxColumn.DataPropertyName = "em_r_id";
-            this.emridDataGridViewTextBoxColumn.HeaderText = "ROL";
-            this.emridDataGridViewTextBoxColumn.Name = "emridDataGridViewTextBoxColumn";
-            this.emridDataGridViewTextBoxColumn.ReadOnly = true;
+            this.r_tipo.DataPropertyName = "r_tipo";
+            this.r_tipo.HeaderText = "ROL";
+            this.r_tipo.Name = "r_tipo";
+            this.r_tipo.ReadOnly = true;
             // 
             // emstatusDataGridViewTextBoxColumn
             // 
@@ -504,7 +504,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 633);
+            this.ClientSize = new System.Drawing.Size(1237, 650);
             this.Controls.Add(this.cmbrol);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtcontraseña);
@@ -602,8 +602,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emnuminteriorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emnumexteriorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emcoloniaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emidmunicipioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mu_descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn r_tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn emstatusDataGridViewTextBoxColumn;
     }
 }

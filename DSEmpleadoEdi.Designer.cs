@@ -299,11 +299,15 @@ namespace WindowsFormsApp2 {
             
             private global::System.Data.DataColumn columnem_colonia;
             
+            private global::System.Data.DataColumn columnem_status;
+            
             private global::System.Data.DataColumn columnem_id_municipio;
             
             private global::System.Data.DataColumn columnem_r_id;
             
-            private global::System.Data.DataColumn columnem_status;
+            private global::System.Data.DataColumn columnmu_descripcion;
+            
+            private global::System.Data.DataColumn columnr_tipo;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -420,6 +424,14 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn em_statusColumn {
+                get {
+                    return this.columnem_status;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn em_id_municipioColumn {
                 get {
                     return this.columnem_id_municipio;
@@ -436,9 +448,17 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn em_statusColumn {
+            public global::System.Data.DataColumn mu_descripcionColumn {
                 get {
-                    return this.columnem_status;
+                    return this.columnmu_descripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn r_tipoColumn {
+                get {
+                    return this.columnr_tipo;
                 }
             }
             
@@ -479,7 +499,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EMPLEADORow AddEMPLEADORow(string em_usuario, byte[] em_contraseña, string em_apellido_paterno, string em_apellido_materno, string em_telefono, string em_calle, int em_num_interior, int em_num_exterior, string em_colonia, int em_id_municipio, int em_r_id, string em_status) {
+            public EMPLEADORow AddEMPLEADORow(string em_usuario, byte[] em_contraseña, string em_apellido_paterno, string em_apellido_materno, string em_telefono, string em_calle, int em_num_interior, int em_num_exterior, string em_colonia, string em_status, int em_id_municipio, int em_r_id, string mu_descripcion, string r_tipo) {
                 EMPLEADORow rowEMPLEADORow = ((EMPLEADORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -492,9 +512,11 @@ namespace WindowsFormsApp2 {
                         em_num_interior,
                         em_num_exterior,
                         em_colonia,
+                        em_status,
                         em_id_municipio,
                         em_r_id,
-                        em_status};
+                        mu_descripcion,
+                        r_tipo};
                 rowEMPLEADORow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEMPLEADORow);
                 return rowEMPLEADORow;
@@ -534,9 +556,11 @@ namespace WindowsFormsApp2 {
                 this.columnem_num_interior = base.Columns["em_num_interior"];
                 this.columnem_num_exterior = base.Columns["em_num_exterior"];
                 this.columnem_colonia = base.Columns["em_colonia"];
+                this.columnem_status = base.Columns["em_status"];
                 this.columnem_id_municipio = base.Columns["em_id_municipio"];
                 this.columnem_r_id = base.Columns["em_r_id"];
-                this.columnem_status = base.Columns["em_status"];
+                this.columnmu_descripcion = base.Columns["mu_descripcion"];
+                this.columnr_tipo = base.Columns["r_tipo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -562,12 +586,16 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnem_num_exterior);
                 this.columnem_colonia = new global::System.Data.DataColumn("em_colonia", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnem_colonia);
+                this.columnem_status = new global::System.Data.DataColumn("em_status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnem_status);
                 this.columnem_id_municipio = new global::System.Data.DataColumn("em_id_municipio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnem_id_municipio);
                 this.columnem_r_id = new global::System.Data.DataColumn("em_r_id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnem_r_id);
-                this.columnem_status = new global::System.Data.DataColumn("em_status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnem_status);
+                this.columnmu_descripcion = new global::System.Data.DataColumn("mu_descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmu_descripcion);
+                this.columnr_tipo = new global::System.Data.DataColumn("r_tipo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnr_tipo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnem_id_empleado}, true));
                 this.columnem_id_empleado.AutoIncrement = true;
@@ -590,10 +618,14 @@ namespace WindowsFormsApp2 {
                 this.columnem_num_exterior.AllowDBNull = false;
                 this.columnem_colonia.AllowDBNull = false;
                 this.columnem_colonia.MaxLength = 30;
-                this.columnem_id_municipio.AllowDBNull = false;
-                this.columnem_r_id.AllowDBNull = false;
                 this.columnem_status.AllowDBNull = false;
                 this.columnem_status.MaxLength = 1;
+                this.columnem_id_municipio.AllowDBNull = false;
+                this.columnem_r_id.AllowDBNull = false;
+                this.columnmu_descripcion.AllowDBNull = false;
+                this.columnmu_descripcion.MaxLength = 100;
+                this.columnr_tipo.AllowDBNull = false;
+                this.columnr_tipo.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -851,6 +883,17 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string em_status {
+                get {
+                    return ((string)(this[this.tableEMPLEADO.em_statusColumn]));
+                }
+                set {
+                    this[this.tableEMPLEADO.em_statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int em_id_municipio {
                 get {
                     return ((int)(this[this.tableEMPLEADO.em_id_municipioColumn]));
@@ -873,12 +916,23 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string em_status {
+            public string mu_descripcion {
                 get {
-                    return ((string)(this[this.tableEMPLEADO.em_statusColumn]));
+                    return ((string)(this[this.tableEMPLEADO.mu_descripcionColumn]));
                 }
                 set {
-                    this[this.tableEMPLEADO.em_statusColumn] = value;
+                    this[this.tableEMPLEADO.mu_descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string r_tipo {
+                get {
+                    return ((string)(this[this.tableEMPLEADO.r_tipoColumn]));
+                }
+                set {
+                    this[this.tableEMPLEADO.r_tipoColumn] = value;
                 }
             }
             
@@ -1064,9 +1118,11 @@ namespace WindowsFormsApp2.DSEmpleadoEdiTableAdapters {
             tableMapping.ColumnMappings.Add("em_num_interior", "em_num_interior");
             tableMapping.ColumnMappings.Add("em_num_exterior", "em_num_exterior");
             tableMapping.ColumnMappings.Add("em_colonia", "em_colonia");
+            tableMapping.ColumnMappings.Add("em_status", "em_status");
             tableMapping.ColumnMappings.Add("em_id_municipio", "em_id_municipio");
             tableMapping.ColumnMappings.Add("em_r_id", "em_r_id");
-            tableMapping.ColumnMappings.Add("em_status", "em_status");
+            tableMapping.ColumnMappings.Add("mu_descripcion", "mu_descripcion");
+            tableMapping.ColumnMappings.Add("r_tipo", "r_tipo");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1150,9 +1206,11 @@ SELECT em_id_empleado, em_usuario, em_contraseña, em_apellido_paterno, em_apell
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT em_id_empleado, em_usuario, em_contraseña, em_apellido_paterno, em_apellid" +
-                "o_materno, em_telefono, em_calle, em_num_interior, em_num_exterior, em_colonia, " +
-                "em_id_municipio, em_r_id, em_status FROM dbo.EMPLEADO";
+            this._commandCollection[0].CommandText = @"SELECT E.em_id_empleado, E.em_usuario, E.em_contraseña, E.em_apellido_paterno, E.em_apellido_materno, E.em_telefono, E.em_calle, E.em_num_interior, E.em_num_exterior, E.em_colonia, E.em_id_municipio, M.mu_descripcion, E.em_r_id, 
+                  R.r_tipo, E.em_status
+FROM     EMPLEADO AS E INNER JOIN
+                  MUNICIPIO AS M ON E.em_id_municipio = M.mu_id_municipio INNER JOIN
+                  ROL AS R ON E.em_r_id = R.r_id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
