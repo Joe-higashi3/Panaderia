@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using WindowsFormsApp2.clases;
+using System.Globalization;
 
 namespace WindowsFormsApp2
 {
@@ -45,6 +46,13 @@ namespace WindowsFormsApp2
             clspedido pedido = new clspedido();
             pedido.iId_cliente = Convert.ToInt32(txtid.Text);
             pedido.iId_empleado = Convert.ToInt32(txtclienteid.Text);
+            // DateTime d_fecha = Convert.ToDateTime(dtpfecha.Value.Date.ToString("MM/dd/yyyy"));
+            //  pedido.d_fecha = Convert.ToDateTime(dtpfecha.Value.Date.ToString("MM/dd/yyyy"));
+       //      pedido.d_fecha = DateTime.Parse(dtpfecha.Text);
+        //   pedido.d_fecha = Convert.ToDateTime(String.Format("{0:MM/dd/yyyy hh:mm:ss}", dtpfecha.Text));
+           // DateTime d_fecha = Convert.ToDateTime(dtpfecha, CultureInfo.InvariantCulture);
+           
+
             pedido.bStatus_pedido = txtstatus.Text;
             if (pedido.Guardar() == true)
             {
@@ -79,6 +87,7 @@ namespace WindowsFormsApp2
         {
             txtid.Clear();
             txtclienteid.Clear();
+            txtEmpleado.Clear();
             txtstatus.Clear();
          //   this.pEDIDOTableAdapter1.Fill(this.panesitoDataSet4.PEDIDO);
         }

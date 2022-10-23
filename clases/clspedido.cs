@@ -14,6 +14,7 @@ namespace WindowsFormsApp2.clases
         public int iId_pedido { get; set; }
         public int iId_cliente { get; set; }
         public int iId_empleado { get; set; }
+        public DateTime d_fecha { get; set; }
         public string bStatus_pedido { get; set; }
 
         public bool Guardar()
@@ -28,6 +29,7 @@ namespace WindowsFormsApp2.clases
             cmd.Parameters.AddWithValue("@IDPEDIDO", iId_pedido);
             cmd.Parameters.AddWithValue("@IDCLIENTE", iId_cliente);
             cmd.Parameters.AddWithValue("@IDEMPLEADO", iId_empleado);
+            cmd.Parameters.Add(new SqlParameter("@FECHA", SqlDbType.DateTime)).Value = d_fecha;
             cmd.Parameters.AddWithValue("@STATUS", bStatus_pedido);
             try
             {

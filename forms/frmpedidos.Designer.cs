@@ -35,6 +35,14 @@
             this.btnactualizar = new System.Windows.Forms.Button();
             this.btninsertar = new System.Windows.Forms.Button();
             this.dgvarticulos = new System.Windows.Forms.DataGridView();
+            this.peidpedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peidclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peidempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pefechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peestatuspedidoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pEDIDOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.panesitoDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panesitoDataSet5 = new WindowsFormsApp2.panesitoDataSet5();
             this.fKPEDIDODEpdid36B12243BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pEDIDOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panesitoDataSetPedBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,31 +59,23 @@
             this.fKPEDIDODEpdid36B12243BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pEDIDO_DETALLETableAdapter1 = new WindowsFormsApp2.panesitoDataSetPedTableAdapters.PEDIDO_DETALLETableAdapter();
             this.pEDIDOBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.panesitoDataSet5 = new WindowsFormsApp2.panesitoDataSet5();
-            this.panesitoDataSet5BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panesitoDataSet6 = new WindowsFormsApp2.panesitoDataSet6();
             this.panesitoDataSet6BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pEDIDOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.pEDIDOTableAdapter2 = new WindowsFormsApp2.panesitoDataSet5TableAdapters.PEDIDOTableAdapter();
-            this.peidpedidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peidclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peidempleadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pefechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peestatuspedidoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet5BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPEDIDODEpdid36B12243BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetPedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetPed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPEDIDODEpdid36B12243BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet5BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet6BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpfecha
@@ -97,7 +97,7 @@
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(133, 29);
             this.btnsalir.TabIndex = 37;
-            this.btnsalir.Text = "Mostrar";
+            this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
             // 
             // btneliminar
@@ -108,7 +108,7 @@
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(133, 29);
             this.btneliminar.TabIndex = 36;
-            this.btneliminar.Text = "Deshabilitar";
+            this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
             // 
@@ -156,6 +156,56 @@
             this.dgvarticulos.Size = new System.Drawing.Size(552, 250);
             this.dgvarticulos.TabIndex = 34;
             this.dgvarticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvarticulos_CellContentClick);
+            // 
+            // peidpedidoDataGridViewTextBoxColumn
+            // 
+            this.peidpedidoDataGridViewTextBoxColumn.DataPropertyName = "pe_id_pedido";
+            this.peidpedidoDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.peidpedidoDataGridViewTextBoxColumn.Name = "peidpedidoDataGridViewTextBoxColumn";
+            this.peidpedidoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peidclienteDataGridViewTextBoxColumn
+            // 
+            this.peidclienteDataGridViewTextBoxColumn.DataPropertyName = "pe_id_cliente";
+            this.peidclienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
+            this.peidclienteDataGridViewTextBoxColumn.Name = "peidclienteDataGridViewTextBoxColumn";
+            this.peidclienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peidempleadoDataGridViewTextBoxColumn
+            // 
+            this.peidempleadoDataGridViewTextBoxColumn.DataPropertyName = "pe_id_empleado";
+            this.peidempleadoDataGridViewTextBoxColumn.HeaderText = "ID Empleado";
+            this.peidempleadoDataGridViewTextBoxColumn.Name = "peidempleadoDataGridViewTextBoxColumn";
+            this.peidempleadoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pefechaDataGridViewTextBoxColumn
+            // 
+            this.pefechaDataGridViewTextBoxColumn.DataPropertyName = "pe_fecha";
+            this.pefechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.pefechaDataGridViewTextBoxColumn.Name = "pefechaDataGridViewTextBoxColumn";
+            this.pefechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // peestatuspedidoDataGridViewCheckBoxColumn
+            // 
+            this.peestatuspedidoDataGridViewCheckBoxColumn.DataPropertyName = "pe_estatus_pedido";
+            this.peestatuspedidoDataGridViewCheckBoxColumn.HeaderText = "Status";
+            this.peestatuspedidoDataGridViewCheckBoxColumn.Name = "peestatuspedidoDataGridViewCheckBoxColumn";
+            this.peestatuspedidoDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // pEDIDOBindingSource2
+            // 
+            this.pEDIDOBindingSource2.DataMember = "PEDIDO";
+            this.pEDIDOBindingSource2.DataSource = this.panesitoDataSet5BindingSource;
+            // 
+            // panesitoDataSet5BindingSource
+            // 
+            this.panesitoDataSet5BindingSource.DataSource = this.panesitoDataSet5;
+            this.panesitoDataSet5BindingSource.Position = 0;
+            // 
+            // panesitoDataSet5
+            // 
+            this.panesitoDataSet5.DataSetName = "panesitoDataSet5";
+            this.panesitoDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // fKPEDIDODEpdid36B12243BindingSource1
             // 
@@ -260,16 +310,6 @@
             this.pEDIDOBindingSource1.DataMember = "PEDIDO";
             this.pEDIDOBindingSource1.DataSource = this.panesitoDataSetPedBindingSource;
             // 
-            // panesitoDataSet5
-            // 
-            this.panesitoDataSet5.DataSetName = "panesitoDataSet5";
-            this.panesitoDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // panesitoDataSet5BindingSource
-            // 
-            this.panesitoDataSet5BindingSource.DataSource = this.panesitoDataSet5;
-            this.panesitoDataSet5BindingSource.Position = 0;
-            // 
             // panesitoDataSet6
             // 
             this.panesitoDataSet6.DataSetName = "panesitoDataSet6";
@@ -280,49 +320,9 @@
             this.panesitoDataSet6BindingSource.DataSource = this.panesitoDataSet6;
             this.panesitoDataSet6BindingSource.Position = 0;
             // 
-            // pEDIDOBindingSource2
-            // 
-            this.pEDIDOBindingSource2.DataMember = "PEDIDO";
-            this.pEDIDOBindingSource2.DataSource = this.panesitoDataSet5BindingSource;
-            // 
             // pEDIDOTableAdapter2
             // 
             this.pEDIDOTableAdapter2.ClearBeforeFill = true;
-            // 
-            // peidpedidoDataGridViewTextBoxColumn
-            // 
-            this.peidpedidoDataGridViewTextBoxColumn.DataPropertyName = "pe_id_pedido";
-            this.peidpedidoDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.peidpedidoDataGridViewTextBoxColumn.Name = "peidpedidoDataGridViewTextBoxColumn";
-            this.peidpedidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // peidclienteDataGridViewTextBoxColumn
-            // 
-            this.peidclienteDataGridViewTextBoxColumn.DataPropertyName = "pe_id_cliente";
-            this.peidclienteDataGridViewTextBoxColumn.HeaderText = "ID Cliente";
-            this.peidclienteDataGridViewTextBoxColumn.Name = "peidclienteDataGridViewTextBoxColumn";
-            this.peidclienteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // peidempleadoDataGridViewTextBoxColumn
-            // 
-            this.peidempleadoDataGridViewTextBoxColumn.DataPropertyName = "pe_id_empleado";
-            this.peidempleadoDataGridViewTextBoxColumn.HeaderText = "ID Empleado";
-            this.peidempleadoDataGridViewTextBoxColumn.Name = "peidempleadoDataGridViewTextBoxColumn";
-            this.peidempleadoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pefechaDataGridViewTextBoxColumn
-            // 
-            this.pefechaDataGridViewTextBoxColumn.DataPropertyName = "pe_fecha";
-            this.pefechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.pefechaDataGridViewTextBoxColumn.Name = "pefechaDataGridViewTextBoxColumn";
-            this.pefechaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // peestatuspedidoDataGridViewCheckBoxColumn
-            // 
-            this.peestatuspedidoDataGridViewCheckBoxColumn.DataPropertyName = "pe_estatus_pedido";
-            this.peestatuspedidoDataGridViewCheckBoxColumn.HeaderText = "Status";
-            this.peestatuspedidoDataGridViewCheckBoxColumn.Name = "peestatuspedidoDataGridViewCheckBoxColumn";
-            this.peestatuspedidoDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // txtEmpleado
             // 
@@ -364,22 +364,24 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmpedidos";
             this.Text = "frmpedidos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet5BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPEDIDODEpdid36B12243BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetPedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetPed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPEDIDODEpdid36B12243BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet5BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet6BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
