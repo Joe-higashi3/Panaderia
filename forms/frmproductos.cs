@@ -27,7 +27,7 @@ namespace WindowsFormsApp2.forms
         private void GuardarProducto()
         {
             clsproducto producto = new clsproducto();
-            //producto.iId_producto = Convert.ToInt32(txtid.Text);
+            producto.iId_producto = Convert.ToInt32(txtid.Text);
             producto.fPrecio99 = float.Parse(txtprecio.Text);
             producto.sNombre = txtnombre.Text;
             producto.sDescripcion = txtdescripcion.Text;

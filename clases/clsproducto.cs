@@ -30,7 +30,7 @@ namespace WindowsFormsApp2.clases
             cmd.CommandText = "pro_alm_producto_guardar";
 
             cmd.Parameters.AddWithValue("@OP", 1);
-            //cmd.Parameters.AddWithValue("@IDPRODUCTO", iId_producto);
+            cmd.Parameters.AddWithValue("@IDPRODUCTO", iId_producto);
             cmd.Parameters.AddWithValue("@NOMBRE", sNombre);
             cmd.Parameters.AddWithValue("@DESCRIPCION", sDescripcion);
             cmd.Parameters.AddWithValue("@CATEGORIA", iId_categoria);
