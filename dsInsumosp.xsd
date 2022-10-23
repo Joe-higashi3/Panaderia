@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="INSUMOTableAdapter" GeneratorDataComponentClassName="INSUMOTableAdapter" Name="INSUMO" UserDataComponentName="INSUMOTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="panesitoConnectionString1 (Settings)" DbObjectName="panesito.dbo.INSUMO" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="panesitoConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [INSUMO] WHERE (([in_id_insumo] = @Original_in_id_insumo) AND ([in_nombre] = @Original_in_nombre) AND ([in_precio] = @Original_in_precio) AND ([in_status] = @Original_in_status) AND ([in_cantidad] = @Original_in_cantidad) AND ([in_id_unidad] = @Original_in_id_unidad))</CommandText>
@@ -37,8 +37,9 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status FROM INSUMO WHERE (in_id_in
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT        in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad
-FROM            INSUMO</CommandText>
+                    <CommandText>SELECT        INSUMO.in_id_insumo, INSUMO.in_nombre, INSUMO.in_precio, INSUMO.in_status, INSUMO.in_cantidad, INSUMO.in_id_unidad, UN.un_descripcion
+FROM            INSUMO INNER JOIN
+                         UNIDAD AS UN ON INSUMO.in_id_unidad = UN.un_id_unidad</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -71,6 +72,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
               <Mapping SourceColumn="in_status" DataSetColumn="in_status" />
               <Mapping SourceColumn="in_cantidad" DataSetColumn="in_cantidad" />
               <Mapping SourceColumn="in_id_unidad" DataSetColumn="in_id_unidad" />
+              <Mapping SourceColumn="un_descripcion" DataSetColumn="un_descripcion" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -82,7 +84,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
   <xs:element name="dsInsumosp" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dsInsumosp" msprop:Generator_UserDSName="dsInsumosp">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="INSUMO" msprop:Generator_TableClassName="INSUMODataTable" msprop:Generator_TableVarName="tableINSUMO" msprop:Generator_RowChangedName="INSUMORowChanged" msprop:Generator_TablePropName="INSUMO" msprop:Generator_RowDeletingName="INSUMORowDeleting" msprop:Generator_RowChangingName="INSUMORowChanging" msprop:Generator_RowEvHandlerName="INSUMORowChangeEventHandler" msprop:Generator_RowDeletedName="INSUMORowDeleted" msprop:Generator_RowClassName="INSUMORow" msprop:Generator_UserTableName="INSUMO" msprop:Generator_RowEvArgName="INSUMORowChangeEvent">
+        <xs:element name="INSUMO" msprop:Generator_TableClassName="INSUMODataTable" msprop:Generator_TableVarName="tableINSUMO" msprop:Generator_TablePropName="INSUMO" msprop:Generator_RowDeletingName="INSUMORowDeleting" msprop:Generator_RowChangingName="INSUMORowChanging" msprop:Generator_RowEvHandlerName="INSUMORowChangeEventHandler" msprop:Generator_RowDeletedName="INSUMORowDeleted" msprop:Generator_UserTableName="INSUMO" msprop:Generator_RowChangedName="INSUMORowChanged" msprop:Generator_RowEvArgName="INSUMORowChangeEvent" msprop:Generator_RowClassName="INSUMORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="in_id_insumo" msprop:Generator_ColumnVarNameInTable="columnin_id_insumo" msprop:Generator_ColumnPropNameInRow="in_id_insumo" msprop:Generator_ColumnPropNameInTable="in_id_insumoColumn" msprop:Generator_UserColumnName="in_id_insumo" type="xs:int" />
@@ -103,6 +105,13 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
               </xs:element>
               <xs:element name="in_cantidad" msprop:Generator_ColumnVarNameInTable="columnin_cantidad" msprop:Generator_ColumnPropNameInRow="in_cantidad" msprop:Generator_ColumnPropNameInTable="in_cantidadColumn" msprop:Generator_UserColumnName="in_cantidad" type="xs:double" />
               <xs:element name="in_id_unidad" msprop:Generator_ColumnVarNameInTable="columnin_id_unidad" msprop:Generator_ColumnPropNameInRow="in_id_unidad" msprop:Generator_ColumnPropNameInTable="in_id_unidadColumn" msprop:Generator_UserColumnName="in_id_unidad" type="xs:int" />
+              <xs:element name="un_descripcion" msprop:Generator_ColumnVarNameInTable="columnun_descripcion" msprop:Generator_ColumnPropNameInRow="un_descripcion" msprop:Generator_ColumnPropNameInTable="un_descripcionColumn" msprop:Generator_UserColumnName="un_descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>

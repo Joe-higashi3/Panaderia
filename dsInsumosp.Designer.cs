@@ -291,6 +291,8 @@ namespace WindowsFormsApp2 {
             
             private global::System.Data.DataColumn columnin_id_unidad;
             
+            private global::System.Data.DataColumn columnun_descripcion;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public INSUMODataTable() {
@@ -374,6 +376,14 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn un_descripcionColumn {
+                get {
+                    return this.columnun_descripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public INSUMORow AddINSUMORow(int in_id_insumo, string in_nombre, double in_precio, string in_status, double in_cantidad, int in_id_unidad) {
+            public INSUMORow AddINSUMORow(int in_id_insumo, string in_nombre, double in_precio, string in_status, double in_cantidad, int in_id_unidad, string un_descripcion) {
                 INSUMORow rowINSUMORow = ((INSUMORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         in_id_insumo,
@@ -417,7 +427,8 @@ namespace WindowsFormsApp2 {
                         in_precio,
                         in_status,
                         in_cantidad,
-                        in_id_unidad};
+                        in_id_unidad,
+                        un_descripcion};
                 rowINSUMORow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowINSUMORow);
                 return rowINSUMORow;
@@ -453,6 +464,7 @@ namespace WindowsFormsApp2 {
                 this.columnin_status = base.Columns["in_status"];
                 this.columnin_cantidad = base.Columns["in_cantidad"];
                 this.columnin_id_unidad = base.Columns["in_id_unidad"];
+                this.columnun_descripcion = base.Columns["un_descripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -470,6 +482,8 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnin_cantidad);
                 this.columnin_id_unidad = new global::System.Data.DataColumn("in_id_unidad", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnin_id_unidad);
+                this.columnun_descripcion = new global::System.Data.DataColumn("un_descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnun_descripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnin_id_insumo}, true));
                 this.columnin_id_insumo.AllowDBNull = false;
@@ -481,6 +495,8 @@ namespace WindowsFormsApp2 {
                 this.columnin_status.MaxLength = 1;
                 this.columnin_cantidad.AllowDBNull = false;
                 this.columnin_id_unidad.AllowDBNull = false;
+                this.columnun_descripcion.AllowDBNull = false;
+                this.columnun_descripcion.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -686,6 +702,17 @@ namespace WindowsFormsApp2 {
                     this[this.tableINSUMO.in_id_unidadColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string un_descripcion {
+                get {
+                    return ((string)(this[this.tableINSUMO.un_descripcionColumn]));
+                }
+                set {
+                    this[this.tableINSUMO.un_descripcionColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -853,6 +880,7 @@ namespace WindowsFormsApp2.dsInsumospTableAdapters {
             tableMapping.ColumnMappings.Add("in_status", "in_status");
             tableMapping.ColumnMappings.Add("in_cantidad", "in_cantidad");
             tableMapping.ColumnMappings.Add("in_id_unidad", "in_id_unidad");
+            tableMapping.ColumnMappings.Add("un_descripcion", "un_descripcion");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -907,8 +935,9 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_u" +
-                "nidad\r\nFROM            INSUMO";
+            this._commandCollection[0].CommandText = @"SELECT        INSUMO.in_id_insumo, INSUMO.in_nombre, INSUMO.in_precio, INSUMO.in_status, INSUMO.in_cantidad, INSUMO.in_id_unidad, UN.un_descripcion
+FROM            INSUMO INNER JOIN
+                         UNIDAD AS UN ON INSUMO.in_id_unidad = UN.un_id_unidad";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

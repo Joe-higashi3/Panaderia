@@ -30,9 +30,9 @@ namespace WindowsFormsApp2.forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace WindowsFormsApp2.forms
             this.innombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inprecioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.in_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.in_id_unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.un_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.instatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvinsumos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNSUMOBindingSource)).BeginInit();
@@ -120,42 +120,42 @@ namespace WindowsFormsApp2.forms
             this.dgvinsumos.AllowUserToAddRows = false;
             this.dgvinsumos.AllowUserToDeleteRows = false;
             this.dgvinsumos.AutoGenerateColumns = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvinsumos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvinsumos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvinsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvinsumos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.inidinsumoDataGridViewTextBoxColumn,
             this.innombreDataGridViewTextBoxColumn,
             this.inprecioDataGridViewTextBoxColumn,
             this.in_cantidad,
-            this.in_id_unidad,
+            this.un_descripcion,
             this.instatusDataGridViewTextBoxColumn});
             this.dgvinsumos.DataSource = this.iNSUMOBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvinsumos.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvinsumos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvinsumos.Location = new System.Drawing.Point(12, 212);
             this.dgvinsumos.Name = "dgvinsumos";
             this.dgvinsumos.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvinsumos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvinsumos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvinsumos.Size = new System.Drawing.Size(776, 226);
             this.dgvinsumos.TabIndex = 8;
             this.dgvinsumos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvinsumos_CellContentClick);
@@ -294,12 +294,12 @@ namespace WindowsFormsApp2.forms
             this.in_cantidad.Name = "in_cantidad";
             this.in_cantidad.ReadOnly = true;
             // 
-            // in_id_unidad
+            // un_descripcion
             // 
-            this.in_id_unidad.DataPropertyName = "in_id_unidad";
-            this.in_id_unidad.HeaderText = "UNIDAD";
-            this.in_id_unidad.Name = "in_id_unidad";
-            this.in_id_unidad.ReadOnly = true;
+            this.un_descripcion.DataPropertyName = "un_descripcion";
+            this.un_descripcion.HeaderText = "UNIDAD";
+            this.un_descripcion.Name = "un_descripcion";
+            this.un_descripcion.ReadOnly = true;
             // 
             // instatusDataGridViewTextBoxColumn
             // 
@@ -368,7 +368,7 @@ namespace WindowsFormsApp2.forms
         private System.Windows.Forms.DataGridViewTextBoxColumn innombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn inprecioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn in_cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn in_id_unidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn un_descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn instatusDataGridViewTextBoxColumn;
     }
 }
