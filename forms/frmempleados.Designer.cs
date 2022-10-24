@@ -80,6 +80,8 @@
             this.mUNICIPIOTableAdapter = new WindowsFormsApp2.DSMunicipioEdiTableAdapters.MUNICIPIOTableAdapter();
             this.eMPLEADOTableAdapter = new WindowsFormsApp2.DSEmpleadoEdiTableAdapters.EMPLEADOTableAdapter();
             this.rOLTableAdapter = new WindowsFormsApp2.DSRolEdiTableAdapters.ROLTableAdapter();
+            this.txtvcontraseña = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvempleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eMPLEADOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSEmpleadoEdi)).BeginInit();
@@ -99,7 +101,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(59, 221);
+            this.label9.Location = new System.Drawing.Point(58, 256);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 25);
             this.label9.TabIndex = 57;
@@ -139,7 +141,7 @@
             // 
             // txtapaterno
             // 
-            this.txtapaterno.Location = new System.Drawing.Point(159, 149);
+            this.txtapaterno.Location = new System.Drawing.Point(158, 184);
             this.txtapaterno.Name = "txtapaterno";
             this.txtapaterno.Size = new System.Drawing.Size(337, 30);
             this.txtapaterno.TabIndex = 6;
@@ -147,7 +149,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 149);
+            this.label6.Location = new System.Drawing.Point(35, 184);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 25);
             this.label6.TabIndex = 51;
@@ -155,7 +157,7 @@
             // 
             // txtamaterno
             // 
-            this.txtamaterno.Location = new System.Drawing.Point(159, 185);
+            this.txtamaterno.Location = new System.Drawing.Point(158, 220);
             this.txtamaterno.Name = "txtamaterno";
             this.txtamaterno.Size = new System.Drawing.Size(337, 30);
             this.txtamaterno.TabIndex = 8;
@@ -163,7 +165,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 187);
+            this.label5.Location = new System.Drawing.Point(31, 222);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 25);
             this.label5.TabIndex = 49;
@@ -337,7 +339,7 @@
             // 
             // txtcolonia
             // 
-            this.txtcolonia.Location = new System.Drawing.Point(159, 221);
+            this.txtcolonia.Location = new System.Drawing.Point(158, 256);
             this.txtcolonia.Name = "txtcolonia";
             this.txtcolonia.Size = new System.Drawing.Size(337, 30);
             this.txtcolonia.TabIndex = 10;
@@ -500,11 +502,31 @@
             // 
             this.rOLTableAdapter.ClearBeforeFill = true;
             // 
+            // txtvcontraseña
+            // 
+            this.txtvcontraseña.Location = new System.Drawing.Point(159, 145);
+            this.txtvcontraseña.Name = "txtvcontraseña";
+            this.txtvcontraseña.PasswordChar = '*';
+            this.txtvcontraseña.Size = new System.Drawing.Size(337, 30);
+            this.txtvcontraseña.TabIndex = 5;
+            this.txtvcontraseña.Tag = "";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(22, 145);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(131, 25);
+            this.label14.TabIndex = 67;
+            this.label14.Text = "Contraseña:";
+            // 
             // frmempleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1237, 650);
+            this.Controls.Add(this.txtvcontraseña);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.cmbrol);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtcontraseña);
@@ -606,5 +628,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mu_descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn r_tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn emstatusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtvcontraseña;
+        private System.Windows.Forms.Label label14;
     }
 }

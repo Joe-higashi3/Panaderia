@@ -11,7 +11,7 @@ namespace WindowsFormsApp2.clases
     class clsempleado
     {
         public string error;
-        //public int iIdempleado { get; set; }
+        public int iIdempleado { get; set; }
         public string sUsuario { get; set; }
         public byte[] sContraseña { get; set; }
         public string sApellido_p { get; set; }
@@ -35,7 +35,7 @@ namespace WindowsFormsApp2.clases
             cmd.CommandText = "SP_EMPLEADO";
 
             cmd.Parameters.AddWithValue("@OP", 1);
-            //cmd.Parameters.AddWithValue("@IDEMPLEADO", iIdempleado);
+            cmd.Parameters.AddWithValue("@IDEMPLEADO", iIdempleado);
             cmd.Parameters.AddWithValue("@USUARIO", sUsuario);
             cmd.Parameters.AddWithValue("@CONTRASEÑA", sContraseña);
             cmd.Parameters.AddWithValue("@APELLIDO_P", sApellido_p);

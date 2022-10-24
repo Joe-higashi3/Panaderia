@@ -44,7 +44,7 @@ namespace WindowsFormsApp2.forms
         {
             clsempleado empleado = new clsempleado();
             byte[] bytes = Encoding.ASCII.GetBytes(txtcontraseña.Text);
-            //empleado.iIdempleado = Convert.ToInt32(txtid.Text);
+            empleado.iIdempleado = Convert.ToInt32(txtid.Text);
             empleado.sUsuario = txtusuario.Text;
             empleado.sContraseña = bytes;
             empleado.sApellido_p = txtapaterno.Text;
@@ -100,6 +100,7 @@ namespace WindowsFormsApp2.forms
             txtcalle.Clear();
             txtinterior.Clear();
             txtexterior.Clear();
+            txtvcontraseña.Clear();
             consecutivo();
             this.eMPLEADOTableAdapter.Fill(this.dSEmpleadoEdi.EMPLEADO);
             txttelefono.Focus();
@@ -107,7 +108,17 @@ namespace WindowsFormsApp2.forms
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            GuardarEmpleado();
+            if(txtcontraseña.Text == txtvcontraseña.Text)
+            {
+                GuardarEmpleado();
+            }
+            else
+            {
+                MessageBox.Show("Las contrasenas no coinciden");
+                txtcontraseña.Clear();
+                txtvcontraseña.Clear();
+                txtcontraseña.Focus();
+            }
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
