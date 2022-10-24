@@ -124,6 +124,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>gruposDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="libreria\Errortxtbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="libreria\Errortxtbox.Designer.cs">
+      <DependentUpon>Errortxtbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="panesitoDataSet.cs">
       <DependentUpon>panesitoDataSet.xsd</DependentUpon>
     </Compile>
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmventas.resx">
       <DependentUpon>frmventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="libreria\Errortxtbox.resx">
+      <DependentUpon>Errortxtbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

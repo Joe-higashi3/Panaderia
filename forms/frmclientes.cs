@@ -40,7 +40,7 @@ namespace WindowsFormsApp2.forms
         private void GuardarCliente()
         {
             clscliente cliente = new clscliente();
-            //cliente.iIdcliente = Convert.ToInt32(txtid.Text);
+            cliente.iIdcliente = Convert.ToInt32(txtid.Text);
             cliente.sNombre = txtnombre.Text;
             cliente.sApellido_p = txtapellidop.Text;
             cliente.sApellido_m = txtapellidom.Text;
@@ -52,9 +52,7 @@ namespace WindowsFormsApp2.forms
             cliente.iMunicipio = Convert.ToInt32(cmbxMunicipio.SelectedValue);
             cliente.sStatus = cmbxstatus.Text.Substring(0,1);
 
-            if(ValidarDatos() == true)
-            {
-
+            
                 if (cliente.Guardar() == true)
                 {
                     MessageBox.Show("Sus Datos se guardaron correctamente");
@@ -66,7 +64,7 @@ namespace WindowsFormsApp2.forms
 
                 }
 
-            }
+            
 
             
 
@@ -131,14 +129,24 @@ namespace WindowsFormsApp2.forms
         }
         private void btnguardar_Click(object sender, EventArgs e)
         {
+                       
+            if(clscliente.ValidarCamposVacios(this, errorValidacionVacio) == false)
+
+            {
+
+                MessageBox.Show("Ha ocurrido un error");
+                limpiar();
 
 
-            if(ValidarDatos() == true)
+            }
+            else
             {
 
                 GuardarCliente();
 
             }
+
+            
               
 
         }
@@ -193,7 +201,7 @@ namespace WindowsFormsApp2.forms
 
 
         // Validacion de los cuadros de Texto
-        private bool ValidarDatos() // Validar espacios en blanco y si no cumplen con las condiciones
+        /*ublic bool ValidarDatos() // Validar espacios en blanco y si no cumplen con las condiciones
         {
 
             bool validacion = true;
@@ -202,8 +210,8 @@ namespace WindowsFormsApp2.forms
             {
 
                 validacion = false;
-                errorTel.SetError(txttelefono, "Ingresar Telefono");
-
+                //errorTel.SetError(txttelefono, "Ingresar Telefono");
+                MessageBox.Show(" Error al ingresar el Telefono");
              
 
             }
@@ -213,8 +221,8 @@ namespace WindowsFormsApp2.forms
 
                 validacion = false;
                 errorNombre.SetError(txtnombre, "Ingresar Nombre");
+                //MessageBox.Show(" Error al ingresar el Nombre");
 
-                
 
             }
 
@@ -224,23 +232,25 @@ namespace WindowsFormsApp2.forms
 
                 validacion = false;
                 errorApePat.SetError(txttelefono, "Ingresar Apellido Paterno");
+                //MessageBox.Show(" Error al ingresar el Apellido Paterno");
 
             }
             if (txtapellidom.Text == "")
             {
 
                 validacion = false;
-                errorApeMat.SetError(txttelefono, "Ingresar Apellido Materno");
+                //errorApeMat.SetError(txttelefono, "Ingresar Apellido Materno");
+                MessageBox.Show(" Error al ingresar el Apellido Materno");
 
-                
             }
             if (txtcolonia.Text == "")
             {
 
                 validacion = false;
-                errorCol.SetError(txttelefono, "Ingresar Colonia");
+                //errorCol.SetError(txttelefono, "Ingresar Colonia");
+                MessageBox.Show(" Error al ingresar la Colonia");
 
-                
+
 
             }
 
@@ -249,16 +259,16 @@ namespace WindowsFormsApp2.forms
 
                 validacion = false;
                 errorNInte.SetError(txttelefono, "Ingresar Numero Interior");
+                //MessageBox.Show(" Error al ingresar el Numero Interior");
 
-               
             }
             if (txtnumext.Text == "")
             {
 
                 validacion = false;
                 errorrNumExt.SetError(txttelefono, "Ingresar Numero Exterior");
+                //MessageBox.Show(" Error al ingresar el Numero Exterior");
 
-               
 
             }
 
@@ -267,6 +277,7 @@ namespace WindowsFormsApp2.forms
 
                 validacion = false;
                 errorCalle.SetError(txttelefono, "Ingresar Calle");
+                //MessageBox.Show(" Error al ingresar la Calle");
 
 
             }
@@ -274,7 +285,7 @@ namespace WindowsFormsApp2.forms
 
             return validacion;
 
-        }
+        }*/
 
 
 
@@ -286,7 +297,7 @@ namespace WindowsFormsApp2.forms
         private void txttelefono_Validating(object sender, CancelEventArgs e)
         {
 
-            int num;
+            /*int num;
             if(!int.TryParse(txttelefono.Text, out num))
             {
 
@@ -298,14 +309,14 @@ namespace WindowsFormsApp2.forms
 
                 errorTel.SetError(txttelefono, "");
 
-            }
+            }*/
 
         }
 
         private void txtnumint_Validating(object sender, CancelEventArgs e)
         {
 
-            int ErrorNum;
+            /*int ErrorNum;
             if (!int.TryParse(txtnumint.Text, out ErrorNum))
             {
 
@@ -317,14 +328,14 @@ namespace WindowsFormsApp2.forms
 
                 errorNInte.SetError(txtnumint, "");
 
-            }
+            }*/
 
         }
 
         private void txtnumext_Validating(object sender, CancelEventArgs e)
         {
 
-            int ErrorNum;
+            /*int ErrorNum;
             if (!int.TryParse(txtnumext.Text, out ErrorNum))
             {
 
@@ -336,7 +347,7 @@ namespace WindowsFormsApp2.forms
 
                 errorrNumExt.SetError(txtnumext, "");
 
-            }
+            }*/
 
         }
 
@@ -350,7 +361,7 @@ namespace WindowsFormsApp2.forms
         private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            /*if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
 
                 errorNombre.SetError(txtnombre, "Ingrese solo Letras");
@@ -362,7 +373,7 @@ namespace WindowsFormsApp2.forms
                 
                 errorNombre.SetError(txtnombre, "");
 
-            }
+            }*/
 
         }
 
@@ -372,7 +383,7 @@ namespace WindowsFormsApp2.forms
         private void txtapellidop_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            /*if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
 
                 errorApePat.SetError(txtapellidop, "Ingrese solo Letras");
@@ -384,14 +395,14 @@ namespace WindowsFormsApp2.forms
 
                 errorApePat.SetError(txtapellidop, "");
 
-            }
+            }*/
 
         }
 
         private void txtapellidom_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            /*if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
 
                 errorApeMat.SetError(txtapellidom, "Ingrese solo Letras");
@@ -403,14 +414,14 @@ namespace WindowsFormsApp2.forms
 
                 errorApeMat.SetError(txtapellidom, "");
 
-            }
+            }*/
 
         }
 
         private void txtcolonia_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            /*if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
 
                 errorCol.SetError(txtcolonia, "Ingrese solo Letras");
@@ -422,7 +433,7 @@ namespace WindowsFormsApp2.forms
 
                 errorCol.SetError(txtcolonia, "");
 
-            }
+            }*/
 
         }
 
@@ -430,7 +441,7 @@ namespace WindowsFormsApp2.forms
         {
 
 
-            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            /*if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
 
                 errorCalle.SetError(txtcalle, "Ingrese solo Letras");
@@ -441,8 +452,11 @@ namespace WindowsFormsApp2.forms
             {
 
                 errorCalle.SetError(txtcalle, "");
+                
 
-            }
+            }*/
+
+            
 
         }
 
@@ -453,5 +467,11 @@ namespace WindowsFormsApp2.forms
 
         }
 
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+
+            limpiar();
+
+        }
     }
 }

@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using WindowsFormsApp2.libreria;
 
 namespace WindowsFormsApp2.clases
 {
@@ -23,6 +25,48 @@ namespace WindowsFormsApp2.clases
         public int iMunicipio { get; set; }
         public string sStatus { get; set; }
 
+        public static Boolean ValidarCamposVacios(Control Objeto, ErrorProvider ErroProvider)
+        {
+
+            Boolean ExErrores = false;
+
+            foreach (Control Item in Objeto.Controls)
+            {
+
+
+                if (Item is Errortxtbox)
+                {
+
+                    Errortxtbox Obj = (Errortxtbox)Item;
+
+                    if (Obj.Validar == true)
+                    {
+
+                        if (string.IsNullOrEmpty(Obj.Text.Trim()))
+                        {
+
+                            ErroProvider.SetError(Obj, "No Puede Estar Vacio");
+                            ExErrores = true;
+
+                        }
+
+                    }
+                                                         
+                    else
+                    {
+
+                        ErroProvider.SetError(Obj, "");
+
+                    }
+                }
+
+            }
+
+            return ExErrores;
+        
+
+        }
+
         public bool Guardar()
         {
             SqlConnection conn = new SqlConnection(Conexion.conn());
@@ -32,7 +76,7 @@ namespace WindowsFormsApp2.clases
             cmd.CommandText = "SP_CLIENTE";
 
             cmd.Parameters.AddWithValue("@OP", 1);
-            cmd.Parameters.AddWithValue("@IDCLIENTE", iIdcliente);
+            cmd.Parameters.AddWithValue("@IDCLIENTE", 1);
             cmd.Parameters.AddWithValue("@NOMBRE", sNombre);
             cmd.Parameters.AddWithValue("@APELLIDO_P", sApellido_p);
             cmd.Parameters.AddWithValue("@APELLIDO_M", sApellido_m);

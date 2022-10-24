@@ -31,23 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
-            this.txttelefono = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.txtcolonia = new System.Windows.Forms.TextBox();
-            this.txtnombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtapellidom = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtapellidop = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtnumint = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtnumext = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtcalle = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtwclientes = new System.Windows.Forms.DataGridView();
             this.clidclienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +72,15 @@
             this.errorNInte = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorrNumExt = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorCalle = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorValidacionVacio = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txttelefono = new WindowsFormsApp2.libreria.Errortxtbox();
+            this.txtnombre = new WindowsFormsApp2.libreria.Errortxtbox();
+            this.txtapellidop = new WindowsFormsApp2.libreria.Errortxtbox();
+            this.txtapellidom = new WindowsFormsApp2.libreria.Errortxtbox();
+            this.txtcolonia = new WindowsFormsApp2.libreria.Errortxtbox();
+            this.txtnumint = new WindowsFormsApp2.libreria.Errortxtbox();
+            this.txtnumext = new WindowsFormsApp2.libreria.Errortxtbox();
+            this.txtcalle = new WindowsFormsApp2.libreria.Errortxtbox();
             ((System.ComponentModel.ISupportInitialize)(this.dtwclientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cLIENTEBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet2)).BeginInit();
@@ -93,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorNInte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorrNumExt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorCalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorValidacionVacio)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -103,6 +105,7 @@
             this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // btnguardar
             // 
@@ -114,14 +117,6 @@
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
-            // txttelefono
-            // 
-            this.txttelefono.Location = new System.Drawing.Point(322, 22);
-            this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(154, 26);
-            this.txttelefono.TabIndex = 2;
-            this.txttelefono.Validating += new System.ComponentModel.CancelEventHandler(this.txttelefono_Validating);
-            // 
             // txtid
             // 
             this.txtid.Enabled = false;
@@ -130,23 +125,6 @@
             this.txtid.Size = new System.Drawing.Size(67, 26);
             this.txtid.TabIndex = 0;
             this.txtid.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtid_KeyUp);
-            // 
-            // txtcolonia
-            // 
-            this.txtcolonia.Location = new System.Drawing.Point(139, 166);
-            this.txtcolonia.Name = "txtcolonia";
-            this.txtcolonia.Size = new System.Drawing.Size(337, 26);
-            this.txtcolonia.TabIndex = 10;
-            this.txtcolonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcolonia_KeyPress);
-            // 
-            // txtnombre
-            // 
-            this.txtnombre.Location = new System.Drawing.Point(139, 58);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(337, 26);
-            this.txtnombre.TabIndex = 4;
-            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
-            this.txtnombre.Validating += new System.ComponentModel.CancelEventHandler(this.txtnombre_Validating);
             // 
             // label4
             // 
@@ -184,14 +162,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "ID:";
             // 
-            // txtapellidom
-            // 
-            this.txtapellidom.Location = new System.Drawing.Point(139, 130);
-            this.txtapellidom.Name = "txtapellidom";
-            this.txtapellidom.Size = new System.Drawing.Size(337, 26);
-            this.txtapellidom.TabIndex = 8;
-            this.txtapellidom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidom_KeyPress);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -200,14 +170,6 @@
             this.label5.Size = new System.Drawing.Size(97, 20);
             this.label5.TabIndex = 26;
             this.label5.Text = "Apellido M:";
-            // 
-            // txtapellidop
-            // 
-            this.txtapellidop.Location = new System.Drawing.Point(139, 94);
-            this.txtapellidop.Name = "txtapellidop";
-            this.txtapellidop.Size = new System.Drawing.Size(337, 26);
-            this.txtapellidop.TabIndex = 6;
-            this.txtapellidop.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellidop_KeyPress);
             // 
             // label6
             // 
@@ -218,14 +180,6 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "Apellido P:";
             // 
-            // txtnumint
-            // 
-            this.txtnumint.Location = new System.Drawing.Point(617, 19);
-            this.txtnumint.Name = "txtnumint";
-            this.txtnumint.Size = new System.Drawing.Size(102, 26);
-            this.txtnumint.TabIndex = 12;
-            this.txtnumint.Validating += new System.ComponentModel.CancelEventHandler(this.txtnumint_Validating);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -235,14 +189,6 @@
             this.label7.TabIndex = 30;
             this.label7.Text = "N. Interior:";
             // 
-            // txtnumext
-            // 
-            this.txtnumext.Location = new System.Drawing.Point(877, 19);
-            this.txtnumext.Name = "txtnumext";
-            this.txtnumext.Size = new System.Drawing.Size(103, 26);
-            this.txtnumext.TabIndex = 14;
-            this.txtnumext.Validating += new System.ComponentModel.CancelEventHandler(this.txtnumext_Validating);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -251,14 +197,6 @@
             this.label8.Size = new System.Drawing.Size(98, 20);
             this.label8.TabIndex = 32;
             this.label8.Text = "N. Exterior:";
-            // 
-            // txtcalle
-            // 
-            this.txtcalle.Location = new System.Drawing.Point(617, 55);
-            this.txtcalle.Name = "txtcalle";
-            this.txtcalle.Size = new System.Drawing.Size(337, 26);
-            this.txtcalle.TabIndex = 16;
-            this.txtcalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcalle_KeyPress);
             // 
             // label9
             // 
@@ -507,32 +445,100 @@
             // 
             this.errorCalle.ContainerControl = this;
             // 
+            // errorValidacionVacio
+            // 
+            this.errorValidacionVacio.ContainerControl = this;
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.Location = new System.Drawing.Point(302, 19);
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(174, 26);
+            this.txttelefono.TabIndex = 43;
+            this.txttelefono.Validar = true;
+            // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(139, 59);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(337, 26);
+            this.txtnombre.TabIndex = 44;
+            this.txtnombre.Validar = true;
+            // 
+            // txtapellidop
+            // 
+            this.txtapellidop.Location = new System.Drawing.Point(139, 92);
+            this.txtapellidop.Name = "txtapellidop";
+            this.txtapellidop.Size = new System.Drawing.Size(337, 26);
+            this.txtapellidop.TabIndex = 45;
+            this.txtapellidop.Validar = true;
+            // 
+            // txtapellidom
+            // 
+            this.txtapellidom.Location = new System.Drawing.Point(139, 131);
+            this.txtapellidom.Name = "txtapellidom";
+            this.txtapellidom.Size = new System.Drawing.Size(337, 26);
+            this.txtapellidom.TabIndex = 46;
+            this.txtapellidom.Validar = true;
+            // 
+            // txtcolonia
+            // 
+            this.txtcolonia.Location = new System.Drawing.Point(139, 172);
+            this.txtcolonia.Name = "txtcolonia";
+            this.txtcolonia.Size = new System.Drawing.Size(337, 26);
+            this.txtcolonia.TabIndex = 47;
+            this.txtcolonia.Validar = true;
+            // 
+            // txtnumint
+            // 
+            this.txtnumint.Location = new System.Drawing.Point(617, 20);
+            this.txtnumint.Name = "txtnumint";
+            this.txtnumint.Size = new System.Drawing.Size(100, 26);
+            this.txtnumint.TabIndex = 48;
+            this.txtnumint.Validar = true;
+            // 
+            // txtnumext
+            // 
+            this.txtnumext.Location = new System.Drawing.Point(864, 19);
+            this.txtnumext.Name = "txtnumext";
+            this.txtnumext.Size = new System.Drawing.Size(100, 26);
+            this.txtnumext.TabIndex = 49;
+            this.txtnumext.Validar = true;
+            // 
+            // txtcalle
+            // 
+            this.txtcalle.Location = new System.Drawing.Point(617, 54);
+            this.txtcalle.Name = "txtcalle";
+            this.txtcalle.Size = new System.Drawing.Size(347, 26);
+            this.txtcalle.TabIndex = 50;
+            this.txtcalle.Validar = true;
+            // 
             // frmclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1228, 593);
+            this.Controls.Add(this.txtcalle);
+            this.Controls.Add(this.txtnumext);
+            this.Controls.Add(this.txtnumint);
+            this.Controls.Add(this.txtcolonia);
+            this.Controls.Add(this.txtapellidom);
+            this.Controls.Add(this.txtapellidop);
+            this.Controls.Add(this.txtnombre);
+            this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.cmbxstatus);
             this.Controls.Add(this.cmbxMunicipio);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtwclientes);
-            this.Controls.Add(this.txtcalle);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtnumext);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtnumint);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtapellidop);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtapellidom);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnguardar);
-            this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.txtid);
-            this.Controls.Add(this.txtcolonia);
-            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -555,6 +561,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorNInte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorrNumExt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorCalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorValidacionVacio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,23 +570,15 @@
         #endregion
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnguardar;
-        private System.Windows.Forms.TextBox txttelefono;
         private System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.TextBox txtcolonia;
-        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtapellidom;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtapellidop;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtnumint;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtnumext;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtcalle;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dtwclientes;
         private System.Windows.Forms.Label label10;
@@ -612,5 +611,14 @@
         private System.Windows.Forms.ErrorProvider errorNInte;
         private System.Windows.Forms.ErrorProvider errorrNumExt;
         private System.Windows.Forms.ErrorProvider errorCalle;
+        private libreria.Errortxtbox txttelefono;
+        public System.Windows.Forms.ErrorProvider errorValidacionVacio;
+        private libreria.Errortxtbox txtcalle;
+        private libreria.Errortxtbox txtnumext;
+        private libreria.Errortxtbox txtnumint;
+        private libreria.Errortxtbox txtcolonia;
+        private libreria.Errortxtbox txtapellidom;
+        private libreria.Errortxtbox txtapellidop;
+        private libreria.Errortxtbox txtnombre;
     }
 }

@@ -56,3 +56,4 @@ C:\Users\ZeeKar\Desktop\5to Sem\PanecitoEx\PanProject\Panaderia\obj\Debug\Window
 C:\Users\ZeeKar\Desktop\5to Sem\PanecitoEx\PanProject\Panaderia\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 C:\Users\ZeeKar\Desktop\5to Sem\PanecitoEx\PanProject\Panaderia\obj\Debug\WindowsFormsApp2.exe
 C:\Users\ZeeKar\Desktop\5to Sem\PanecitoEx\PanProject\Panaderia\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\ZeeKar\Desktop\5to Sem\PanecitoEx\PanProject\Panaderia\obj\Debug\WindowsFormsApp2.libreria.Errortxtbox.resources
