@@ -34,33 +34,38 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtdescripcion = new System.Windows.Forms.TextBox();
-            this.txtcategoria = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtprecio = new System.Windows.Forms.TextBox();
             this.btnGuardarProducto = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dvgproductos = new System.Windows.Forms.DataGridView();
+            this.pRODUCTOBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.panesitoDataSetcatagBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panesitoDataSetcatag = new WindowsFormsApp2.panesitoDataSetcatag();
             this.label5 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbxstatus = new System.Windows.Forms.ComboBox();
             this.txtcantidad = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.panesitoDataSetcatag = new WindowsFormsApp2.panesitoDataSetcatag();
-            this.panesitoDataSetcatagBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTOBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.pRODUCTOTableAdapter1 = new WindowsFormsApp2.panesitoDataSetcatagTableAdapters.PRODUCTOTableAdapter();
-            this.pr_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pr_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prprecioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pridcategoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prdescripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prnombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxcategoria = new System.Windows.Forms.ComboBox();
+            this.cATEGORIABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dScategoria = new WindowsFormsApp2.DScategoria();
+            this.cATEGORIATableAdapter = new WindowsFormsApp2.DScategoriaTableAdapters.CATEGORIATableAdapter();
             this.pridproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prnombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prdescripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pr_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ca_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prprecioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pr_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dvgproductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatag)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatagBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatagBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dScategoria)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -105,13 +110,7 @@
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(302, 26);
             this.txtdescripcion.TabIndex = 20;
-            // 
-            // txtcategoria
-            // 
-            this.txtcategoria.Location = new System.Drawing.Point(150, 125);
-            this.txtcategoria.Name = "txtcategoria";
-            this.txtcategoria.Size = new System.Drawing.Size(302, 26);
-            this.txtcategoria.TabIndex = 25;
+            this.txtdescripcion.TextChanged += new System.EventHandler(this.txtdescripcion_TextChanged);
             // 
             // txtid
             // 
@@ -156,17 +155,32 @@
             this.pridproductoDataGridViewTextBoxColumn,
             this.prnombreDataGridViewTextBoxColumn,
             this.prdescripcionDataGridViewTextBoxColumn,
-            this.pridcategoriaDataGridViewTextBoxColumn,
             this.pr_cantidad,
+            this.ca_descripcion,
             this.prprecioDataGridViewTextBoxColumn,
             this.pr_status});
             this.dvgproductos.DataSource = this.pRODUCTOBindingSource4;
             this.dvgproductos.Location = new System.Drawing.Point(-2, 171);
             this.dvgproductos.Name = "dvgproductos";
             this.dvgproductos.RowTemplate.Height = 24;
-            this.dvgproductos.Size = new System.Drawing.Size(838, 282);
+            this.dvgproductos.Size = new System.Drawing.Size(927, 338);
             this.dvgproductos.TabIndex = 50;
             this.dvgproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgproductos_CellContentClick);
+            // 
+            // pRODUCTOBindingSource4
+            // 
+            this.pRODUCTOBindingSource4.DataMember = "PRODUCTO";
+            this.pRODUCTOBindingSource4.DataSource = this.panesitoDataSetcatagBindingSource;
+            // 
+            // panesitoDataSetcatagBindingSource
+            // 
+            this.panesitoDataSetcatagBindingSource.DataSource = this.panesitoDataSetcatag;
+            this.panesitoDataSetcatagBindingSource.Position = 0;
+            // 
+            // panesitoDataSetcatag
+            // 
+            this.panesitoDataSetcatag.DataSetName = "panesitoDataSetcatag";
+            this.panesitoDataSetcatag.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -221,60 +235,35 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "Cantidad:";
             // 
-            // panesitoDataSetcatag
-            // 
-            this.panesitoDataSetcatag.DataSetName = "panesitoDataSetcatag";
-            this.panesitoDataSetcatag.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // panesitoDataSetcatagBindingSource
-            // 
-            this.panesitoDataSetcatagBindingSource.DataSource = this.panesitoDataSetcatag;
-            this.panesitoDataSetcatagBindingSource.Position = 0;
-            // 
-            // pRODUCTOBindingSource4
-            // 
-            this.pRODUCTOBindingSource4.DataMember = "PRODUCTO";
-            this.pRODUCTOBindingSource4.DataSource = this.panesitoDataSetcatagBindingSource;
-            // 
             // pRODUCTOTableAdapter1
             // 
             this.pRODUCTOTableAdapter1.ClearBeforeFill = true;
             // 
-            // pr_cantidad
+            // cbxcategoria
             // 
-            this.pr_cantidad.DataPropertyName = "pr_cantidad";
-            this.pr_cantidad.HeaderText = "Cantidad";
-            this.pr_cantidad.Name = "pr_cantidad";
+            this.cbxcategoria.DataSource = this.cATEGORIABindingSource;
+            this.cbxcategoria.DisplayMember = "ca_descripcion";
+            this.cbxcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxcategoria.FormattingEnabled = true;
+            this.cbxcategoria.Location = new System.Drawing.Point(150, 125);
+            this.cbxcategoria.Name = "cbxcategoria";
+            this.cbxcategoria.Size = new System.Drawing.Size(248, 28);
+            this.cbxcategoria.TabIndex = 25;
+            this.cbxcategoria.ValueMember = "ca_id";
             // 
-            // pr_status
+            // cATEGORIABindingSource
             // 
-            this.pr_status.DataPropertyName = "pr_status";
-            this.pr_status.HeaderText = "Status";
-            this.pr_status.Name = "pr_status";
+            this.cATEGORIABindingSource.DataMember = "CATEGORIA";
+            this.cATEGORIABindingSource.DataSource = this.dScategoria;
             // 
-            // prprecioDataGridViewTextBoxColumn
+            // dScategoria
             // 
-            this.prprecioDataGridViewTextBoxColumn.DataPropertyName = "pr_precio";
-            this.prprecioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.prprecioDataGridViewTextBoxColumn.Name = "prprecioDataGridViewTextBoxColumn";
+            this.dScategoria.DataSetName = "DScategoria";
+            this.dScategoria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pridcategoriaDataGridViewTextBoxColumn
+            // cATEGORIATableAdapter
             // 
-            this.pridcategoriaDataGridViewTextBoxColumn.DataPropertyName = "pr_id_categoria";
-            this.pridcategoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
-            this.pridcategoriaDataGridViewTextBoxColumn.Name = "pridcategoriaDataGridViewTextBoxColumn";
-            // 
-            // prdescripcionDataGridViewTextBoxColumn
-            // 
-            this.prdescripcionDataGridViewTextBoxColumn.DataPropertyName = "pr_descripcion";
-            this.prdescripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.prdescripcionDataGridViewTextBoxColumn.Name = "prdescripcionDataGridViewTextBoxColumn";
-            // 
-            // prnombreDataGridViewTextBoxColumn
-            // 
-            this.prnombreDataGridViewTextBoxColumn.DataPropertyName = "pr_nombre";
-            this.prnombreDataGridViewTextBoxColumn.HeaderText = "Nombre Producto";
-            this.prnombreDataGridViewTextBoxColumn.Name = "prnombreDataGridViewTextBoxColumn";
+            this.cATEGORIATableAdapter.ClearBeforeFill = true;
             // 
             // pridproductoDataGridViewTextBoxColumn
             // 
@@ -283,11 +272,48 @@
             this.pridproductoDataGridViewTextBoxColumn.Name = "pridproductoDataGridViewTextBoxColumn";
             this.pridproductoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // prnombreDataGridViewTextBoxColumn
+            // 
+            this.prnombreDataGridViewTextBoxColumn.DataPropertyName = "pr_nombre";
+            this.prnombreDataGridViewTextBoxColumn.HeaderText = "Nombre Producto";
+            this.prnombreDataGridViewTextBoxColumn.Name = "prnombreDataGridViewTextBoxColumn";
+            // 
+            // prdescripcionDataGridViewTextBoxColumn
+            // 
+            this.prdescripcionDataGridViewTextBoxColumn.DataPropertyName = "pr_descripcion";
+            this.prdescripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.prdescripcionDataGridViewTextBoxColumn.Name = "prdescripcionDataGridViewTextBoxColumn";
+            // 
+            // pr_cantidad
+            // 
+            this.pr_cantidad.DataPropertyName = "pr_cantidad";
+            this.pr_cantidad.HeaderText = "Cantidad";
+            this.pr_cantidad.Name = "pr_cantidad";
+            // 
+            // ca_descripcion
+            // 
+            this.ca_descripcion.DataPropertyName = "ca_descripcion";
+            this.ca_descripcion.HeaderText = "Categoria";
+            this.ca_descripcion.Name = "ca_descripcion";
+            // 
+            // prprecioDataGridViewTextBoxColumn
+            // 
+            this.prprecioDataGridViewTextBoxColumn.DataPropertyName = "pr_precio";
+            this.prprecioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.prprecioDataGridViewTextBoxColumn.Name = "prprecioDataGridViewTextBoxColumn";
+            // 
+            // pr_status
+            // 
+            this.pr_status.DataPropertyName = "pr_status";
+            this.pr_status.HeaderText = "Status";
+            this.pr_status.Name = "pr_status";
+            // 
             // frmproductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 465);
+            this.ClientSize = new System.Drawing.Size(923, 505);
+            this.Controls.Add(this.cbxcategoria);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtcantidad);
             this.Controls.Add(this.cmbxstatus);
@@ -299,7 +325,6 @@
             this.Controls.Add(this.btnGuardarProducto);
             this.Controls.Add(this.txtprecio);
             this.Controls.Add(this.txtid);
-            this.Controls.Add(this.txtcategoria);
             this.Controls.Add(this.txtdescripcion);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -309,11 +334,14 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "frmproductos";
             this.Text = "V";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmproductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgproductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatag)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatagBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatagBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dScategoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,7 +354,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtdescripcion;
-        private System.Windows.Forms.TextBox txtcategoria;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtprecio;
         private System.Windows.Forms.Button btnGuardarProducto;
@@ -342,12 +369,16 @@
         private System.Windows.Forms.BindingSource panesitoDataSetcatagBindingSource;
         private System.Windows.Forms.BindingSource pRODUCTOBindingSource4;
         private panesitoDataSetcatagTableAdapters.PRODUCTOTableAdapter pRODUCTOTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pr_cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pr_status;
+        private System.Windows.Forms.ComboBox cbxcategoria;
+        private DScategoria dScategoria;
+        private System.Windows.Forms.BindingSource cATEGORIABindingSource;
+        private DScategoriaTableAdapters.CATEGORIATableAdapter cATEGORIATableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pridproductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prnombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prdescripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pridcategoriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pr_cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ca_descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn prprecioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pr_status;
     }
 }

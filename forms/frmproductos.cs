@@ -31,7 +31,7 @@ namespace WindowsFormsApp2.forms
             producto.fPrecio99 = float.Parse(txtprecio.Text);
             producto.sNombre = txtnombre.Text;
             producto.sDescripcion = txtdescripcion.Text;
-            producto.iId_categoria = Convert.ToInt32(txtcategoria.Text);
+            producto.iId_categoria = Convert.ToInt32(cbxcategoria.SelectedValue);
             producto.sStatus = cmbxstatus.Text.Substring(0, 1);
             producto.iCantidad = Convert.ToInt32(txtcantidad.Text);
 
@@ -54,7 +54,7 @@ namespace WindowsFormsApp2.forms
             txtnombre.Clear();
             txtprecio.Clear();
             txtdescripcion.Clear();
-            txtcategoria.Clear();
+            //txtcategoria.Clear();
             txtcantidad.Clear();
             consecutivo();
             this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetcatag.PRODUCTO);
@@ -81,6 +81,8 @@ namespace WindowsFormsApp2.forms
 
         private void frmproductos_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'dScategoria.CATEGORIA' Puede moverla o quitarla según sea necesario.
+            this.cATEGORIATableAdapter.Fill(this.dScategoria.CATEGORIA);
             txtprecio.Focus();
             // TODO: esta línea de código carga datos en la tabla 'panesitoDataSetcatag.PRODUCTO' Puede moverla o quitarla según sea necesario.
             this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetcatag.PRODUCTO);            
@@ -98,7 +100,8 @@ namespace WindowsFormsApp2.forms
             txtprecio.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_precio.ToString();
             txtnombre.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_nombre.ToString();
             txtdescripcion.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_descripcion.ToString();
-            txtcategoria.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_id_categoria.ToString();
+            cbxcategoria.SelectedValue = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_id_categoria;
+
             txtcantidad.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_cantidad.ToString();
             string sSTATUS;
             sSTATUS = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_status.ToString();
@@ -120,6 +123,11 @@ namespace WindowsFormsApp2.forms
         private void button2_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private void txtdescripcion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

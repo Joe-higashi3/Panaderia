@@ -67,6 +67,11 @@
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
     <Compile Include="clases\prubea.cs" />
+    <Compile Include="DScategoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DScategoria.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsMunicipio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +192,17 @@
     <EmbeddedResource Include="reportes\frmrepoventas.resx">
       <DependentUpon>frmrepoventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DScategoria.xsc">
+      <DependentUpon>DScategoria.xsd</DependentUpon>
+    </None>
+    <None Include="DScategoria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DScategoria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DScategoria.xss">
+      <DependentUpon>DScategoria.xsd</DependentUpon>
+    </None>
     <None Include="DsMunicipio.xsc">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
     </None>

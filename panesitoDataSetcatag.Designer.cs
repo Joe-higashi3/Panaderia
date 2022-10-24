@@ -608,6 +608,8 @@ namespace WindowsFormsApp2 {
             
             private global::System.Data.DataColumn columnpr_status;
             
+            private global::System.Data.DataColumn columnca_descripcion;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public PRODUCTODataTable() {
@@ -699,6 +701,14 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ca_descripcionColumn {
+                get {
+                    return this.columnca_descripcion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -734,7 +744,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PRODUCTORow AddPRODUCTORow(string pr_nombre, string pr_descripcion, CATEGORIARow parentCATEGORIARowByFK__PRODUCTO__pr_id___29572725, double pr_precio, int pr_cantidad, string pr_status) {
+            public PRODUCTORow AddPRODUCTORow(string pr_nombre, string pr_descripcion, CATEGORIARow parentCATEGORIARowByFK__PRODUCTO__pr_id___29572725, double pr_precio, int pr_cantidad, string pr_status, string ca_descripcion) {
                 PRODUCTORow rowPRODUCTORow = ((PRODUCTORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -743,7 +753,8 @@ namespace WindowsFormsApp2 {
                         null,
                         pr_precio,
                         pr_cantidad,
-                        pr_status};
+                        pr_status,
+                        ca_descripcion};
                 if ((parentCATEGORIARowByFK__PRODUCTO__pr_id___29572725 != null)) {
                     columnValuesArray[3] = parentCATEGORIARowByFK__PRODUCTO__pr_id___29572725[0];
                 }
@@ -783,6 +794,7 @@ namespace WindowsFormsApp2 {
                 this.columnpr_precio = base.Columns["pr_precio"];
                 this.columnpr_cantidad = base.Columns["pr_cantidad"];
                 this.columnpr_status = base.Columns["pr_status"];
+                this.columnca_descripcion = base.Columns["ca_descripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -802,6 +814,8 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnpr_cantidad);
                 this.columnpr_status = new global::System.Data.DataColumn("pr_status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpr_status);
+                this.columnca_descripcion = new global::System.Data.DataColumn("ca_descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnca_descripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnpr_id_producto}, true));
                 this.columnpr_id_producto.AutoIncrement = true;
@@ -819,6 +833,7 @@ namespace WindowsFormsApp2 {
                 this.columnpr_cantidad.AllowDBNull = false;
                 this.columnpr_status.AllowDBNull = false;
                 this.columnpr_status.MaxLength = 1;
+                this.columnca_descripcion.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1103,6 +1118,22 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string ca_descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tablePRODUCTO.ca_descripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ca_descripcion\' de la tabla \'PRODUCTO\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePRODUCTO.ca_descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public CATEGORIARow CATEGORIARow {
                 get {
                     return ((CATEGORIARow)(this.GetParentRow(this.Table.ParentRelations["FK__PRODUCTO__pr_id___29572725"])));
@@ -1110,6 +1141,18 @@ namespace WindowsFormsApp2 {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK__PRODUCTO__pr_id___29572725"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool Isca_descripcionNull() {
+                return this.IsNull(this.tablePRODUCTO.ca_descripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void Setca_descripcionNull() {
+                this[this.tablePRODUCTO.ca_descripcionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1639,6 +1682,7 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
             tableMapping.ColumnMappings.Add("pr_precio", "pr_precio");
             tableMapping.ColumnMappings.Add("pr_cantidad", "pr_cantidad");
             tableMapping.ColumnMappings.Add("pr_status", "pr_status");
+            tableMapping.ColumnMappings.Add("ca_descripcion", "ca_descripcion");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1696,8 +1740,9 @@ SELECT pr_id_producto, pr_nombre, pr_descripcion, pr_id_categoria, pr_precio, pr
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT pr_id_producto, pr_nombre, pr_descripcion, pr_id_categoria, pr_precio, pr_" +
-                "cantidad, pr_status FROM dbo.PRODUCTO";
+            this._commandCollection[0].CommandText = @"SELECT        PR.pr_id_producto, PR.pr_nombre, PR.pr_descripcion, PR.pr_id_categoria, CA.ca_descripcion, PR.pr_precio, PR.pr_cantidad, PR.pr_status
+FROM            PRODUCTO AS PR INNER JOIN
+                         CATEGORIA AS CA ON PR.pr_id_categoria = CA.ca_id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
