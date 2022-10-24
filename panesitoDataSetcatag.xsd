@@ -90,7 +90,7 @@ SELECT pr_id_producto, pr_nombre, pr_descripcion, pr_id_categoria, pr_precio, pr
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT        PR.pr_id_producto, PR.pr_nombre, PR.pr_descripcion, PR.pr_id_categoria, CA.ca_descripcion, PR.pr_precio, PR.pr_cantidad, PR.pr_status
+                    <CommandText>SELECT        PR.pr_id_producto, PR.pr_nombre, PR.pr_descripcion, PR.pr_id_categoria, CA.ca_descripcion, PR.pr_precio, PR.pr_status
 FROM            PRODUCTO AS PR INNER JOIN
                          CATEGORIA AS CA ON PR.pr_id_categoria = CA.ca_id</CommandText>
                     <Parameters />
@@ -126,7 +126,6 @@ SELECT pr_id_producto, pr_nombre, pr_descripcion, pr_id_categoria, pr_precio, pr
               <Mapping SourceColumn="pr_descripcion" DataSetColumn="pr_descripcion" />
               <Mapping SourceColumn="pr_id_categoria" DataSetColumn="pr_id_categoria" />
               <Mapping SourceColumn="pr_precio" DataSetColumn="pr_precio" />
-              <Mapping SourceColumn="pr_cantidad" DataSetColumn="pr_cantidad" />
               <Mapping SourceColumn="pr_status" DataSetColumn="pr_status" />
               <Mapping SourceColumn="ca_descripcion" DataSetColumn="ca_descripcion" />
             </Mappings>
@@ -140,7 +139,7 @@ SELECT pr_id_producto, pr_nombre, pr_descripcion, pr_id_categoria, pr_precio, pr
   <xs:element name="panesitoDataSetcatag" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="panesitoDataSetcatag" msprop:Generator_UserDSName="panesitoDataSetcatag">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CATEGORIA" msprop:Generator_TableClassName="CATEGORIADataTable" msprop:Generator_TableVarName="tableCATEGORIA" msprop:Generator_RowChangedName="CATEGORIARowChanged" msprop:Generator_TablePropName="CATEGORIA" msprop:Generator_RowDeletingName="CATEGORIARowDeleting" msprop:Generator_RowChangingName="CATEGORIARowChanging" msprop:Generator_RowEvHandlerName="CATEGORIARowChangeEventHandler" msprop:Generator_RowDeletedName="CATEGORIARowDeleted" msprop:Generator_RowClassName="CATEGORIARow" msprop:Generator_UserTableName="CATEGORIA" msprop:Generator_RowEvArgName="CATEGORIARowChangeEvent">
+        <xs:element name="CATEGORIA" msprop:Generator_TableClassName="CATEGORIADataTable" msprop:Generator_TableVarName="tableCATEGORIA" msprop:Generator_TablePropName="CATEGORIA" msprop:Generator_RowDeletingName="CATEGORIARowDeleting" msprop:Generator_RowChangingName="CATEGORIARowChanging" msprop:Generator_RowEvHandlerName="CATEGORIARowChangeEventHandler" msprop:Generator_RowDeletedName="CATEGORIARowDeleted" msprop:Generator_UserTableName="CATEGORIA" msprop:Generator_RowChangedName="CATEGORIARowChanged" msprop:Generator_RowEvArgName="CATEGORIARowChangeEvent" msprop:Generator_RowClassName="CATEGORIARow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ca_id" msprop:Generator_ColumnVarNameInTable="columnca_id" msprop:Generator_ColumnPropNameInRow="ca_id" msprop:Generator_ColumnPropNameInTable="ca_idColumn" msprop:Generator_UserColumnName="ca_id" type="xs:int" />
@@ -154,7 +153,7 @@ SELECT pr_id_producto, pr_nombre, pr_descripcion, pr_id_categoria, pr_precio, pr
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRODUCTO" msprop:Generator_TableClassName="PRODUCTODataTable" msprop:Generator_TableVarName="tablePRODUCTO" msprop:Generator_RowChangedName="PRODUCTORowChanged" msprop:Generator_TablePropName="PRODUCTO" msprop:Generator_RowDeletingName="PRODUCTORowDeleting" msprop:Generator_RowChangingName="PRODUCTORowChanging" msprop:Generator_RowEvHandlerName="PRODUCTORowChangeEventHandler" msprop:Generator_RowDeletedName="PRODUCTORowDeleted" msprop:Generator_RowClassName="PRODUCTORow" msprop:Generator_UserTableName="PRODUCTO" msprop:Generator_RowEvArgName="PRODUCTORowChangeEvent">
+        <xs:element name="PRODUCTO" msprop:Generator_TableClassName="PRODUCTODataTable" msprop:Generator_TableVarName="tablePRODUCTO" msprop:Generator_TablePropName="PRODUCTO" msprop:Generator_RowDeletingName="PRODUCTORowDeleting" msprop:Generator_RowChangingName="PRODUCTORowChanging" msprop:Generator_RowEvHandlerName="PRODUCTORowChangeEventHandler" msprop:Generator_RowDeletedName="PRODUCTORowDeleted" msprop:Generator_UserTableName="PRODUCTO" msprop:Generator_RowChangedName="PRODUCTORowChanged" msprop:Generator_RowEvArgName="PRODUCTORowChangeEvent" msprop:Generator_RowClassName="PRODUCTORow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="pr_id_producto" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpr_id_producto" msprop:Generator_ColumnPropNameInRow="pr_id_producto" msprop:Generator_ColumnPropNameInTable="pr_id_productoColumn" msprop:Generator_UserColumnName="pr_id_producto" type="xs:int" />
@@ -174,7 +173,6 @@ SELECT pr_id_producto, pr_nombre, pr_descripcion, pr_id_categoria, pr_precio, pr
               </xs:element>
               <xs:element name="pr_id_categoria" msprop:Generator_ColumnVarNameInTable="columnpr_id_categoria" msprop:Generator_ColumnPropNameInRow="pr_id_categoria" msprop:Generator_ColumnPropNameInTable="pr_id_categoriaColumn" msprop:Generator_UserColumnName="pr_id_categoria" type="xs:int" />
               <xs:element name="pr_precio" msprop:Generator_ColumnVarNameInTable="columnpr_precio" msprop:Generator_ColumnPropNameInRow="pr_precio" msprop:Generator_ColumnPropNameInTable="pr_precioColumn" msprop:Generator_UserColumnName="pr_precio" type="xs:double" />
-              <xs:element name="pr_cantidad" msprop:Generator_ColumnVarNameInTable="columnpr_cantidad" msprop:Generator_ColumnPropNameInRow="pr_cantidad" msprop:Generator_ColumnPropNameInTable="pr_cantidadColumn" msprop:Generator_UserColumnName="pr_cantidad" type="xs:int" />
               <xs:element name="pr_status" msprop:Generator_ColumnVarNameInTable="columnpr_status" msprop:Generator_ColumnPropNameInRow="pr_status" msprop:Generator_ColumnPropNameInTable="pr_statusColumn" msprop:Generator_UserColumnName="pr_status">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -205,7 +203,7 @@ SELECT pr_id_producto, pr_nombre, pr_descripcion, pr_id_categoria, pr_precio, pr
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__PRODUCTO__pr_id___29572725" msdata:parent="CATEGORIA" msdata:child="PRODUCTO" msdata:parentkey="ca_id" msdata:childkey="pr_id_categoria" msprop:Generator_UserChildTable="PRODUCTO" msprop:Generator_ChildPropName="GetPRODUCTORows" msprop:Generator_UserRelationName="FK__PRODUCTO__pr_id___29572725" msprop:Generator_RelationVarName="relationFK__PRODUCTO__pr_id___29572725" msprop:Generator_UserParentTable="CATEGORIA" msprop:Generator_ParentPropName="CATEGORIARow" />
+      <msdata:Relationship name="FK__PRODUCTO__pr_id___29572725" msdata:parent="CATEGORIA" msdata:child="PRODUCTO" msdata:parentkey="ca_id" msdata:childkey="pr_id_categoria" msprop:Generator_UserChildTable="PRODUCTO" msprop:Generator_ChildPropName="GetPRODUCTORows" msprop:Generator_UserRelationName="FK__PRODUCTO__pr_id___29572725" msprop:Generator_ParentPropName="CATEGORIARow" msprop:Generator_RelationVarName="relationFK__PRODUCTO__pr_id___29572725" msprop:Generator_UserParentTable="CATEGORIA" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

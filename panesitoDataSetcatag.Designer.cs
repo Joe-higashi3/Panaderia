@@ -604,8 +604,6 @@ namespace WindowsFormsApp2 {
             
             private global::System.Data.DataColumn columnpr_precio;
             
-            private global::System.Data.DataColumn columnpr_cantidad;
-            
             private global::System.Data.DataColumn columnpr_status;
             
             private global::System.Data.DataColumn columnca_descripcion;
@@ -685,14 +683,6 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn pr_cantidadColumn {
-                get {
-                    return this.columnpr_cantidad;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn pr_statusColumn {
                 get {
                     return this.columnpr_status;
@@ -744,7 +734,7 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public PRODUCTORow AddPRODUCTORow(string pr_nombre, string pr_descripcion, CATEGORIARow parentCATEGORIARowByFK__PRODUCTO__pr_id___29572725, double pr_precio, int pr_cantidad, string pr_status, string ca_descripcion) {
+            public PRODUCTORow AddPRODUCTORow(string pr_nombre, string pr_descripcion, CATEGORIARow parentCATEGORIARowByFK__PRODUCTO__pr_id___29572725, double pr_precio, string pr_status, string ca_descripcion) {
                 PRODUCTORow rowPRODUCTORow = ((PRODUCTORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -752,7 +742,6 @@ namespace WindowsFormsApp2 {
                         pr_descripcion,
                         null,
                         pr_precio,
-                        pr_cantidad,
                         pr_status,
                         ca_descripcion};
                 if ((parentCATEGORIARowByFK__PRODUCTO__pr_id___29572725 != null)) {
@@ -792,7 +781,6 @@ namespace WindowsFormsApp2 {
                 this.columnpr_descripcion = base.Columns["pr_descripcion"];
                 this.columnpr_id_categoria = base.Columns["pr_id_categoria"];
                 this.columnpr_precio = base.Columns["pr_precio"];
-                this.columnpr_cantidad = base.Columns["pr_cantidad"];
                 this.columnpr_status = base.Columns["pr_status"];
                 this.columnca_descripcion = base.Columns["ca_descripcion"];
             }
@@ -810,8 +798,6 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnpr_id_categoria);
                 this.columnpr_precio = new global::System.Data.DataColumn("pr_precio", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpr_precio);
-                this.columnpr_cantidad = new global::System.Data.DataColumn("pr_cantidad", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpr_cantidad);
                 this.columnpr_status = new global::System.Data.DataColumn("pr_status", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpr_status);
                 this.columnca_descripcion = new global::System.Data.DataColumn("ca_descripcion", typeof(string), null, global::System.Data.MappingType.Element);
@@ -830,7 +816,6 @@ namespace WindowsFormsApp2 {
                 this.columnpr_descripcion.MaxLength = 30;
                 this.columnpr_id_categoria.AllowDBNull = false;
                 this.columnpr_precio.AllowDBNull = false;
-                this.columnpr_cantidad.AllowDBNull = false;
                 this.columnpr_status.AllowDBNull = false;
                 this.columnpr_status.MaxLength = 1;
                 this.columnca_descripcion.MaxLength = 50;
@@ -1091,17 +1076,6 @@ namespace WindowsFormsApp2 {
                 }
                 set {
                     this[this.tablePRODUCTO.pr_precioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int pr_cantidad {
-                get {
-                    return ((int)(this[this.tablePRODUCTO.pr_cantidadColumn]));
-                }
-                set {
-                    this[this.tablePRODUCTO.pr_cantidadColumn] = value;
                 }
             }
             
@@ -1680,7 +1654,6 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
             tableMapping.ColumnMappings.Add("pr_descripcion", "pr_descripcion");
             tableMapping.ColumnMappings.Add("pr_id_categoria", "pr_id_categoria");
             tableMapping.ColumnMappings.Add("pr_precio", "pr_precio");
-            tableMapping.ColumnMappings.Add("pr_cantidad", "pr_cantidad");
             tableMapping.ColumnMappings.Add("pr_status", "pr_status");
             tableMapping.ColumnMappings.Add("ca_descripcion", "ca_descripcion");
             this._adapter.TableMappings.Add(tableMapping);
@@ -1740,9 +1713,10 @@ SELECT pr_id_producto, pr_nombre, pr_descripcion, pr_id_categoria, pr_precio, pr
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        PR.pr_id_producto, PR.pr_nombre, PR.pr_descripcion, PR.pr_id_categoria, CA.ca_descripcion, PR.pr_precio, PR.pr_cantidad, PR.pr_status
-FROM            PRODUCTO AS PR INNER JOIN
-                         CATEGORIA AS CA ON PR.pr_id_categoria = CA.ca_id";
+            this._commandCollection[0].CommandText = "SELECT        PR.pr_id_producto, PR.pr_nombre, PR.pr_descripcion, PR.pr_id_catego" +
+                "ria, CA.ca_descripcion, PR.pr_precio, PR.pr_status\r\nFROM            PRODUCTO AS " +
+                "PR INNER JOIN\r\n                         CATEGORIA AS CA ON PR.pr_id_categoria = " +
+                "CA.ca_id";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

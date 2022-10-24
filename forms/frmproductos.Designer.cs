@@ -56,7 +56,6 @@
             this.pridproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prnombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prdescripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pr_cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ca_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prprecioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pr_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -155,7 +154,6 @@
             this.pridproductoDataGridViewTextBoxColumn,
             this.prnombreDataGridViewTextBoxColumn,
             this.prdescripcionDataGridViewTextBoxColumn,
-            this.pr_cantidad,
             this.ca_descripcion,
             this.prprecioDataGridViewTextBoxColumn,
             this.pr_status});
@@ -284,12 +282,6 @@
             this.prdescripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
             this.prdescripcionDataGridViewTextBoxColumn.Name = "prdescripcionDataGridViewTextBoxColumn";
             // 
-            // pr_cantidad
-            // 
-            this.pr_cantidad.DataPropertyName = "pr_cantidad";
-            this.pr_cantidad.HeaderText = "Cantidad";
-            this.pr_cantidad.Name = "pr_cantidad";
-            // 
             // ca_descripcion
             // 
             this.ca_descripcion.DataPropertyName = "ca_descripcion";
@@ -376,7 +368,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pridproductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prnombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prdescripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pr_cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn ca_descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn prprecioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pr_status;
