@@ -58,6 +58,7 @@
     <Compile Include="busquedas\frmbusquedapedidos.Designer.cs">
       <DependentUpon>frmbusquedapedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="clases\clscategoria.cs" />
     <Compile Include="clases\clscliente.cs" />
     <Compile Include="clases\clsempleado.cs" />
     <Compile Include="clases\clsinsumo.cs" />
@@ -76,6 +77,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmcategoria.Designer.cs">
+      <DependentUpon>frmcategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\frmclientes.cs">
       <SubType>Form</SubType>
@@ -158,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="busquedas\frmbusquedapedidos.resx">
       <DependentUpon>frmbusquedapedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmcategoria.resx">
+      <DependentUpon>frmcategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\frmclientes.resx">
       <DependentUpon>frmclientes.cs</DependentUpon>

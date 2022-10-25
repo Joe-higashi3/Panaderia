@@ -55,7 +55,7 @@ namespace WindowsFormsApp2.forms
             txtprecio.Clear();
             txtdescripcion.Clear();
             //txtcategoria.Clear();
-            txtcantidad.Clear();
+            //txtcantidad.Clear();
             consecutivo();
             this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetcatag.PRODUCTO);
 
