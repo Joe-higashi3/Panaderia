@@ -58,3 +58,4 @@ D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsAp
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.pdb
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frminsumo.resources
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmunidad.resources
+D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmtipomov.resources

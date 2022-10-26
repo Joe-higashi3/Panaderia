@@ -64,6 +64,7 @@
     <Compile Include="clases\clspedido.cs" />
     <Compile Include="clases\clsproducto.cs" />
     <Compile Include="clases\clsreceta.cs" />
+    <Compile Include="clases\clstipomov.cs" />
     <Compile Include="clases\clsunidad.cs" />
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
@@ -81,6 +82,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dstipomov.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dstipomov.xsd</DependentUpon>
     </Compile>
     <Compile Include="dsunidad.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -138,6 +144,12 @@
     </Compile>
     <Compile Include="forms\frmreceta.Designer.cs">
       <DependentUpon>frmreceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmtipomov.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmtipomov.Designer.cs">
+      <DependentUpon>frmtipomov.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\frmunidad.cs">
       <SubType>Form</SubType>
@@ -228,6 +240,9 @@
     <EmbeddedResource Include="forms\frmreceta.resx">
       <DependentUpon>frmreceta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmtipomov.resx">
+      <DependentUpon>frmtipomov.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmunidad.resx">
       <DependentUpon>frmunidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +296,17 @@
     </None>
     <None Include="DsMunicipio.xss">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </None>
+    <None Include="dstipomov.xsc">
+      <DependentUpon>dstipomov.xsd</DependentUpon>
+    </None>
+    <None Include="dstipomov.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dstipomov.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dstipomov.xss">
+      <DependentUpon>dstipomov.xsd</DependentUpon>
     </None>
     <None Include="dsunidad.xsc">
       <DependentUpon>dsunidad.xsd</DependentUpon>

@@ -36,18 +36,18 @@ namespace WindowsFormsApp2.forms
 
         private void GuardarUnidad()
         {
-            clsunidad insumo = new clsunidad();
-            insumo.iIdUnidad = Convert.ToInt32(txtidunidad.Text);
-            insumo.sDescripcion = txtdescunidad.Text;
+            clsunidad unidad = new clsunidad();
+            unidad.iIdUnidad = Convert.ToInt32(txtidunidad.Text);
+            unidad.sDescripcion = txtdescunidad.Text;
      
-            if (insumo.GuardarUnidad() == true)
+            if (unidad.GuardarUnidad() == true)
             {
                 MessageBox.Show("Los datos se han guardado correctamente");
                 limpiar();
             }
             else
             {
-                MessageBox.Show("ERROR: Los datos no se pudieron guardar: " + insumo.error);
+                MessageBox.Show("ERROR: Los datos no se pudieron guardar: " + unidad.error);
 
             }
         }
