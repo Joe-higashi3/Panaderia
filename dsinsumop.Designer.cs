@@ -20,9 +20,9 @@ namespace WindowsFormsApp2 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("dsInsumosp")]
+    [global::System.Xml.Serialization.XmlRootAttribute("dsinsumop")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class dsInsumosp : global::System.Data.DataSet {
+    public partial class dsinsumop : global::System.Data.DataSet {
         
         private INSUMODataTable tableINSUMO;
         
@@ -30,7 +30,7 @@ namespace WindowsFormsApp2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public dsInsumosp() {
+        public dsinsumop() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WindowsFormsApp2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected dsInsumosp(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected dsinsumop(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            dsInsumosp cln = ((dsInsumosp)(base.Clone()));
+            dsinsumop cln = ((dsinsumop)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "dsInsumosp";
+            this.DataSetName = "dsinsumop";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dsInsumosp.xsd";
+            this.Namespace = "http://tempuri.org/dsinsumop.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableINSUMO = new INSUMODataTable();
@@ -225,7 +225,7 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            dsInsumosp ds = new dsInsumosp();
+            dsinsumop ds = new dsinsumop();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -283,13 +283,13 @@ namespace WindowsFormsApp2 {
             
             private global::System.Data.DataColumn columnin_nombre;
             
-            private global::System.Data.DataColumn columnin_status;
+            private global::System.Data.DataColumn columnin_costo;
             
             private global::System.Data.DataColumn columnin_id_unidad;
             
-            private global::System.Data.DataColumn columnun_descripcion;
+            private global::System.Data.DataColumn columnin_status;
             
-            private global::System.Data.DataColumn columnin_costo;
+            private global::System.Data.DataColumn columnun_descripcion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -342,9 +342,9 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn in_statusColumn {
+            public global::System.Data.DataColumn in_costoColumn {
                 get {
-                    return this.columnin_status;
+                    return this.columnin_costo;
                 }
             }
             
@@ -358,17 +358,17 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn un_descripcionColumn {
+            public global::System.Data.DataColumn in_statusColumn {
                 get {
-                    return this.columnun_descripcion;
+                    return this.columnin_status;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn in_costoColumn {
+            public global::System.Data.DataColumn un_descripcionColumn {
                 get {
-                    return this.columnin_costo;
+                    return this.columnun_descripcion;
                 }
             }
             
@@ -409,15 +409,15 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public INSUMORow AddINSUMORow(int in_id_insumo, string in_nombre, string in_status, int in_id_unidad, string un_descripcion, double in_costo) {
+            public INSUMORow AddINSUMORow(int in_id_insumo, string in_nombre, double in_costo, int in_id_unidad, string in_status, string un_descripcion) {
                 INSUMORow rowINSUMORow = ((INSUMORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         in_id_insumo,
                         in_nombre,
-                        in_status,
+                        in_costo,
                         in_id_unidad,
-                        un_descripcion,
-                        in_costo};
+                        in_status,
+                        un_descripcion};
                 rowINSUMORow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowINSUMORow);
                 return rowINSUMORow;
@@ -449,10 +449,10 @@ namespace WindowsFormsApp2 {
             internal void InitVars() {
                 this.columnin_id_insumo = base.Columns["in_id_insumo"];
                 this.columnin_nombre = base.Columns["in_nombre"];
-                this.columnin_status = base.Columns["in_status"];
-                this.columnin_id_unidad = base.Columns["in_id_unidad"];
-                this.columnun_descripcion = base.Columns["un_descripcion"];
                 this.columnin_costo = base.Columns["in_costo"];
+                this.columnin_id_unidad = base.Columns["in_id_unidad"];
+                this.columnin_status = base.Columns["in_status"];
+                this.columnun_descripcion = base.Columns["un_descripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -462,26 +462,26 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnin_id_insumo);
                 this.columnin_nombre = new global::System.Data.DataColumn("in_nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnin_nombre);
-                this.columnin_status = new global::System.Data.DataColumn("in_status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnin_status);
-                this.columnin_id_unidad = new global::System.Data.DataColumn("in_id_unidad", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnin_id_unidad);
-                this.columnun_descripcion = new global::System.Data.DataColumn("un_descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnun_descripcion);
                 this.columnin_costo = new global::System.Data.DataColumn("in_costo", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnin_costo);
+                this.columnin_id_unidad = new global::System.Data.DataColumn("in_id_unidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnin_id_unidad);
+                this.columnin_status = new global::System.Data.DataColumn("in_status", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnin_status);
+                this.columnun_descripcion = new global::System.Data.DataColumn("un_descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnun_descripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnin_id_insumo}, true));
                 this.columnin_id_insumo.AllowDBNull = false;
                 this.columnin_id_insumo.Unique = true;
                 this.columnin_nombre.AllowDBNull = false;
                 this.columnin_nombre.MaxLength = 50;
+                this.columnin_costo.AllowDBNull = false;
+                this.columnin_id_unidad.AllowDBNull = false;
                 this.columnin_status.AllowDBNull = false;
                 this.columnin_status.MaxLength = 1;
-                this.columnin_id_unidad.AllowDBNull = false;
                 this.columnun_descripcion.AllowDBNull = false;
                 this.columnun_descripcion.MaxLength = 20;
-                this.columnin_costo.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -549,7 +549,7 @@ namespace WindowsFormsApp2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                dsInsumosp ds = new dsInsumosp();
+                dsinsumop ds = new dsinsumop();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -646,12 +646,12 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string in_status {
+            public double in_costo {
                 get {
-                    return ((string)(this[this.tableINSUMO.in_statusColumn]));
+                    return ((double)(this[this.tableINSUMO.in_costoColumn]));
                 }
                 set {
-                    this[this.tableINSUMO.in_statusColumn] = value;
+                    this[this.tableINSUMO.in_costoColumn] = value;
                 }
             }
             
@@ -668,23 +668,23 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string in_status {
+                get {
+                    return ((string)(this[this.tableINSUMO.in_statusColumn]));
+                }
+                set {
+                    this[this.tableINSUMO.in_statusColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string un_descripcion {
                 get {
                     return ((string)(this[this.tableINSUMO.un_descripcionColumn]));
                 }
                 set {
                     this[this.tableINSUMO.un_descripcionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public double in_costo {
-                get {
-                    return ((double)(this[this.tableINSUMO.in_costoColumn]));
-                }
-                set {
-                    this[this.tableINSUMO.in_costoColumn] = value;
                 }
             }
         }
@@ -724,7 +724,7 @@ namespace WindowsFormsApp2 {
         }
     }
 }
-namespace WindowsFormsApp2.dsInsumospTableAdapters {
+namespace WindowsFormsApp2.dsinsumopTableAdapters {
     
     
     /// <summary>
@@ -850,49 +850,47 @@ namespace WindowsFormsApp2.dsInsumospTableAdapters {
             tableMapping.DataSetTable = "INSUMO";
             tableMapping.ColumnMappings.Add("in_id_insumo", "in_id_insumo");
             tableMapping.ColumnMappings.Add("in_nombre", "in_nombre");
-            tableMapping.ColumnMappings.Add("in_status", "in_status");
-            tableMapping.ColumnMappings.Add("in_id_unidad", "in_id_unidad");
-            tableMapping.ColumnMappings.Add("un_descripcion", "un_descripcion");
             tableMapping.ColumnMappings.Add("in_costo", "in_costo");
+            tableMapping.ColumnMappings.Add("in_id_unidad", "in_id_unidad");
+            tableMapping.ColumnMappings.Add("in_status", "in_status");
+            tableMapping.ColumnMappings.Add("un_descripcion", "un_descripcion");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [INSUMO] WHERE (([in_id_insumo] = @Original_in_id_insumo) AND ([in_nombre] = @Original_in_nombre) AND ([in_precio] = @Original_in_precio) AND ([in_status] = @Original_in_status) AND ([in_cantidad] = @Original_in_cantidad) AND ([in_id_unidad] = @Original_in_id_unidad))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[INSUMO] WHERE (([in_id_insumo] = @Original_in_id_insumo) AND (" +
+                "[in_nombre] = @Original_in_nombre) AND ([in_costo] = @Original_in_costo) AND ([i" +
+                "n_id_unidad] = @Original_in_id_unidad) AND ([in_status] = @Original_in_status))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_id_insumo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_id_insumo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_precio", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_precio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_status", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_cantidad", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_cantidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_costo", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_costo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_id_unidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_id_unidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_status", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[INSUMO] ([in_id_insumo], [in_nombre], [in_precio], [in_status]" +
-                ") VALUES (@in_id_insumo, @in_nombre, @in_precio, @in_status);\r\nSELECT in_id_insu" +
-                "mo, in_nombre, in_precio, in_status FROM INSUMO WHERE (in_id_insumo = @in_id_ins" +
-                "umo)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[INSUMO] ([in_id_insumo], [in_nombre], [in_costo], [in_id_unidad], [in_status]) VALUES (@in_id_insumo, @in_nombre, @in_costo, @in_id_unidad, @in_status);
+SELECT in_id_insumo, in_nombre, in_costo, in_id_unidad, in_status FROM INSUMO WHERE (in_id_insumo = @in_id_insumo)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_id_insumo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_id_insumo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_precio", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_precio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_costo", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_costo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_id_unidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_id_unidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_status", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [INSUMO] SET [in_id_insumo] = @in_id_insumo, [in_nombre] = @in_nombre, [in_precio] = @in_precio, [in_status] = @in_status, [in_cantidad] = @in_cantidad, [in_id_unidad] = @in_id_unidad WHERE (([in_id_insumo] = @Original_in_id_insumo) AND ([in_nombre] = @Original_in_nombre) AND ([in_precio] = @Original_in_precio) AND ([in_status] = @Original_in_status) AND ([in_cantidad] = @Original_in_cantidad) AND ([in_id_unidad] = @Original_in_id_unidad));
-SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad FROM INSUMO WHERE (in_id_insumo = @in_id_insumo)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[INSUMO] SET [in_id_insumo] = @in_id_insumo, [in_nombre] = @in_nombre, [in_costo] = @in_costo, [in_id_unidad] = @in_id_unidad, [in_status] = @in_status WHERE (([in_id_insumo] = @Original_in_id_insumo) AND ([in_nombre] = @Original_in_nombre) AND ([in_costo] = @Original_in_costo) AND ([in_id_unidad] = @Original_in_id_unidad) AND ([in_status] = @Original_in_status));
+SELECT in_id_insumo, in_nombre, in_costo, in_id_unidad, in_status FROM INSUMO WHERE (in_id_insumo = @in_id_insumo)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_id_insumo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_id_insumo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_precio", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_precio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_status", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_cantidad", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_cantidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_costo", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_costo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_id_unidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_id_unidad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@in_status", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_id_insumo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_id_insumo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_nombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_nombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_precio", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_precio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_status", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_cantidad", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_cantidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_costo", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_costo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_id_unidad", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_id_unidad", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_in_status", global::System.Data.SqlDbType.Char, 0, global::System.Data.ParameterDirection.Input, 0, 0, "in_status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -919,7 +917,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dsInsumosp.INSUMODataTable dataTable) {
+        public virtual int Fill(dsinsumop.INSUMODataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -932,9 +930,9 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dsInsumosp.INSUMODataTable GetData() {
+        public virtual dsinsumop.INSUMODataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dsInsumosp.INSUMODataTable dataTable = new dsInsumosp.INSUMODataTable();
+            dsinsumop.INSUMODataTable dataTable = new dsinsumop.INSUMODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -942,14 +940,14 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsInsumosp.INSUMODataTable dataTable) {
+        public virtual int Update(dsinsumop.INSUMODataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dsInsumosp dataSet) {
+        public virtual int Update(dsinsumop dataSet) {
             return this.Adapter.Update(dataSet, "INSUMO");
         }
         
@@ -972,7 +970,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_in_id_insumo, string Original_in_nombre, double Original_in_precio, string Original_in_status, double Original_in_cantidad, int Original_in_id_unidad) {
+        public virtual int Delete(int Original_in_id_insumo, string Original_in_nombre, double Original_in_costo, int Original_in_id_unidad, string Original_in_status) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_in_id_insumo));
             if ((Original_in_nombre == null)) {
                 throw new global::System.ArgumentNullException("Original_in_nombre");
@@ -980,15 +978,14 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_in_nombre));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_in_precio));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_in_costo));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_in_id_unidad));
             if ((Original_in_status == null)) {
                 throw new global::System.ArgumentNullException("Original_in_status");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_in_status));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_in_status));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_in_cantidad));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_in_id_unidad));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1009,7 +1006,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int in_id_insumo, string in_nombre, double in_precio, string in_status) {
+        public virtual int Insert(int in_id_insumo, string in_nombre, double in_costo, int in_id_unidad, string in_status) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(in_id_insumo));
             if ((in_nombre == null)) {
                 throw new global::System.ArgumentNullException("in_nombre");
@@ -1017,12 +1014,13 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(in_nombre));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(in_precio));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(in_costo));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(in_id_unidad));
             if ((in_status == null)) {
                 throw new global::System.ArgumentNullException("in_status");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(in_status));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(in_status));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1044,7 +1042,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int in_id_insumo, string in_nombre, double in_precio, string in_status, double in_cantidad, int in_id_unidad, int Original_in_id_insumo, string Original_in_nombre, double Original_in_precio, string Original_in_status, double Original_in_cantidad, int Original_in_id_unidad) {
+        public virtual int Update(int in_id_insumo, string in_nombre, double in_costo, int in_id_unidad, string in_status, int Original_in_id_insumo, string Original_in_nombre, double Original_in_costo, int Original_in_id_unidad, string Original_in_status) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(in_id_insumo));
             if ((in_nombre == null)) {
                 throw new global::System.ArgumentNullException("in_nombre");
@@ -1052,31 +1050,29 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(in_nombre));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(in_precio));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(in_costo));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(in_id_unidad));
             if ((in_status == null)) {
                 throw new global::System.ArgumentNullException("in_status");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(in_status));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(in_status));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(in_cantidad));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(in_id_unidad));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_in_id_insumo));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_in_id_insumo));
             if ((Original_in_nombre == null)) {
                 throw new global::System.ArgumentNullException("Original_in_nombre");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_in_nombre));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_in_nombre));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_in_precio));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((double)(Original_in_costo));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_in_id_unidad));
             if ((Original_in_status == null)) {
                 throw new global::System.ArgumentNullException("Original_in_status");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_in_status));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_in_cantidad));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_in_id_unidad));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1097,8 +1093,8 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string in_nombre, double in_precio, string in_status, double in_cantidad, int in_id_unidad, int Original_in_id_insumo, string Original_in_nombre, double Original_in_precio, string Original_in_status, double Original_in_cantidad, int Original_in_id_unidad) {
-            return this.Update(Original_in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad, Original_in_id_insumo, Original_in_nombre, Original_in_precio, Original_in_status, Original_in_cantidad, Original_in_id_unidad);
+        public virtual int Update(string in_nombre, double in_costo, int in_id_unidad, string in_status, int Original_in_id_insumo, string Original_in_nombre, double Original_in_costo, int Original_in_id_unidad, string Original_in_status) {
+            return this.Update(Original_in_id_insumo, in_nombre, in_costo, in_id_unidad, in_status, Original_in_id_insumo, Original_in_nombre, Original_in_costo, Original_in_id_unidad, Original_in_status);
         }
     }
     
@@ -1193,7 +1189,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(dsInsumosp dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(dsinsumop dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._iNSUMOTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.INSUMO.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1212,7 +1208,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(dsInsumosp dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(dsinsumop dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._iNSUMOTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.INSUMO.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1230,7 +1226,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(dsInsumosp dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(dsinsumop dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._iNSUMOTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.INSUMO.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1272,7 +1268,7 @@ SELECT in_id_insumo, in_nombre, in_precio, in_status, in_cantidad, in_id_unidad 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(dsInsumosp dataSet) {
+        public virtual int UpdateAll(dsinsumop dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

@@ -64,8 +64,14 @@
     <Compile Include="clases\clspedido.cs" />
     <Compile Include="clases\clsproducto.cs" />
     <Compile Include="clases\clsreceta.cs" />
+    <Compile Include="clases\clsunidad.cs" />
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
+    <Compile Include="dsinsumop.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsinsumop.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsInsumosp.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +86,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsunidad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsunidadp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsunidadp.xsd</DependentUpon>
     </Compile>
     <Compile Include="forms\frmclientes.cs">
       <SubType>Form</SubType>
@@ -122,6 +133,12 @@
     </Compile>
     <Compile Include="forms\frmreceta.Designer.cs">
       <DependentUpon>frmreceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmunidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmunidad.Designer.cs">
+      <DependentUpon>frmunidad.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\frmventas.cs">
       <SubType>Form</SubType>
@@ -206,6 +223,9 @@
     <EmbeddedResource Include="forms\frmreceta.resx">
       <DependentUpon>frmreceta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmunidad.resx">
+      <DependentUpon>frmunidad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmventas.resx">
       <DependentUpon>frmventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +244,17 @@
     <EmbeddedResource Include="reportes\frmrepoventas.resx">
       <DependentUpon>frmrepoventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsinsumop.xsc">
+      <DependentUpon>dsinsumop.xsd</DependentUpon>
+    </None>
+    <None Include="dsinsumop.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsinsumop.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsinsumop.xss">
+      <DependentUpon>dsinsumop.xsd</DependentUpon>
+    </None>
     <None Include="dsInsumosp.xsc">
       <DependentUpon>dsInsumosp.xsd</DependentUpon>
     </None>
@@ -256,6 +287,17 @@
     </None>
     <None Include="dsunidad.xss">
       <DependentUpon>dsunidad.xsd</DependentUpon>
+    </None>
+    <None Include="dsunidadp.xsc">
+      <DependentUpon>dsunidadp.xsd</DependentUpon>
+    </None>
+    <None Include="dsunidadp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsunidadp.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsunidadp.xss">
+      <DependentUpon>dsunidadp.xsd</DependentUpon>
     </None>
     <None Include="gruposDataSet.xsc">
       <DependentUpon>gruposDataSet.xsd</DependentUpon>

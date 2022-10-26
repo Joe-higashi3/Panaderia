@@ -2,38 +2,36 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using WindowsFormsApp2.clases;
 
 namespace WindowsFormsApp2.forms
 {
-    public partial class frminsumos : Form
+    public partial class frminsumo : Form
     {
         clases.Conexion objconection;
         SqlConnection conexion;
         string sConexion;
-        public frminsumos()
+        public frminsumo()
         {
             InitializeComponent();
             sConexion = Conexion.conn();
-            iNSUMOTableAdapter.Connection.ConnectionString = sConexion;
             uNIDADTableAdapter.Connection.ConnectionString = sConexion;
+            iNSUMOTableAdapter.Connection.ConnectionString = sConexion;
         }
 
         private void frminsumos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dsunidad.UNIDAD' Puede moverla o quitarla según sea necesario.
-            this.uNIDADTableAdapter.Fill(this.dsunidad.UNIDAD);
-            // TODO: esta línea de código carga datos en la tabla 'dsInsumosp.INSUMO' Puede moverla o quitarla según sea necesario.
-            this.iNSUMOTableAdapter.Fill(this.dsInsumosp.INSUMO);
+            // TODO: esta línea de código carga datos en la tabla 'dsunidadp.UNIDAD' Puede moverla o quitarla según sea necesario.
+            this.uNIDADTableAdapter.Fill(this.dsunidadp.UNIDAD);
+            // TODO: esta línea de código carga datos en la tabla 'dsinsumop.INSUMO' Puede moverla o quitarla según sea necesario.
+            this.iNSUMOTableAdapter.Fill(this.dsinsumop.INSUMO);
 
-            txtnombre.Focus();
-            consecutivo();
         }
 
         private void GuardarInsumo()
@@ -41,8 +39,7 @@ namespace WindowsFormsApp2.forms
             clsinsumo insumo = new clsinsumo();
             insumo.iIdinsumo = Convert.ToInt32(txtid.Text);
             insumo.sNombre = txtnombre.Text;
-            insumo.fPrecio = float.Parse(txtprecio.Text);
-            insumo.fCantidad = float.Parse(txtcantidad.Text);
+            insumo.fCosto = float.Parse(txtcosto.Text);
             insumo.iIdUnidad = Convert.ToInt32(cmbxunidad.SelectedValue);
             insumo.sStatus = cmbxistatus.Text.Substring(0, 1);
 
@@ -81,11 +78,10 @@ namespace WindowsFormsApp2.forms
         private void limpiar()
         {
             txtnombre.Clear();
-            txtprecio.Clear();
-            txtcantidad.Clear();
+            txtcosto.Clear();
             consecutivo();
-            this.iNSUMOTableAdapter.Fill(this.dsInsumosp.INSUMO);
-            this.uNIDADTableAdapter.Fill(this.dsunidad.UNIDAD);
+            this.iNSUMOTableAdapter.Fill(this.dsinsumop.INSUMO);
+            this.uNIDADTableAdapter.Fill(this.dsunidadp.UNIDAD);
             txtnombre.Focus();
         }
 
@@ -101,15 +97,14 @@ namespace WindowsFormsApp2.forms
 
         private void dgvinsumos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtid.Text = this.dsInsumosp.INSUMO[iNSUMOBindingSource.Position].in_id_insumo.ToString();
-            txtnombre.Text = this.dsInsumosp.INSUMO[iNSUMOBindingSource.Position].in_nombre.ToString();
-            txtprecio.Text = this.dsInsumosp.INSUMO[iNSUMOBindingSource.Position].in_precio.ToString();
-            txtcantidad.Text = this.dsInsumosp.INSUMO[iNSUMOBindingSource.Position].in_cantidad.ToString();
-            cmbxunidad.SelectedValue = this.dsunidad.UNIDAD[uNIDADBindingSource.Position].un_id_unidad;
+            txtid.Text = this.dsinsumop.INSUMO[iNSUMOBindingSource.Position].in_id_insumo.ToString();
+            txtnombre.Text = this.dsinsumop.INSUMO[iNSUMOBindingSource.Position].in_nombre.ToString();
+            txtcosto.Text = this.dsinsumop.INSUMO[iNSUMOBindingSource.Position].in_costo.ToString();
+            cmbxunidad.SelectedValue = this.dsunidadp.UNIDAD[uNIDADBindingSource.Position].un_id_unidad;
 
-            cmbxistatus.SelectedValue = this.dsInsumosp.INSUMO[iNSUMOBindingSource.Position].in_status;
+            cmbxistatus.SelectedValue = this.dsinsumop.INSUMO[iNSUMOBindingSource.Position].in_status;
             string sSTATUS;
-            sSTATUS = this.dsInsumosp.INSUMO[iNSUMOBindingSource.Position].in_status.ToString();
+            sSTATUS = this.dsinsumop.INSUMO[iNSUMOBindingSource.Position].in_status.ToString();
             switch (sSTATUS)
             {
                 case "A":
@@ -123,5 +118,7 @@ namespace WindowsFormsApp2.forms
                     break;
             }
         }
+
+        
     }
 }
