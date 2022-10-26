@@ -64,6 +64,7 @@
     <Compile Include="clases\clspedido.cs" />
     <Compile Include="clases\clsproducto.cs" />
     <Compile Include="clases\clsreceta.cs" />
+    <Compile Include="clases\clsrol.cs" />
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
     <Compile Include="clases\pruebaEdi.cs" />
@@ -81,6 +82,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSMunicipioEdi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSRol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSRol.xsd</DependentUpon>
     </Compile>
     <Compile Include="DSRolEdi.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -122,6 +128,12 @@
     </Compile>
     <Compile Include="forms\frmreceta.Designer.cs">
       <DependentUpon>frmreceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmrol.Designer.cs">
+      <DependentUpon>frmrol.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\frmventas.cs">
       <SubType>Form</SubType>
@@ -203,6 +215,9 @@
     <EmbeddedResource Include="forms\frmreceta.resx">
       <DependentUpon>frmreceta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmrol.resx">
+      <DependentUpon>frmrol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmventas.resx">
       <DependentUpon>frmventas.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +268,17 @@
     </None>
     <None Include="DSMunicipioEdi.xss">
       <DependentUpon>DSMunicipioEdi.xsd</DependentUpon>
+    </None>
+    <None Include="DSRol.xsc">
+      <DependentUpon>DSRol.xsd</DependentUpon>
+    </None>
+    <None Include="DSRol.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSRol.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSRol.xss">
+      <DependentUpon>DSRol.xsd</DependentUpon>
     </None>
     <None Include="DSRolEdi.xsc">
       <DependentUpon>DSRolEdi.xsd</DependentUpon>

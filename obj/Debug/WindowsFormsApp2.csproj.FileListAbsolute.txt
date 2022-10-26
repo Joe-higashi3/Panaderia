@@ -56,3 +56,4 @@ C:\Users\tupap\Documents\TODO\UADO\5 semestre\Ingenieria de sw 2\panesito\Panade
 C:\Users\tupap\Documents\TODO\UADO\5 semestre\Ingenieria de sw 2\panesito\Panaderia\bin\Debug\WindowsFormsApp2.exe.config
 C:\Users\tupap\Documents\TODO\UADO\5 semestre\Ingenieria de sw 2\panesito\Panaderia\bin\Debug\WindowsFormsApp2.exe
 C:\Users\tupap\Documents\TODO\UADO\5 semestre\Ingenieria de sw 2\panesito\Panaderia\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\tupap\Documents\TODO\UADO\5 semestre\Ingenieria de sw 2\panesito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmrol.resources
