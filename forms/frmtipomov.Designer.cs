@@ -86,6 +86,7 @@ namespace WindowsFormsApp2.forms
             this.dgvtm.Name = "dgvtm";
             this.dgvtm.Size = new System.Drawing.Size(718, 209);
             this.dgvtm.TabIndex = 3;
+            this.dgvtm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtm_CellContentClick);
             // 
             // label2
             // 

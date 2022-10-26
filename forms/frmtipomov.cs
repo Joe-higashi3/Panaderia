@@ -79,6 +79,13 @@ namespace WindowsFormsApp2.forms
             txttm.Focus();
         }
 
+        private void dgvtm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtidtm.Text = this.dstipomov.TIPO_MOV[tIPOMOVBindingSource.Position].tm_id.ToString();
+            txttm.Text = this.dstipomov.TIPO_MOV[tIPOMOVBindingSource.Position].tm_tipo.ToString();
+        }
+
+
         private void btnguardar_Click(object sender, EventArgs e)
         {
             GuardarTipoMov();
@@ -88,5 +95,7 @@ namespace WindowsFormsApp2.forms
         {
             limpiar();
         }
+
+        
     }
 }
