@@ -22,11 +22,15 @@ namespace WindowsFormsApp2.forms
         public frmcategoria()
         {
             InitializeComponent();
+            sConexion = Conexion.conn();
         }
 
         private void frmcategoria_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'panesitodscategoria.CATEGORIA' Puede moverla o quitarla según sea necesario.
+            this.cATEGORIATableAdapter.Fill(this.panesitodscategoria.CATEGORIA);
             txtdescripcion.Focus();
+            consecutivo();
         }
 
         private void GuardarCategoria()
@@ -52,16 +56,43 @@ namespace WindowsFormsApp2.forms
         {
             txtid.Clear();
             txtdescripcion.Clear();
+            this.cATEGORIATableAdapter.Fill(this.panesitodscategoria.CATEGORIA);
+            consecutivo();
         }
+
+        private void consecutivo()
+        {
+            SqlConnection conn = new SqlConnection(sConexion);
+            SqlCommand cmd = new SqlCommand("", conn);
+            SqlDataReader l;
+
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT ISNULL(MAX(ca_id),0) + 1 AS consecutivo FROM CATEGORIA";
+
+
+            conn.Open();
+            l = cmd.ExecuteReader();
+            if (l.Read())
+            {
+                txtid.Text = Convert.ToString(l.GetInt32(0));
+            }
+        }
+
 
         private void dgvcategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            txtid.Text = this.panesitodscategoria.CATEGORIA[cATEGORIABindingSource.Position].ca_id.ToString();
+            txtdescripcion.Text = this.panesitodscategoria.CATEGORIA[cATEGORIABindingSource.Position].ca_descripcion.ToString();
         }
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
             GuardarCategoria();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

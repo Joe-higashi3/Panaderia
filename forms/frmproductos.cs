@@ -33,7 +33,7 @@ namespace WindowsFormsApp2.forms
             producto.sDescripcion = txtdescripcion.Text;
             producto.iId_categoria = Convert.ToInt32(cbxcategoria.SelectedValue);
             producto.sStatus = cmbxstatus.Text.Substring(0, 1);
-//            producto.iCantidad = Convert.ToInt32(txtcantidad.Text);
+            producto.iId_unidad = Convert.ToInt32(cbxunidad.SelectedValue);
 
             if (producto.GuardarProducto() == true)
             {
@@ -54,8 +54,6 @@ namespace WindowsFormsApp2.forms
             txtnombre.Clear();
             txtprecio.Clear();
             txtdescripcion.Clear();
-            //txtcategoria.Clear();
-            //txtcantidad.Clear();
             consecutivo();
             this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetcatag.PRODUCTO);
 
@@ -81,11 +79,13 @@ namespace WindowsFormsApp2.forms
 
         private void frmproductos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dScategoria.CATEGORIA' Puede moverla o quitarla según sea necesario.
-            this.cATEGORIATableAdapter.Fill(this.dScategoria.CATEGORIA);
+            // TODO: esta línea de código carga datos en la tabla 'panesitoDataSetcatag.UNIDAD' Puede moverla o quitarla según sea necesario.
+            this.uNIDADTableAdapter.Fill(this.panesitoDataSetcatag.UNIDAD);
+            // TODO: esta línea de código carga datos en la tabla 'panesitoDataSetcatag.CATEGORIA' Puede moverla o quitarla según sea necesario.
+            this.cATEGORIATableAdapter.Fill(this.panesitoDataSetcatag.CATEGORIA);
             txtprecio.Focus();
             // TODO: esta línea de código carga datos en la tabla 'panesitoDataSetcatag.PRODUCTO' Puede moverla o quitarla según sea necesario.
-            this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetcatag.PRODUCTO);            
+            this.pRODUCTOTableAdapter1.Fill(this.panesitoDataSetcatag.PRODUCTO);
             consecutivo();
         }
 
@@ -102,7 +102,8 @@ namespace WindowsFormsApp2.forms
             txtdescripcion.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_descripcion.ToString();
             cbxcategoria.SelectedValue = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_id_categoria;
 
-            //txtcantidad.Text = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_cantidad.ToString();
+            cbxunidad.SelectedValue = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_id_unidad;
+
             string sSTATUS;
             sSTATUS = this.panesitoDataSetcatag.PRODUCTO[pRODUCTOBindingSource4.Position].pr_status.ToString();
             switch (sSTATUS)

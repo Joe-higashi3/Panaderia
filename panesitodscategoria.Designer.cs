@@ -20,9 +20,9 @@ namespace WindowsFormsApp2 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DScategoria")]
+    [global::System.Xml.Serialization.XmlRootAttribute("panesitodscategoria")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DScategoria : global::System.Data.DataSet {
+    public partial class panesitodscategoria : global::System.Data.DataSet {
         
         private CATEGORIADataTable tableCATEGORIA;
         
@@ -30,7 +30,7 @@ namespace WindowsFormsApp2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DScategoria() {
+        public panesitodscategoria() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace WindowsFormsApp2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected DScategoria(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected panesitodscategoria(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DScategoria cln = ((DScategoria)(base.Clone()));
+            panesitodscategoria cln = ((panesitodscategoria)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DScategoria";
+            this.DataSetName = "panesitodscategoria";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DScategoria.xsd";
+            this.Namespace = "http://tempuri.org/panesitodscategoria.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCATEGORIA = new CATEGORIADataTable();
@@ -225,7 +225,7 @@ namespace WindowsFormsApp2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DScategoria ds = new DScategoria();
+            panesitodscategoria ds = new panesitodscategoria();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -369,10 +369,10 @@ namespace WindowsFormsApp2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CATEGORIARow AddCATEGORIARow(int ca_id, string ca_descripcion) {
+            public CATEGORIARow AddCATEGORIARow(string ca_descripcion) {
                 CATEGORIARow rowCATEGORIARow = ((CATEGORIARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ca_id,
+                        null,
                         ca_descripcion};
                 rowCATEGORIARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCATEGORIARow);
@@ -416,8 +416,13 @@ namespace WindowsFormsApp2 {
                 base.Columns.Add(this.columnca_descripcion);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnca_id}, true));
+                this.columnca_id.AutoIncrement = true;
+                this.columnca_id.AutoIncrementSeed = -1;
+                this.columnca_id.AutoIncrementStep = -1;
                 this.columnca_id.AllowDBNull = false;
+                this.columnca_id.ReadOnly = true;
                 this.columnca_id.Unique = true;
+                this.columnca_descripcion.AllowDBNull = false;
                 this.columnca_descripcion.MaxLength = 50;
             }
             
@@ -486,7 +491,7 @@ namespace WindowsFormsApp2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DScategoria ds = new DScategoria();
+                panesitodscategoria ds = new panesitodscategoria();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -574,28 +579,11 @@ namespace WindowsFormsApp2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string ca_descripcion {
                 get {
-                    try {
-                        return ((string)(this[this.tableCATEGORIA.ca_descripcionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ca_descripcion\' de la tabla \'CATEGORIA\' es DBNull.", e);
-                    }
+                    return ((string)(this[this.tableCATEGORIA.ca_descripcionColumn]));
                 }
                 set {
                     this[this.tableCATEGORIA.ca_descripcionColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Isca_descripcionNull() {
-                return this.IsNull(this.tableCATEGORIA.ca_descripcionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Setca_descripcionNull() {
-                this[this.tableCATEGORIA.ca_descripcionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -634,7 +622,7 @@ namespace WindowsFormsApp2 {
         }
     }
 }
-namespace WindowsFormsApp2.DScategoriaTableAdapters {
+namespace WindowsFormsApp2.panesitodscategoriaTableAdapters {
     
     
     /// <summary>
@@ -763,30 +751,27 @@ namespace WindowsFormsApp2.DScategoriaTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[CATEGORIA] WHERE (([ca_id] = @Original_ca_id) AND ((@IsNull_ca" +
-                "_descripcion = 1 AND [ca_descripcion] IS NULL) OR ([ca_descripcion] = @Original_" +
-                "ca_descripcion)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[CATEGORIA] WHERE (([ca_id] = @Original_ca_id) AND ([ca_descrip" +
+                "cion] = @Original_ca_descripcion))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ca_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ca_descripcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_descripcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ca_descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CATEGORIA] ([ca_id], [ca_descripcion]) VALUES (@ca_id, @ca_des" +
-                "cripcion);\r\nSELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CATEGORIA] ([ca_descripcion]) VALUES (@ca_descripcion);\r\nSELEC" +
+                "T ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ca_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ca_descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[CATEGORIA] SET [ca_id] = @ca_id, [ca_descripcion] = @ca_descripcion WHERE (([ca_id] = @Original_ca_id) AND ((@IsNull_ca_descripcion = 1 AND [ca_descripcion] IS NULL) OR ([ca_descripcion] = @Original_ca_descripcion)));
-SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[CATEGORIA] SET [ca_descripcion] = @ca_descripcion WHERE (([ca_id] =" +
+                " @Original_ca_id) AND ([ca_descripcion] = @Original_ca_descripcion));\r\nSELECT ca" +
+                "_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ca_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ca_descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_descripcion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ca_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ca_descripcion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_descripcion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ca_descripcion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ca_descripcion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ca_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ca_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -810,7 +795,7 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DScategoria.CATEGORIADataTable dataTable) {
+        public virtual int Fill(panesitodscategoria.CATEGORIADataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -823,9 +808,9 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DScategoria.CATEGORIADataTable GetData() {
+        public virtual panesitodscategoria.CATEGORIADataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DScategoria.CATEGORIADataTable dataTable = new DScategoria.CATEGORIADataTable();
+            panesitodscategoria.CATEGORIADataTable dataTable = new panesitodscategoria.CATEGORIADataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -833,14 +818,14 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DScategoria.CATEGORIADataTable dataTable) {
+        public virtual int Update(panesitodscategoria.CATEGORIADataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DScategoria dataSet) {
+        public virtual int Update(panesitodscategoria dataSet) {
             return this.Adapter.Update(dataSet, "CATEGORIA");
         }
         
@@ -866,12 +851,10 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         public virtual int Delete(int Original_ca_id, string Original_ca_descripcion) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ca_id));
             if ((Original_ca_descripcion == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ca_descripcion");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_ca_descripcion));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ca_descripcion));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -893,13 +876,12 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ca_id, string ca_descripcion) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ca_id));
+        public virtual int Insert(string ca_descripcion) {
             if ((ca_descripcion == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ca_descripcion");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(ca_descripcion));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(ca_descripcion));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -921,23 +903,21 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int ca_id, string ca_descripcion, int Original_ca_id, string Original_ca_descripcion) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ca_id));
+        public virtual int Update(string ca_descripcion, int Original_ca_id, string Original_ca_descripcion, int ca_id) {
             if ((ca_descripcion == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("ca_descripcion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(ca_descripcion));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ca_descripcion));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_ca_id));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ca_id));
             if ((Original_ca_descripcion == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_ca_descripcion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_ca_descripcion));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_ca_descripcion));
             }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(ca_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -959,7 +939,7 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string ca_descripcion, int Original_ca_id, string Original_ca_descripcion) {
-            return this.Update(Original_ca_id, ca_descripcion, Original_ca_id, Original_ca_descripcion);
+            return this.Update(ca_descripcion, Original_ca_id, Original_ca_descripcion, Original_ca_id);
         }
     }
     
@@ -1054,7 +1034,7 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(DScategoria dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(panesitodscategoria dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._cATEGORIATableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.CATEGORIA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1073,7 +1053,7 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(DScategoria dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(panesitodscategoria dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._cATEGORIATableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.CATEGORIA.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1091,7 +1071,7 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(DScategoria dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(panesitodscategoria dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._cATEGORIATableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CATEGORIA.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1133,7 +1113,7 @@ SELECT ca_id, ca_descripcion FROM CATEGORIA WHERE (ca_id = @ca_id)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(DScategoria dataSet) {
+        public virtual int UpdateAll(panesitodscategoria dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

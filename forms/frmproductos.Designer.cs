@@ -40,6 +40,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.dvgproductos = new System.Windows.Forms.DataGridView();
             this.pridproductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pr_id_unidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prnombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prdescripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ca_descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +49,8 @@
             this.pRODUCTOBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.panesitoDataSetcatagBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panesitoDataSetcatag = new WindowsFormsApp2.panesitoDataSetcatag();
+            this.pRODUCTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.panesitoDataSet3 = new WindowsFormsApp2.panesitoDataSet3();
             this.label5 = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,14 +58,26 @@
             this.pRODUCTOTableAdapter1 = new WindowsFormsApp2.panesitoDataSetcatagTableAdapters.PRODUCTOTableAdapter();
             this.cbxcategoria = new System.Windows.Forms.ComboBox();
             this.cATEGORIABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dScategoria = new WindowsFormsApp2.DScategoria();
-            this.cATEGORIATableAdapter = new WindowsFormsApp2.DScategoriaTableAdapters.CATEGORIATableAdapter();
+            this.cbxunidad = new System.Windows.Forms.ComboBox();
+            this.uNIDADBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cATEGORIABindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label7 = new System.Windows.Forms.Label();
+            this.pRODUCTOTableAdapter = new WindowsFormsApp2.panesitoDataSet3TableAdapters.PRODUCTOTableAdapter();
+            this.cATEGORIATableAdapter = new WindowsFormsApp2.panesitoDataSetcatagTableAdapters.CATEGORIATableAdapter();
+            this.cATEGORIABindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.uNIDADTableAdapter = new WindowsFormsApp2.panesitoDataSetcatagTableAdapters.UNIDADTableAdapter();
+            this.cATEGORIABindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dvgproductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatagBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dScategoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uNIDADBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -150,6 +165,7 @@
             this.dvgproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgproductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pridproductoDataGridViewTextBoxColumn,
+            this.pr_id_unidad,
             this.prnombreDataGridViewTextBoxColumn,
             this.prdescripcionDataGridViewTextBoxColumn,
             this.ca_descripcion,
@@ -169,6 +185,12 @@
             this.pridproductoDataGridViewTextBoxColumn.HeaderText = "Id Producto";
             this.pridproductoDataGridViewTextBoxColumn.Name = "pridproductoDataGridViewTextBoxColumn";
             this.pridproductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pr_id_unidad
+            // 
+            this.pr_id_unidad.DataPropertyName = "pr_id_unidad";
+            this.pr_id_unidad.HeaderText = "Unidad";
+            this.pr_id_unidad.Name = "pr_id_unidad";
             // 
             // prnombreDataGridViewTextBoxColumn
             // 
@@ -215,6 +237,16 @@
             this.panesitoDataSetcatag.DataSetName = "panesitoDataSetcatag";
             this.panesitoDataSetcatag.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // pRODUCTOBindingSource
+            // 
+            this.pRODUCTOBindingSource.DataMember = "PRODUCTO";
+            this.pRODUCTOBindingSource.DataSource = this.panesitoDataSet3;
+            // 
+            // panesitoDataSet3
+            // 
+            this.panesitoDataSet3.DataSetName = "panesitoDataSet3";
+            this.panesitoDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -258,7 +290,7 @@
             // 
             // cbxcategoria
             // 
-            this.cbxcategoria.DataSource = this.cATEGORIABindingSource;
+            this.cbxcategoria.DataSource = this.cATEGORIABindingSource3;
             this.cbxcategoria.DisplayMember = "ca_descripcion";
             this.cbxcategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxcategoria.FormattingEnabled = true;
@@ -271,22 +303,67 @@
             // cATEGORIABindingSource
             // 
             this.cATEGORIABindingSource.DataMember = "CATEGORIA";
-            this.cATEGORIABindingSource.DataSource = this.dScategoria;
             // 
-            // dScategoria
+            // cbxunidad
             // 
-            this.dScategoria.DataSetName = "DScategoria";
-            this.dScategoria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cbxunidad.DataSource = this.uNIDADBindingSource;
+            this.cbxunidad.DisplayMember = "un_descripcion";
+            this.cbxunidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxunidad.FormattingEnabled = true;
+            this.cbxunidad.Location = new System.Drawing.Point(573, 12);
+            this.cbxunidad.Name = "cbxunidad";
+            this.cbxunidad.Size = new System.Drawing.Size(121, 28);
+            this.cbxunidad.TabIndex = 30;
+            this.cbxunidad.ValueMember = "un_id_unidad";
+            // 
+            // uNIDADBindingSource
+            // 
+            this.uNIDADBindingSource.DataMember = "UNIDAD";
+            this.uNIDADBindingSource.DataSource = this.panesitoDataSetcatagBindingSource;
+            // 
+            // cATEGORIABindingSource1
+            // 
+            this.cATEGORIABindingSource1.DataMember = "CATEGORIA";
+            this.cATEGORIABindingSource1.DataSource = this.panesitoDataSetcatagBindingSource;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(500, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 20);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Unidad:";
+            // 
+            // pRODUCTOTableAdapter
+            // 
+            this.pRODUCTOTableAdapter.ClearBeforeFill = true;
             // 
             // cATEGORIATableAdapter
             // 
             this.cATEGORIATableAdapter.ClearBeforeFill = true;
+            // 
+            // cATEGORIABindingSource2
+            // 
+            this.cATEGORIABindingSource2.DataMember = "CATEGORIA";
+            this.cATEGORIABindingSource2.DataSource = this.panesitoDataSetcatagBindingSource;
+            // 
+            // uNIDADTableAdapter
+            // 
+            this.uNIDADTableAdapter.ClearBeforeFill = true;
+            // 
+            // cATEGORIABindingSource3
+            // 
+            this.cATEGORIABindingSource3.DataMember = "CATEGORIA";
+            this.cATEGORIABindingSource3.DataSource = this.panesitoDataSetcatagBindingSource;
             // 
             // frmproductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 505);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbxunidad);
             this.Controls.Add(this.cbxcategoria);
             this.Controls.Add(this.cmbxstatus);
             this.Controls.Add(this.label6);
@@ -312,8 +389,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatagBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSetcatag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pRODUCTOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dScategoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uNIDADBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIABindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,14 +422,25 @@
         private System.Windows.Forms.BindingSource pRODUCTOBindingSource4;
         private panesitoDataSetcatagTableAdapters.PRODUCTOTableAdapter pRODUCTOTableAdapter1;
         private System.Windows.Forms.ComboBox cbxcategoria;
-        private DScategoria dScategoria;
+    //    private DScategoria dScategoria;
         private System.Windows.Forms.BindingSource cATEGORIABindingSource;
-        private DScategoriaTableAdapters.CATEGORIATableAdapter cATEGORIATableAdapter;
+        private System.Windows.Forms.ComboBox cbxunidad;
+        private System.Windows.Forms.Label label7;
+        private panesitoDataSet3 panesitoDataSet3;
+        private System.Windows.Forms.BindingSource pRODUCTOBindingSource;
+        private panesitoDataSet3TableAdapters.PRODUCTOTableAdapter pRODUCTOTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pr_id_unidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ca_descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pr_status;
+        private System.Windows.Forms.BindingSource cATEGORIABindingSource1;
+        private panesitoDataSetcatagTableAdapters.CATEGORIATableAdapter cATEGORIATableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pridproductoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prnombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prdescripcionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ca_descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn prprecioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pr_status;
+        private System.Windows.Forms.BindingSource cATEGORIABindingSource2;
+        private System.Windows.Forms.BindingSource uNIDADBindingSource;
+        private panesitoDataSetcatagTableAdapters.UNIDADTableAdapter uNIDADTableAdapter;
+        private System.Windows.Forms.BindingSource cATEGORIABindingSource3;
     }
 }
