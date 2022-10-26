@@ -96,6 +96,7 @@ namespace WindowsFormsApp2.forms
             limpiar();
         }
 
+
         private void dgvinsumos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txtid.Text = this.dsinsumop.INSUMO[iNSUMOBindingSource.Position].in_id_insumo.ToString();
