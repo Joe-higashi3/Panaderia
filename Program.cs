@@ -17,7 +17,7 @@ namespace WindowsFormsApp2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frminsumo());
+            Application.Run(new frmunidad());
         }
     }
 }

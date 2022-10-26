@@ -31,6 +31,7 @@ namespace WindowsFormsApp2.forms
             this.uNIDADTableAdapter.Fill(this.dsunidadp.UNIDAD);
             // TODO: esta línea de código carga datos en la tabla 'dsinsumop.INSUMO' Puede moverla o quitarla según sea necesario.
             this.iNSUMOTableAdapter.Fill(this.dsinsumop.INSUMO);
+            consecutivo();
 
         }
 

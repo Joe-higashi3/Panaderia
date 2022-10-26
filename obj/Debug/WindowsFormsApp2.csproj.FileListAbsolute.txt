@@ -44,7 +44,6 @@ D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsAp
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.busquedas.frmbusquedapedidos.resources
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmclientes.resources
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmempleados.resources
-D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frminsumos.resources
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmmenu.resources
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.frmpedidos.resources
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmproductos.resources
@@ -57,3 +56,5 @@ D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsAp
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.exe
 D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.pdb
+D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frminsumo.resources
+D:\QUINTO-SEMESTRE\Desarrollo-web-II\Panecito\Panaderia\obj\Debug\WindowsFormsApp2.forms.frmunidad.resources
