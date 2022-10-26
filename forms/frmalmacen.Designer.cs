@@ -39,7 +39,6 @@
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.btnagregar = new System.Windows.Forms.Button();
-            this.btnmodificar = new System.Windows.Forms.Button();
             this.dsalmacen = new WindowsFormsApp2.dsalmacen();
             this.aLMACENPRODUCTOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aLMACEN_PRODUCTOTableAdapter = new WindowsFormsApp2.dsalmacenTableAdapters.ALMACEN_PRODUCTOTableAdapter();
@@ -139,16 +138,6 @@
             this.btnagregar.UseVisualStyleBackColor = true;
             this.btnagregar.Click += new System.EventHandler(this.btnagregar_Click);
             // 
-            // btnmodificar
-            // 
-            this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodificar.Location = new System.Drawing.Point(288, 21);
-            this.btnmodificar.Name = "btnmodificar";
-            this.btnmodificar.Size = new System.Drawing.Size(79, 26);
-            this.btnmodificar.TabIndex = 6;
-            this.btnmodificar.Text = "Eliminar";
-            this.btnmodificar.UseVisualStyleBackColor = true;
-            // 
             // dsalmacen
             // 
             this.dsalmacen.DataSetName = "dsalmacen";
@@ -172,7 +161,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 399);
-            this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.btnagregar);
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.txtid);
@@ -200,7 +188,6 @@
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Button btnagregar;
-        private System.Windows.Forms.Button btnmodificar;
         private dsalmacen dsalmacen;
         private System.Windows.Forms.BindingSource aLMACENPRODUCTOBindingSource;
         private dsalmacenTableAdapters.ALMACEN_PRODUCTOTableAdapter aLMACEN_PRODUCTOTableAdapter;
