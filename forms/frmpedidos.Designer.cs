@@ -48,7 +48,6 @@
             this.panesitoDataSetPedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panesitoDataSetPed = new WindowsFormsApp2.panesitoDataSetPed();
             this.txtstatus = new System.Windows.Forms.TextBox();
-            this.txtclienteid = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,6 +63,10 @@
             this.pEDIDOTableAdapter2 = new WindowsFormsApp2.panesitoDataSet5TableAdapters.PEDIDOTableAdapter();
             this.txtEmpleado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.cmbstatus = new System.Windows.Forms.ComboBox();
+            this.pEDIDOBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.txtclienteid = new System.Windows.Forms.TextBox();
+            this.val = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet5BindingSource)).BeginInit();
@@ -76,10 +79,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet6BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.val)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpfecha
             // 
+            this.dtpfecha.CustomFormat = "mm/dd/yyyy hh:mm:ss";
             this.dtpfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpfecha.Location = new System.Drawing.Point(94, 69);
@@ -88,6 +94,7 @@
             this.dtpfecha.Size = new System.Drawing.Size(204, 26);
             this.dtpfecha.TabIndex = 38;
             this.dtpfecha.UseWaitCursor = true;
+            this.dtpfecha.Value = new System.DateTime(2022, 10, 24, 0, 0, 0, 0);
             // 
             // btnsalir
             // 
@@ -122,6 +129,7 @@
             this.btnactualizar.TabIndex = 35;
             this.btnactualizar.Text = "Actualizar";
             this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
             // 
             // btninsertar
             // 
@@ -229,23 +237,15 @@
             // 
             // txtstatus
             // 
-            this.txtstatus.Location = new System.Drawing.Point(234, 4);
+            this.txtstatus.Location = new System.Drawing.Point(203, 5);
             this.txtstatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtstatus.Name = "txtstatus";
-            this.txtstatus.Size = new System.Drawing.Size(64, 20);
+            this.txtstatus.Size = new System.Drawing.Size(95, 20);
             this.txtstatus.TabIndex = 32;
-            // 
-            // txtclienteid
-            // 
-            this.txtclienteid.Location = new System.Drawing.Point(94, 39);
-            this.txtclienteid.Margin = new System.Windows.Forms.Padding(2);
-            this.txtclienteid.Name = "txtclienteid";
-            this.txtclienteid.Size = new System.Drawing.Size(204, 20);
-            this.txtclienteid.TabIndex = 30;
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(94, 5);
+            this.txtid.Location = new System.Drawing.Point(56, 4);
             this.txtid.Margin = new System.Windows.Forms.Padding(2);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(63, 20);
@@ -255,7 +255,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(161, 2);
+            this.label4.Location = new System.Drawing.Point(123, 4);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
@@ -277,7 +277,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 4);
+            this.label1.Location = new System.Drawing.Point(22, 3);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 20);
@@ -345,11 +345,40 @@
             this.label3.Text = "Empleado:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // cmbstatus
+            // 
+            this.cmbstatus.FormattingEnabled = true;
+            this.cmbstatus.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.cmbstatus.Location = new System.Drawing.Point(600, 320);
+            this.cmbstatus.Name = "cmbstatus";
+            this.cmbstatus.Size = new System.Drawing.Size(13, 21);
+            this.cmbstatus.TabIndex = 41;
+            // 
+            // pEDIDOBindingSource3
+            // 
+            this.pEDIDOBindingSource3.DataMember = "PEDIDO";
+            this.pEDIDOBindingSource3.DataSource = this.panesitoDataSet5BindingSource;
+            // 
+            // txtclienteid
+            // 
+            this.txtclienteid.Location = new System.Drawing.Point(94, 39);
+            this.txtclienteid.Margin = new System.Windows.Forms.Padding(2);
+            this.txtclienteid.Name = "txtclienteid";
+            this.txtclienteid.Size = new System.Drawing.Size(204, 20);
+            this.txtclienteid.TabIndex = 30;
+            // 
+            // val
+            // 
+            this.val.ContainerControl = this;
+            // 
             // frmpedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 388);
+            this.Controls.Add(this.cmbstatus);
             this.Controls.Add(this.txtEmpleado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvarticulos);
@@ -382,6 +411,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panesitoDataSet6BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pEDIDOBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.val)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,7 +427,6 @@
         private System.Windows.Forms.Button btninsertar;
         private System.Windows.Forms.DataGridView dgvarticulos;
         private System.Windows.Forms.TextBox txtstatus;
-        private System.Windows.Forms.TextBox txtclienteid;
         private System.Windows.Forms.TextBox txtid;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
@@ -424,6 +454,10 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn peestatuspedidoDataGridViewCheckBoxColumn;
         private System.Windows.Forms.TextBox txtEmpleado;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cmbstatus;
+        private System.Windows.Forms.BindingSource pEDIDOBindingSource3;
+        private System.Windows.Forms.TextBox txtclienteid;
+        private System.Windows.Forms.ErrorProvider val;
     }
 }
 

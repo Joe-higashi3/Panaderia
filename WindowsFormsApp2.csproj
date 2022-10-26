@@ -58,18 +58,42 @@
     <Compile Include="busquedas\frmbusquedapedidos.Designer.cs">
       <DependentUpon>frmbusquedapedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="clases\clsalmacen.cs" />
     <Compile Include="clases\clscliente.cs" />
     <Compile Include="clases\clsempleado.cs" />
     <Compile Include="clases\clsinsumo.cs" />
     <Compile Include="clases\clspedido.cs" />
     <Compile Include="clases\clsproducto.cs" />
     <Compile Include="clases\clsreceta.cs" />
+    <Compile Include="clases\clsvalidar.cs" />
     <Compile Include="clases\clsventa.cs" />
     <Compile Include="clases\conexion.cs" />
+    <Compile Include="dsalmacen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsalmacen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsalmacen2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsalmacen2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsMunicipio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmalmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmalmacen.Designer.cs">
+      <DependentUpon>frmalmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmcategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmcategoria.Designer.cs">
+      <DependentUpon>frmcategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\frmclientes.cs">
       <SubType>Form</SubType>
@@ -122,6 +146,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>gruposDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Libreria\validacionvaciosynumeros.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Libreria\validacionvaciosynumeros.Designer.cs">
+      <DependentUpon>validacionvaciosynumeros.cs</DependentUpon>
     </Compile>
     <Compile Include="panesitoDataSet.cs">
       <DependentUpon>panesitoDataSet.xsd</DependentUpon>
@@ -189,6 +219,12 @@
     <EmbeddedResource Include="busquedas\frmbusquedapedidos.resx">
       <DependentUpon>frmbusquedapedidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmalmacen.resx">
+      <DependentUpon>frmalmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmcategoria.resx">
+      <DependentUpon>frmcategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frmclientes.resx">
       <DependentUpon>frmclientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +261,28 @@
     <EmbeddedResource Include="reportes\frmrepoventas.resx">
       <DependentUpon>frmrepoventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsalmacen.xsc">
+      <DependentUpon>dsalmacen.xsd</DependentUpon>
+    </None>
+    <None Include="dsalmacen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsalmacen.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsalmacen.xss">
+      <DependentUpon>dsalmacen.xsd</DependentUpon>
+    </None>
+    <None Include="dsalmacen2.xsc">
+      <DependentUpon>dsalmacen2.xsd</DependentUpon>
+    </None>
+    <None Include="dsalmacen2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsalmacen2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsalmacen2.xss">
+      <DependentUpon>dsalmacen2.xsd</DependentUpon>
+    </None>
     <None Include="DsMunicipio.xsc">
       <DependentUpon>DsMunicipio.xsd</DependentUpon>
     </None>

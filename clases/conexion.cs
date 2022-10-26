@@ -10,7 +10,7 @@ namespace WindowsFormsApp2.clases
     {
         public static string conn()
         {
-            string miconexion = @"Data Source=LAPTOP-4RK8N9SL;Initial Catalog=panesito;user=Administrador;password=123";
+            string miconexion = @"Data Source=LAPTOP-4RK8N9SL;Initial Catalog=panesito;user=Administrador;password=1234";
             return miconexion;
         }
     }

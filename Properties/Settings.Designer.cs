@@ -44,5 +44,15 @@ namespace WindowsFormsApp2.Properties {
                 return ((string)(this["panesitoConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-4RK8N9SL;Initial Catalog=panesito;Integrated Security=True")]
+        public string panesitoConnectionString2 {
+            get {
+                return ((string)(this["panesitoConnectionString2"]));
+            }
+        }
     }
 }
